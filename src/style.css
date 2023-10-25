@@ -1,4 +1,11 @@
 
+/* ------------------- */
+/* Variables           */
+/* ------------------- */
+:root{
+    --main-color:#000000;
+}
+
 
 /* ------------------- */
 /* CSS - Reset               */
@@ -31,6 +38,7 @@ body {
     font-size: 15px;
     overflow-x: hidden;
     position: relative;
+    color: var(--main-color);
 }
 
 /* make images easier to work with */
@@ -66,19 +74,54 @@ ol[role='list'] {
 }
 
 /* ------------------- */
-/* Variables           */
-/* ------------------- */
-
-
-/* ------------------- */
 /*       Nav           */
 /* ------------------- */
-
+body{
+    border: 5px solid green;
+}
+#nav{
+    border: 1px solid red;
+    display: flex;
+    gap: 135px;
+    align-items: center;
+    margin-left: 62.5px;
+    margin-top: 32.5px;
+}
 .primary-nav-svg{
     width: 8.8px;
     height: 9px;
 }
 
+.logo{
+    width: 196.188px;
+    height: 57.5965px;
+}
+.nav-links{
+    text-decoration: none;
+    color: var(--main-color);
+    font-style: italic;
+}
+
+.primary-nav{
+    display: flex;
+    gap: 43px;
+    height: 100%;
+    border: 1px solid black;
+    padding: 0;
+}
+
+.primary-nav-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9.5px;
+    height: 100%;
+    border: 1px solid blue;
+}
+
+.primary-nav-item{
+    cursor: pointer;
+}
 /* ------------------- */
 /*       hero          */
 /* ------------------- */
