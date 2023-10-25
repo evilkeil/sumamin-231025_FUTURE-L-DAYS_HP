@@ -11,10 +11,12 @@ module.exports = {
       template:'src/template.html',
     }),
   ],
-  output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
+  output:{
+    path:path.resolve(__dirname,'dist'),
+    filename:"[name][contenthash].js",
+    clean:true,
+    assetModuleFilename:'[name][ext]',
+},
   devtool:'source-map',
   devServer:{
       static:{
@@ -33,12 +35,16 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
         type: 'asset/resource',
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
+      },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
       },
     ],
   },
