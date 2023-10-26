@@ -283,7 +283,7 @@ margin-right: 85px;
 /* scroll to contact btn */
 .scroll-btn{
     position: relative;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 122.02px;
     /* height: 122.05px; */
     aspect-ratio: 1;
@@ -346,6 +346,7 @@ margin-right: 85px;
       .hero-top-img::after{
         font-size: 35.17px;
         height: 43px;
+        letter-spacing: 1.41px;
       }
       .hero-top-container{
         margin-top: 0px;
@@ -360,7 +361,19 @@ margin-right: 85px;
             height: 22.35px;
         }
   }
-
+  @media (max-width:600px){
+    .hero-top-img::after{
+        font-size: 25px;
+        height: 43px;
+      }
+    .scroll-btn{
+        width: 60px;
+    }
+    .scroll-btn-arrow{
+        width: 16px;
+        height: 17px;
+    }
+  }
 /* ------------------- */
 /*       about         */
 /* ------------------- */
