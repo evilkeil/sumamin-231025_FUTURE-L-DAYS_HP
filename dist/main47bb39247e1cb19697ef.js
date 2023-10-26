@@ -40,9 +40,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `
 
     --bar-width:30px;
     --bar-height:1.17px;
-    --bar-gap:11px;
+    --bar-gap:11.24px;
     --foreground:#606060;
     --background:#FFFFFF;
+    --animation-timing:350ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3  + var(--bar-gap) * 2);
 
 
 }
@@ -79,6 +81,8 @@ body {
     overflow-x: hidden;
     position: relative;
     color: var(--main-color);
+    margin: 0;
+    padding: 0;
 }
 
 /* make images easier to work with */
@@ -123,10 +127,12 @@ body{
 #nav{
     /* border: 1px solid red; */
     display: flex;
-    gap: 8.4375rem;
+    
+    justify-content: center;
     align-items: center;
-    margin-left: 3.9063rem;
-    margin-top: 2.0313rem;
+    margin-left: 61.93px;
+    margin-top: 34.38px;
+    position: relative;
 }
 .primary-nav-svg{
     width: 8.8791px;
@@ -135,8 +141,12 @@ body{
 }
 
 .logo{
-    width: 196.188px;
-    height: 57.5965px;
+    position: absolute;
+    top:4px;
+    left: 0;
+    width: 196.19px;
+    height: 57.6px;
+    /* border: 1px soild green; */
 }
 .nav-links{
     text-decoration: none;
@@ -182,7 +192,9 @@ body{
         right: 0;
         height: 100%;
         width: 100%;
-        transform: translateX(-100%);
+        transition: transform var(--animation-timing);
+        transform: translateX(100%);
+        
     }
 
     .primary-nav{
@@ -199,14 +211,24 @@ body{
         width: 16px;
         height: 18px;
     }
-    #nav{
-        margin-left: 1.375rem;
-        margin-right: 1.375rem;
-        justify-content: space-between;
+ 
+    .logo{
+        position: static;
     }
-
+    #nav{
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 9.57px;
+    }
     .hamburger-menu{
-        display: block;
+        --x-width:calc(var(--hamburger-height) * 1.41421356237); /* the length of the bar when its an X (hamburger menu height  * squareroot of 2) */
+        display: flex;
+        flex-direction: column;
+        gap: var(--bar-gap);
+        width: max-content;
+        z-index: 2;
+        cursor: pointer;
     }
 
     .hamburger-menu::before,
@@ -216,12 +238,114 @@ body{
         width: var(--bar-width);
         height: var(--bar-height);
         background-color: var(--foreground);
+        border-radius: 9999px;
+        transform-origin: left center;
+        transition: opacity var(--animation-timing), width var(--animation-timing),translate var(--animation-timing),rotate var(--animation-timing);
+       
     }
     
+    .hamburger-menu input{
+        appearance: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        pointer-events: none;
+    }
+
+    .hamburger-menu:has(input:checked)::before{
+        rotate: 45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / -2);
+       
+    }
+
+    .hamburger-menu:has(input:checked)::after{
+        rotate: -45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height)/2);
+        
+    }
+    .hamburger-menu input:checked{
+        opacity: 0;
+        width: 0;
+    }
+
+    .hamburger-menu:has(input:checked) + .primary-nav-wrapper{
+        transform: translateX(0);
+    }
 }
+
+/* mobile */
+@media (max-width:600px){
+    .logo{
+        width: 160px;
+        height: 46.97px;
+    }
+    #nav{
+        gap: 120px;
+        margin-left: 20px;
+        margin-top: 9.57px;
+    }
+}
+
 /* ------------------- */
 /*       hero          */
 /* ------------------- */
+
+/* hero top */
+.hero-top-container{
+border: 1px solid black;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 557.5px;
+margin-top: 70px;
+}
+/* scroll to contact btn */
+.scroll-btn{
+    position: relative;
+    border: 1px solid green;
+    width: 122.02px;
+    height: 122.05px;
+}
+.scroll-btn-arrow{
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    top: 41.17px;
+    left: 42.68px;
+}
+
+.rotate-text{
+    animation-name: rotate-circle;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate-circle {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  /* hero top image styles */
+  .hero-top-img{
+    width: 435px;
+    height: 71px;
+    position: relative;
+  }
+  .hero-top-img::after{
+    content: "The future is full of likes.";
+    text-align: left;
+    letter-spacing: 2.95px;
+    color: #F0F5F5;
+    opacity: 1;
+    font-size: 73.79px;
+    width: 590px;
+    height: 90px;
+    position: absolute;
+  }
 
 /* ------------------- */
 /*       about         */
@@ -245,7 +369,7 @@ body{
 
 /* ------------------- */
 /*       footer        */
-/* ------------------- */`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";AACA,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;AACxB;IACI,oBAAoB;;IAEpB,UAAU;;IAEV,4DAA4D;;IAE5D,iBAAiB;;IAEjB,YAAY;;IAEZ,4BAA4B;;IAE5B,gBAAgB;IAChB,mBAAmB;IACnB,cAAc;IACd,oBAAoB;IACpB,oBAAoB;;;AAGxB;;;AAGA,wBAAwB;AACxB,8BAA8B;AAC9B,wBAAwB;;AAExB,eAAe;AACf;;;IAGI,sBAAsB;AAC1B;;AAEA,kBAAkB;AAClB;;;;;;;;;IASI,SAAS;AACb;;AAEA,oBAAoB;AACpB;IACI,gBAAgB;IAChB,kBAAkB;IAClB,kBAAkB;IAClB,kBAAkB;IAClB,wBAAwB;AAC5B;;AAEA,oCAAoC;AACpC;;IAEI,eAAe;IACf,cAAc;AAClB;;AAEA,2CAA2C;AAC3C;;;;IAII,aAAa;AACjB;;AAEA;;EAEE,gBAAgB;AAClB;;AAEA,wDAAwD;AACxD;EACE;;;IAGE,qCAAqC;IACrC,uCAAuC;IACvC,sCAAsC;IACtC,gCAAgC;EAClC;AACF;;AAEA,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;AACxB;IACI,6BAA6B;IAC7B,2BAA2B;AAC/B;AACA;IACI,2BAA2B;IAC3B,aAAa;IACb,cAAc;IACd,mBAAmB;IACnB,sBAAsB;IACtB,qBAAqB;AACzB;AACA;IACI,eAAe;IACf,gBAAgB;;AAEpB;;AAEA;IACI,gBAAgB;IAChB,iBAAiB;AACrB;AACA;IACI,qBAAqB;IACrB,wBAAwB;IACxB,kBAAkB;IAClB,mCAAmC;IACnC,0BAA0B;IAC1B,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,cAAc;IACd,YAAY;IACZ,6BAA6B;IAC7B,UAAU;AACd;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,cAAc;IACd,YAAY;IACZ,4BAA4B;AAChC;;AAEA;IACI,eAAe;AACnB;;;AAGA;IACI,aAAa;AACjB;;AAEA,uBAAuB;AACvB;IACI;QACI,uBAAuB;QACvB,eAAe;QACf,MAAM;QACN,QAAQ;QACR,YAAY;QACZ,WAAW;QACX,4BAA4B;IAChC;;IAEA;QACI,sBAAsB;QACtB,SAAS;QACT,uBAAuB;QACvB,kBAAkB;IACtB;;IAEA;QACI,eAAe;IACnB;IACA;QACI,WAAW;QACX,YAAY;IAChB;IACA;QACI,qBAAqB;QACrB,sBAAsB;QACtB,8BAA8B;IAClC;;IAEA;QACI,cAAc;IAClB;;IAEA;;;QAGI,WAAW;QACX,uBAAuB;QACvB,yBAAyB;QACzB,mCAAmC;IACvC;;AAEJ;AACA,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;;AAExB,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;;AAExB,wBAAwB;AACxB,yBAAyB;AACzB,wBAAwB;;AAExB,wBAAwB;AACxB,yBAAyB;AACzB,wBAAwB;;AAExB,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;;AAExB,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;;AAExB,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB","sourcesContent":["\n/* ------------------- */\n/* Variables           */\n/* ------------------- */\n:root{\n    --main-color:#000000;\n\n    /* fonts */\n\n    --ff-trade-gothic:\"trade-gothic-next-compressed\", sans-serif;\n\n    /* font weights */\n\n    --fw-nav:400;\n\n    /* hamburger menu vaiables */\n\n    --bar-width:30px;\n    --bar-height:1.17px;\n    --bar-gap:11px;\n    --foreground:#606060;\n    --background:#FFFFFF;\n\n\n}\n\n\n/* ------------------- */\n/* CSS - Reset               */\n/* ------------------- */\n\n/* Box sizing */\n*,\n*::before,\n*::after {\n    box-sizing: border-box;\n}\n\n/* Reset margins */\nbody,\nh1,\nh2,\nh3,\nh4,\nh5,\np,\nfigure,\npicture {\n    margin: 0;\n}\n\n/* set up the body */\nbody {\n    line-height: 1.5;\n    min-height: 100dvh;\n    overflow-x: hidden;\n    position: relative;\n    color: var(--main-color);\n}\n\n/* make images easier to work with */\nimg,\npicture {\n    max-width: 100%;\n    display: block;\n}\n\n/* make form elements easier to work with */\ninput,\nbutton,\ntextarea,\nselect {\n    font: inherit;\n}\n\nul[role='list'],\nol[role='list'] {\n  list-style: none;\n}\n\n/* remove animations for people who've turned them off */\n@media (prefers-reduced-motion: reduce) {  \n  *,\n  *::before,\n  *::after {\n    animation-duration: 0.01ms !important;\n    animation-iteration-count: 1 !important;\n    transition-duration: 0.01ms !important;\n    scroll-behavior: auto !important;\n  }\n}\n\n/* ------------------- */\n/*       Nav           */\n/* ------------------- */\nbody{\n    /* border: 5px solid green; */\n    /* background-color: red; */\n}\n#nav{\n    /* border: 1px solid red; */\n    display: flex;\n    gap: 8.4375rem;\n    align-items: center;\n    margin-left: 3.9063rem;\n    margin-top: 2.0313rem;\n}\n.primary-nav-svg{\n    width: 8.8791px;\n    height: 9.0395px;\n    \n}\n\n.logo{\n    width: 196.188px;\n    height: 57.5965px;\n}\n.nav-links{\n    text-decoration: none;\n    color: var(--main-color);\n    font-style: normal;\n    font-family: var(--ff-trade-gothic);\n    font-weight: var(--fw-nav);\n    font-size: 1.25rem;\n}\n\n.primary-nav{\n    display: flex;\n    gap: 2.6875rem;\n    height: 100%;\n    /* border: 1px solid black; */\n    padding: 0;\n}\n\n.primary-nav-item{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 0.5938rem;\n    height: 100%;\n    /* border: 1px solid blue; */\n}\n\n.primary-nav-item:hover{\n    cursor: pointer;\n}\n\n\n.hamburger-menu{\n    display: none;\n}\n\n/* tablet and mobile  */\n@media (max-width:950px){\n    .primary-nav-wrapper{\n        background-color: white;\n        position: fixed;\n        top: 0;\n        right: 0;\n        height: 100%;\n        width: 100%;\n        transform: translateX(-100%);\n    }\n\n    .primary-nav{\n        flex-direction: column;\n        gap: 1rem;\n        align-items: flex-start;\n        padding-left: 1rem;\n    }\n\n    .nav-links{\n        font-size: 2rem;\n    }\n    .primary-nav-svg{\n        width: 16px;\n        height: 18px;\n    }\n    #nav{\n        margin-left: 1.375rem;\n        margin-right: 1.375rem;\n        justify-content: space-between;\n    }\n\n    .hamburger-menu{\n        display: block;\n    }\n\n    .hamburger-menu::before,\n    .hamburger-menu::after,\n    .hamburger-menu input{\n        content: \"\";\n        width: var(--bar-width);\n        height: var(--bar-height);\n        background-color: var(--foreground);\n    }\n    \n}\n/* ------------------- */\n/*       hero          */\n/* ------------------- */\n\n/* ------------------- */\n/*       about         */\n/* ------------------- */\n\n/* ------------------- */\n/*       service        */\n/* ------------------- */\n\n/* ------------------- */\n/*       topics         */\n/* ------------------- */\n\n/* ------------------- */\n/*       company       */\n/* ------------------- */\n\n/* ------------------- */\n/*       contact       */\n/* ------------------- */\n\n/* ------------------- */\n/*       footer        */\n/* ------------------- */"],"sourceRoot":""}]);
+/* ------------------- */`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"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","sourcesContent":["\n/* ------------------- */\n/* Variables           */\n/* ------------------- */\n:root{\n    --main-color:#000000;\n\n    /* fonts */\n\n    --ff-trade-gothic:\"trade-gothic-next-compressed\", sans-serif;\n\n    /* font weights */\n\n    --fw-nav:400;\n\n    /* hamburger menu vaiables */\n\n    --bar-width:30px;\n    --bar-height:1.17px;\n    --bar-gap:11.24px;\n    --foreground:#606060;\n    --background:#FFFFFF;\n    --animation-timing:350ms ease-in-out;\n    --hamburger-height: calc(var(--bar-height) * 3  + var(--bar-gap) * 2);\n\n\n}\n\n\n/* ------------------- */\n/* CSS - Reset               */\n/* ------------------- */\n\n/* Box sizing */\n*,\n*::before,\n*::after {\n    box-sizing: border-box;\n}\n\n/* Reset margins */\nbody,\nh1,\nh2,\nh3,\nh4,\nh5,\np,\nfigure,\npicture {\n    margin: 0;\n}\n\n/* set up the body */\nbody {\n    line-height: 1.5;\n    min-height: 100dvh;\n    overflow-x: hidden;\n    position: relative;\n    color: var(--main-color);\n    margin: 0;\n    padding: 0;\n}\n\n/* make images easier to work with */\nimg,\npicture {\n    max-width: 100%;\n    display: block;\n}\n\n/* make form elements easier to work with */\ninput,\nbutton,\ntextarea,\nselect {\n    font: inherit;\n}\n\nul[role='list'],\nol[role='list'] {\n  list-style: none;\n}\n\n/* remove animations for people who've turned them off */\n@media (prefers-reduced-motion: reduce) {  \n  *,\n  *::before,\n  *::after {\n    animation-duration: 0.01ms !important;\n    animation-iteration-count: 1 !important;\n    transition-duration: 0.01ms !important;\n    scroll-behavior: auto !important;\n  }\n}\n\n/* ------------------- */\n/*       Nav           */\n/* ------------------- */\nbody{\n    /* border: 5px solid green; */\n    /* background-color: red; */\n}\n#nav{\n    /* border: 1px solid red; */\n    display: flex;\n    \n    justify-content: center;\n    align-items: center;\n    margin-left: 61.93px;\n    margin-top: 34.38px;\n    position: relative;\n}\n.primary-nav-svg{\n    width: 8.8791px;\n    height: 9.0395px;\n    \n}\n\n.logo{\n    position: absolute;\n    top:4px;\n    left: 0;\n    width: 196.19px;\n    height: 57.6px;\n    /* border: 1px soild green; */\n}\n.nav-links{\n    text-decoration: none;\n    color: var(--main-color);\n    font-style: normal;\n    font-family: var(--ff-trade-gothic);\n    font-weight: var(--fw-nav);\n    font-size: 1.25rem;\n}\n\n.primary-nav{\n    display: flex;\n    gap: 2.6875rem;\n    height: 100%;\n    /* border: 1px solid black; */\n    padding: 0;\n}\n\n.primary-nav-item{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 0.5938rem;\n    height: 100%;\n    /* border: 1px solid blue; */\n}\n\n.primary-nav-item:hover{\n    cursor: pointer;\n}\n\n\n.hamburger-menu{\n    display: none;\n}\n\n/* tablet and mobile  */\n@media (max-width:950px){\n    .primary-nav-wrapper{\n        background-color: white;\n        position: fixed;\n        top: 0;\n        right: 0;\n        height: 100%;\n        width: 100%;\n        transition: transform var(--animation-timing);\n        transform: translateX(100%);\n        \n    }\n\n    .primary-nav{\n        flex-direction: column;\n        gap: 1rem;\n        align-items: flex-start;\n        padding-left: 1rem;\n    }\n\n    .nav-links{\n        font-size: 2rem;\n    }\n    .primary-nav-svg{\n        width: 16px;\n        height: 18px;\n    }\n \n    .logo{\n        position: static;\n    }\n    #nav{\n        justify-content: space-between;\n        margin-left: 20px;\n        margin-right: 20px;\n        margin-top: 9.57px;\n    }\n    .hamburger-menu{\n        --x-width:calc(var(--hamburger-height) * 1.41421356237); /* the length of the bar when its an X (hamburger menu height  * squareroot of 2) */\n        display: flex;\n        flex-direction: column;\n        gap: var(--bar-gap);\n        width: max-content;\n        z-index: 2;\n        cursor: pointer;\n    }\n\n    .hamburger-menu::before,\n    .hamburger-menu::after,\n    .hamburger-menu input{\n        content: \"\";\n        width: var(--bar-width);\n        height: var(--bar-height);\n        background-color: var(--foreground);\n        border-radius: 9999px;\n        transform-origin: left center;\n        transition: opacity var(--animation-timing), width var(--animation-timing),translate var(--animation-timing),rotate var(--animation-timing);\n       \n    }\n    \n    .hamburger-menu input{\n        appearance: none;\n        padding: 0;\n        margin: 0;\n        outline: none;\n        pointer-events: none;\n    }\n\n    .hamburger-menu:has(input:checked)::before{\n        rotate: 45deg;\n        width: var(--x-width);\n        translate: 0 calc(var(--bar-height) / -2);\n       \n    }\n\n    .hamburger-menu:has(input:checked)::after{\n        rotate: -45deg;\n        width: var(--x-width);\n        translate: 0 calc(var(--bar-height)/2);\n        \n    }\n    .hamburger-menu input:checked{\n        opacity: 0;\n        width: 0;\n    }\n\n    .hamburger-menu:has(input:checked) + .primary-nav-wrapper{\n        transform: translateX(0);\n    }\n}\n\n/* mobile */\n@media (max-width:600px){\n    .logo{\n        width: 160px;\n        height: 46.97px;\n    }\n    #nav{\n        gap: 120px;\n        margin-left: 20px;\n        margin-top: 9.57px;\n    }\n}\n\n/* ------------------- */\n/*       hero          */\n/* ------------------- */\n\n/* hero top */\n.hero-top-container{\nborder: 1px solid black;\ndisplay: flex;\njustify-content: center;\nalign-items: center;\ngap: 557.5px;\nmargin-top: 70px;\n}\n/* scroll to contact btn */\n.scroll-btn{\n    position: relative;\n    border: 1px solid green;\n    width: 122.02px;\n    height: 122.05px;\n}\n.scroll-btn-arrow{\n    width: 37px;\n    height: 37px;\n    position: absolute;\n    top: 41.17px;\n    left: 42.68px;\n}\n\n.rotate-text{\n    animation-name: rotate-circle;\n    animation-duration: 10s;\n    animation-timing-function: linear;\n    animation-iteration-count: infinite;\n}\n\n@keyframes rotate-circle {\n    to {\n      transform: rotate(1turn);\n    }\n  }\n\n  /* hero top image styles */\n  .hero-top-img{\n    width: 435px;\n    height: 71px;\n    position: relative;\n  }\n  .hero-top-img::after{\n    content: \"The future is full of likes.\";\n    text-align: left;\n    letter-spacing: 2.95px;\n    color: #F0F5F5;\n    opacity: 1;\n    font-size: 73.79px;\n    width: 590px;\n    height: 90px;\n    position: absolute;\n  }\n\n/* ------------------- */\n/*       about         */\n/* ------------------- */\n\n/* ------------------- */\n/*       service        */\n/* ------------------- */\n\n/* ------------------- */\n/*       topics         */\n/* ------------------- */\n\n/* ------------------- */\n/*       company       */\n/* ------------------- */\n\n/* ------------------- */\n/*       contact       */\n/* ------------------- */\n\n/* ------------------- */\n/*       footer        */\n/* ------------------- */"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -782,4 +906,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main97971c037591c248d001.js.map
+//# sourceMappingURL=main47bb39247e1cb19697ef.js.map

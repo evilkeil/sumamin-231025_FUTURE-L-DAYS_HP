@@ -171,7 +171,7 @@ body{
         width: 100%;
         transition: transform var(--animation-timing);
         transform: translateX(100%);
-        
+        z-index: 4;
     }
 
     .primary-nav{
@@ -204,7 +204,7 @@ body{
         flex-direction: column;
         gap: var(--bar-gap);
         width: max-content;
-        z-index: 2;
+        z-index: 5;
         cursor: pointer;
     }
 
@@ -269,7 +269,97 @@ body{
 /*       hero          */
 /* ------------------- */
 
+/* hero top */
+.hero-top-container{
+/* border: 1px solid black; */
+display: flex;
+justify-content: space-between;
+align-items: center;
+/* gap: 557.5px; */
+margin-top: 70px;
+margin-left: 240px;
+margin-right: 85px;
+}
+/* scroll to contact btn */
+.scroll-btn{
+    position: relative;
+    border: 1px solid green;
+    width: 122.02px;
+    /* height: 122.05px; */
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+}
+.scroll-btn-arrow{
+    width: 37px;
+    height: 37px;
+    /* position: absolute;
+    top: 41.17px;
+    left: 42.68px; */
+    z-index: 2;
+}
 
+.rotate-text{
+    position: absolute;
+    inset: 0;
+    animation-name: rotate-circle;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate-circle {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  /* hero top image styles */
+  .hero-top-img{
+    /* border: 1px solid red; */
+    width: 435px;
+    height: 71px;
+    position: relative;
+  }
+  .hero-top-img::after{
+    content: "The future is full of likes.";
+    text-align: left;
+    letter-spacing: 2.95px;
+    color: #F0F5F5;
+    opacity: 1;
+    font-size: 73.79px;
+    width: max-content;
+    height: 90px;
+    /* white-space: nowrap; */
+    z-index: -1;
+    position: absolute;
+    top: 26px;
+   
+  }
+  @media (max-width:950px){
+    .hero-top-img{
+        /* border: 1px solid red; */
+        width: 207.54px;
+        height: 33.84px;
+        
+      }
+      .hero-top-img::after{
+        font-size: 35.17px;
+        height: 43px;
+      }
+      .hero-top-container{
+        margin-top: 0px;
+        margin-left: 19.97px;
+        margin-right: 18.39px;
+        }
+        .scroll-btn{
+            width: 73.21px;
+        }
+        .scroll-btn-arrow{
+            width: 22px;
+            height: 22.35px;
+        }
+  }
 
 /* ------------------- */
 /*       about         */
