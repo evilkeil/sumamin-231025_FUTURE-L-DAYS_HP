@@ -16,11 +16,11 @@
     /* hamburger menu vaiables */
 
     --bar-width:30px;
-    --bar-height:1px;
-    --bar-gap:11px;
+    --bar-height:1.17px;
+    --bar-gap:11.24px;
     --foreground:#606060;
     --background:#FFFFFF;
-    --animation-timing:200ms ease-in-out;
+    --animation-timing:350ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3  + var(--bar-gap) * 2);
 
 
@@ -161,7 +161,9 @@ body{
         right: 0;
         height: 100%;
         width: 100%;
-        transform: translateX(-100%);
+        transition: transform var(--animation-timing);
+        transform: translateX(100%);
+        border: 1px solid red;
     }
 
     .primary-nav{
@@ -231,6 +233,10 @@ body{
     .hamburger-menu input:checked{
         opacity: 0;
         width: 0;
+    }
+
+    .hamburger-menu:has(input:checked) + .primary-nav-wrapper{
+        transform: translateX(0);
     }
 }
 /* ------------------- */
