@@ -13,6 +13,15 @@
 
     --fw-nav:400;
 
+    /* hamburger menu vaiables */
+
+    --bar-width:30px;
+    --bar-height:1px;
+    --bar-gap:11px;
+    --foreground:#606060;
+    --background:#FFFFFF;
+    --animation-timing:200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3  + var(--bar-gap) * 2);
 
 
 }
@@ -88,6 +97,7 @@ ol[role='list'] {
 /* ------------------- */
 body{
     /* border: 5px solid green; */
+    /* background-color: red; */
 }
 #nav{
     /* border: 1px solid red; */
@@ -133,8 +143,95 @@ body{
     /* border: 1px solid blue; */
 }
 
-.primary-nav-item{
+.primary-nav-item:hover{
     cursor: pointer;
+}
+
+
+.hamburger-menu{
+    display: none;
+}
+
+/* tablet and mobile  */
+@media (max-width:950px){
+    .primary-nav-wrapper{
+        background-color: white;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        transform: translateX(-100%);
+    }
+
+    .primary-nav{
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+        padding-left: 1rem;
+    }
+
+    .nav-links{
+        font-size: 2rem;
+    }
+    .primary-nav-svg{
+        width: 16px;
+        height: 18px;
+    }
+    #nav{
+        margin-left: 1.375rem;
+        margin-right: 1.375rem;
+        justify-content: space-between;
+    }
+
+    .hamburger-menu{
+        --x-width:calc(var(--hamburger-height) * 1.41421356237); /* the length of the bar when its an X (hamburger menu height  * squareroot of 2) */
+        display: flex;
+        flex-direction: column;
+        gap: var(--bar-gap);
+        width: max-content;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .hamburger-menu::before,
+    .hamburger-menu::after,
+    .hamburger-menu input{
+        content: "";
+        width: var(--bar-width);
+        height: var(--bar-height);
+        background-color: var(--foreground);
+        border-radius: 9999px;
+        transform-origin: left center;
+        transition: opacity var(--animation-timing), width var(--animation-timing),translate var(--animation-timing),rotate var(--animation-timing);
+       
+    }
+    
+    .hamburger-menu input{
+        appearance: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        pointer-events: none;
+    }
+
+    .hamburger-menu:has(input:checked)::before{
+        rotate: 45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / -2);
+       
+    }
+
+    .hamburger-menu:has(input:checked)::after{
+        rotate: -45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height)/2);
+        
+    }
+    .hamburger-menu input:checked{
+        opacity: 0;
+        width: 0;
+    }
 }
 /* ------------------- */
 /*       hero          */

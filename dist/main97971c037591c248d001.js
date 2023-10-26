@@ -22,6 +22,31 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `
+/* ------------------- */
+/* Variables           */
+/* ------------------- */
+:root{
+    --main-color:#000000;
+
+    /* fonts */
+
+    --ff-trade-gothic:"trade-gothic-next-compressed", sans-serif;
+
+    /* font weights */
+
+    --fw-nav:400;
+
+    /* hamburger menu vaiables */
+
+    --bar-width:30px;
+    --bar-height:1.17px;
+    --bar-gap:11px;
+    --foreground:#606060;
+    --background:#FFFFFF;
+
+
+}
+
 
 /* ------------------- */
 /* CSS - Reset               */
@@ -51,9 +76,9 @@ picture {
 body {
     line-height: 1.5;
     min-height: 100dvh;
-    font-size: 15px;
     overflow-x: hidden;
     position: relative;
+    color: var(--main-color);
 }
 
 /* make images easier to work with */
@@ -89,19 +114,111 @@ ol[role='list'] {
 }
 
 /* ------------------- */
-/* Variables           */
-/* ------------------- */
-
-
-/* ------------------- */
 /*       Nav           */
 /* ------------------- */
-
+body{
+    /* border: 5px solid green; */
+    /* background-color: red; */
+}
+#nav{
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 8.4375rem;
+    align-items: center;
+    margin-left: 3.9063rem;
+    margin-top: 2.0313rem;
+}
 .primary-nav-svg{
-    width: 8.8px;
-    height: 9px;
+    width: 8.8791px;
+    height: 9.0395px;
+    
 }
 
+.logo{
+    width: 196.188px;
+    height: 57.5965px;
+}
+.nav-links{
+    text-decoration: none;
+    color: var(--main-color);
+    font-style: normal;
+    font-family: var(--ff-trade-gothic);
+    font-weight: var(--fw-nav);
+    font-size: 1.25rem;
+}
+
+.primary-nav{
+    display: flex;
+    gap: 2.6875rem;
+    height: 100%;
+    /* border: 1px solid black; */
+    padding: 0;
+}
+
+.primary-nav-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5938rem;
+    height: 100%;
+    /* border: 1px solid blue; */
+}
+
+.primary-nav-item:hover{
+    cursor: pointer;
+}
+
+
+.hamburger-menu{
+    display: none;
+}
+
+/* tablet and mobile  */
+@media (max-width:950px){
+    .primary-nav-wrapper{
+        background-color: white;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        transform: translateX(-100%);
+    }
+
+    .primary-nav{
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+        padding-left: 1rem;
+    }
+
+    .nav-links{
+        font-size: 2rem;
+    }
+    .primary-nav-svg{
+        width: 16px;
+        height: 18px;
+    }
+    #nav{
+        margin-left: 1.375rem;
+        margin-right: 1.375rem;
+        justify-content: space-between;
+    }
+
+    .hamburger-menu{
+        display: block;
+    }
+
+    .hamburger-menu::before,
+    .hamburger-menu::after,
+    .hamburger-menu input{
+        content: "";
+        width: var(--bar-width);
+        height: var(--bar-height);
+        background-color: var(--foreground);
+    }
+    
+}
 /* ------------------- */
 /*       hero          */
 /* ------------------- */
@@ -128,7 +245,7 @@ ol[role='list'] {
 
 /* ------------------- */
 /*       footer        */
-/* ------------------- */`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";;AAEA,wBAAwB;AACxB,8BAA8B;AAC9B,wBAAwB;;AAExB,eAAe;AACf;;;IAGI,sBAAsB;AAC1B;;AAEA,kBAAkB;AAClB;;;;;;;;;IASI,SAAS;AACb;;AAEA,oBAAoB;AACpB;IACI,gBAAgB;IAChB,kBAAkB;IAClB,eAAe;IACf,kBAAkB;IAClB,kBAAkB;AACtB;;AAEA,oCAAoC;AACpC;;IAEI,eAAe;IACf,cAAc;AAClB;;AAEA,2CAA2C;AAC3C;;;;IAII,aAAa;AACjB;;AAEA;;EAEE,gBAAgB;AAClB;;AAEA,wDAAwD;AACxD;EACE;;;IAGE,qCAAqC;IACrC,uCAAuC;IACvC,sCAAsC;IACtC,gCAAgC;EAClC;AACF;;AAEA,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;;;AAGxB,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;;AAExB;IACI,YAAY;IACZ,WAAW;AACf;;AAEA,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;;AAExB,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;;AAExB,wBAAwB;AACxB,yBAAyB;AACzB,wBAAwB;;AAExB,wBAAwB;AACxB,yBAAyB;AACzB,wBAAwB;;AAExB,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;;AAExB,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;;AAExB,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB","sourcesContent":["\n\n/* ------------------- */\n/* CSS - Reset               */\n/* ------------------- */\n\n/* Box sizing */\n*,\n*::before,\n*::after {\n    box-sizing: border-box;\n}\n\n/* Reset margins */\nbody,\nh1,\nh2,\nh3,\nh4,\nh5,\np,\nfigure,\npicture {\n    margin: 0;\n}\n\n/* set up the body */\nbody {\n    line-height: 1.5;\n    min-height: 100dvh;\n    font-size: 15px;\n    overflow-x: hidden;\n    position: relative;\n}\n\n/* make images easier to work with */\nimg,\npicture {\n    max-width: 100%;\n    display: block;\n}\n\n/* make form elements easier to work with */\ninput,\nbutton,\ntextarea,\nselect {\n    font: inherit;\n}\n\nul[role='list'],\nol[role='list'] {\n  list-style: none;\n}\n\n/* remove animations for people who've turned them off */\n@media (prefers-reduced-motion: reduce) {  \n  *,\n  *::before,\n  *::after {\n    animation-duration: 0.01ms !important;\n    animation-iteration-count: 1 !important;\n    transition-duration: 0.01ms !important;\n    scroll-behavior: auto !important;\n  }\n}\n\n/* ------------------- */\n/* Variables           */\n/* ------------------- */\n\n\n/* ------------------- */\n/*       Nav           */\n/* ------------------- */\n\n.primary-nav-svg{\n    width: 8.8px;\n    height: 9px;\n}\n\n/* ------------------- */\n/*       hero          */\n/* ------------------- */\n\n/* ------------------- */\n/*       about         */\n/* ------------------- */\n\n/* ------------------- */\n/*       service        */\n/* ------------------- */\n\n/* ------------------- */\n/*       topics         */\n/* ------------------- */\n\n/* ------------------- */\n/*       company       */\n/* ------------------- */\n\n/* ------------------- */\n/*       contact       */\n/* ------------------- */\n\n/* ------------------- */\n/*       footer        */\n/* ------------------- */"],"sourceRoot":""}]);
+/* ------------------- */`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";AACA,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;AACxB;IACI,oBAAoB;;IAEpB,UAAU;;IAEV,4DAA4D;;IAE5D,iBAAiB;;IAEjB,YAAY;;IAEZ,4BAA4B;;IAE5B,gBAAgB;IAChB,mBAAmB;IACnB,cAAc;IACd,oBAAoB;IACpB,oBAAoB;;;AAGxB;;;AAGA,wBAAwB;AACxB,8BAA8B;AAC9B,wBAAwB;;AAExB,eAAe;AACf;;;IAGI,sBAAsB;AAC1B;;AAEA,kBAAkB;AAClB;;;;;;;;;IASI,SAAS;AACb;;AAEA,oBAAoB;AACpB;IACI,gBAAgB;IAChB,kBAAkB;IAClB,kBAAkB;IAClB,kBAAkB;IAClB,wBAAwB;AAC5B;;AAEA,oCAAoC;AACpC;;IAEI,eAAe;IACf,cAAc;AAClB;;AAEA,2CAA2C;AAC3C;;;;IAII,aAAa;AACjB;;AAEA;;EAEE,gBAAgB;AAClB;;AAEA,wDAAwD;AACxD;EACE;;;IAGE,qCAAqC;IACrC,uCAAuC;IACvC,sCAAsC;IACtC,gCAAgC;EAClC;AACF;;AAEA,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;AACxB;IACI,6BAA6B;IAC7B,2BAA2B;AAC/B;AACA;IACI,2BAA2B;IAC3B,aAAa;IACb,cAAc;IACd,mBAAmB;IACnB,sBAAsB;IACtB,qBAAqB;AACzB;AACA;IACI,eAAe;IACf,gBAAgB;;AAEpB;;AAEA;IACI,gBAAgB;IAChB,iBAAiB;AACrB;AACA;IACI,qBAAqB;IACrB,wBAAwB;IACxB,kBAAkB;IAClB,mCAAmC;IACnC,0BAA0B;IAC1B,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,cAAc;IACd,YAAY;IACZ,6BAA6B;IAC7B,UAAU;AACd;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,cAAc;IACd,YAAY;IACZ,4BAA4B;AAChC;;AAEA;IACI,eAAe;AACnB;;;AAGA;IACI,aAAa;AACjB;;AAEA,uBAAuB;AACvB;IACI;QACI,uBAAuB;QACvB,eAAe;QACf,MAAM;QACN,QAAQ;QACR,YAAY;QACZ,WAAW;QACX,4BAA4B;IAChC;;IAEA;QACI,sBAAsB;QACtB,SAAS;QACT,uBAAuB;QACvB,kBAAkB;IACtB;;IAEA;QACI,eAAe;IACnB;IACA;QACI,WAAW;QACX,YAAY;IAChB;IACA;QACI,qBAAqB;QACrB,sBAAsB;QACtB,8BAA8B;IAClC;;IAEA;QACI,cAAc;IAClB;;IAEA;;;QAGI,WAAW;QACX,uBAAuB;QACvB,yBAAyB;QACzB,mCAAmC;IACvC;;AAEJ;AACA,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;;AAExB,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;;AAExB,wBAAwB;AACxB,yBAAyB;AACzB,wBAAwB;;AAExB,wBAAwB;AACxB,yBAAyB;AACzB,wBAAwB;;AAExB,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;;AAExB,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB;;AAExB,wBAAwB;AACxB,wBAAwB;AACxB,wBAAwB","sourcesContent":["\n/* ------------------- */\n/* Variables           */\n/* ------------------- */\n:root{\n    --main-color:#000000;\n\n    /* fonts */\n\n    --ff-trade-gothic:\"trade-gothic-next-compressed\", sans-serif;\n\n    /* font weights */\n\n    --fw-nav:400;\n\n    /* hamburger menu vaiables */\n\n    --bar-width:30px;\n    --bar-height:1.17px;\n    --bar-gap:11px;\n    --foreground:#606060;\n    --background:#FFFFFF;\n\n\n}\n\n\n/* ------------------- */\n/* CSS - Reset               */\n/* ------------------- */\n\n/* Box sizing */\n*,\n*::before,\n*::after {\n    box-sizing: border-box;\n}\n\n/* Reset margins */\nbody,\nh1,\nh2,\nh3,\nh4,\nh5,\np,\nfigure,\npicture {\n    margin: 0;\n}\n\n/* set up the body */\nbody {\n    line-height: 1.5;\n    min-height: 100dvh;\n    overflow-x: hidden;\n    position: relative;\n    color: var(--main-color);\n}\n\n/* make images easier to work with */\nimg,\npicture {\n    max-width: 100%;\n    display: block;\n}\n\n/* make form elements easier to work with */\ninput,\nbutton,\ntextarea,\nselect {\n    font: inherit;\n}\n\nul[role='list'],\nol[role='list'] {\n  list-style: none;\n}\n\n/* remove animations for people who've turned them off */\n@media (prefers-reduced-motion: reduce) {  \n  *,\n  *::before,\n  *::after {\n    animation-duration: 0.01ms !important;\n    animation-iteration-count: 1 !important;\n    transition-duration: 0.01ms !important;\n    scroll-behavior: auto !important;\n  }\n}\n\n/* ------------------- */\n/*       Nav           */\n/* ------------------- */\nbody{\n    /* border: 5px solid green; */\n    /* background-color: red; */\n}\n#nav{\n    /* border: 1px solid red; */\n    display: flex;\n    gap: 8.4375rem;\n    align-items: center;\n    margin-left: 3.9063rem;\n    margin-top: 2.0313rem;\n}\n.primary-nav-svg{\n    width: 8.8791px;\n    height: 9.0395px;\n    \n}\n\n.logo{\n    width: 196.188px;\n    height: 57.5965px;\n}\n.nav-links{\n    text-decoration: none;\n    color: var(--main-color);\n    font-style: normal;\n    font-family: var(--ff-trade-gothic);\n    font-weight: var(--fw-nav);\n    font-size: 1.25rem;\n}\n\n.primary-nav{\n    display: flex;\n    gap: 2.6875rem;\n    height: 100%;\n    /* border: 1px solid black; */\n    padding: 0;\n}\n\n.primary-nav-item{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 0.5938rem;\n    height: 100%;\n    /* border: 1px solid blue; */\n}\n\n.primary-nav-item:hover{\n    cursor: pointer;\n}\n\n\n.hamburger-menu{\n    display: none;\n}\n\n/* tablet and mobile  */\n@media (max-width:950px){\n    .primary-nav-wrapper{\n        background-color: white;\n        position: fixed;\n        top: 0;\n        right: 0;\n        height: 100%;\n        width: 100%;\n        transform: translateX(-100%);\n    }\n\n    .primary-nav{\n        flex-direction: column;\n        gap: 1rem;\n        align-items: flex-start;\n        padding-left: 1rem;\n    }\n\n    .nav-links{\n        font-size: 2rem;\n    }\n    .primary-nav-svg{\n        width: 16px;\n        height: 18px;\n    }\n    #nav{\n        margin-left: 1.375rem;\n        margin-right: 1.375rem;\n        justify-content: space-between;\n    }\n\n    .hamburger-menu{\n        display: block;\n    }\n\n    .hamburger-menu::before,\n    .hamburger-menu::after,\n    .hamburger-menu input{\n        content: \"\";\n        width: var(--bar-width);\n        height: var(--bar-height);\n        background-color: var(--foreground);\n    }\n    \n}\n/* ------------------- */\n/*       hero          */\n/* ------------------- */\n\n/* ------------------- */\n/*       about         */\n/* ------------------- */\n\n/* ------------------- */\n/*       service        */\n/* ------------------- */\n\n/* ------------------- */\n/*       topics         */\n/* ------------------- */\n\n/* ------------------- */\n/*       company       */\n/* ------------------- */\n\n/* ------------------- */\n/*       contact       */\n/* ------------------- */\n\n/* ------------------- */\n/*       footer        */\n/* ------------------- */"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -665,4 +782,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=maina10c4bda4d911c36d39f.js.map
+//# sourceMappingURL=main97971c037591c248d001.js.map
