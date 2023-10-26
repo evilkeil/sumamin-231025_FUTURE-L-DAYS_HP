@@ -58,6 +58,8 @@ body {
     overflow-x: hidden;
     position: relative;
     color: var(--main-color);
+    margin: 0;
+    padding: 0;
 }
 
 /* make images easier to work with */
@@ -102,10 +104,12 @@ body{
 #nav{
     /* border: 1px solid red; */
     display: flex;
-    gap: 8.4375rem;
+    
+    justify-content: center;
     align-items: center;
-    margin-left: 3.9063rem;
-    margin-top: 2.0313rem;
+    margin-left: 61.93px;
+    margin-top: 34.38px;
+    position: relative;
 }
 .primary-nav-svg{
     width: 8.8791px;
@@ -114,8 +118,12 @@ body{
 }
 
 .logo{
-    width: 196.188px;
-    height: 57.5965px;
+    position: absolute;
+    top:4px;
+    left: 0;
+    width: 196.19px;
+    height: 57.6px;
+    /* border: 1px soild green; */
 }
 .nav-links{
     text-decoration: none;
@@ -163,7 +171,7 @@ body{
         width: 100%;
         transition: transform var(--animation-timing);
         transform: translateX(100%);
-        border: 1px solid red;
+        
     }
 
     .primary-nav{
@@ -180,12 +188,16 @@ body{
         width: 16px;
         height: 18px;
     }
-    #nav{
-        margin-left: 1.375rem;
-        margin-right: 1.375rem;
-        justify-content: space-between;
+ 
+    .logo{
+        position: static;
     }
-
+    #nav{
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 9.57px;
+    }
     .hamburger-menu{
         --x-width:calc(var(--hamburger-height) * 1.41421356237); /* the length of the bar when its an X (hamburger menu height  * squareroot of 2) */
         display: flex;
@@ -239,9 +251,25 @@ body{
         transform: translateX(0);
     }
 }
+
+/* mobile */
+@media (max-width:600px){
+    .logo{
+        width: 160px;
+        height: 46.97px;
+    }
+    #nav{
+        gap: 120px;
+        margin-left: 20px;
+        margin-top: 9.57px;
+    }
+}
+
 /* ------------------- */
 /*       hero          */
 /* ------------------- */
+
+
 
 /* ------------------- */
 /*       about         */
