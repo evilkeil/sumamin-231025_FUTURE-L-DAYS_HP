@@ -279,6 +279,7 @@ align-items: center;
 margin-top: 70px;
 margin-left: 240px;
 margin-right: 85px;
+margin-bottom: 69px;
 }
 /* scroll to contact btn */
 .scroll-btn{
@@ -374,6 +375,19 @@ margin-right: 85px;
         height: 17px;
     }
   }
+
+
+/* hero Key visual */
+
+.kv{
+    width: 1010.23px;
+    height: 568.26px;
+}
+
+.hero-carousel{
+    display: flex;
+    overflow-x: hidden;
+}
 /* ------------------- */
 /*       about         */
 /* ------------------- */
