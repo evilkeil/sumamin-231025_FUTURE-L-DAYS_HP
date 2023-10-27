@@ -7,8 +7,9 @@
 
     /* fonts */
 
-    --ff-trade-gothic:"trade-gothic-next-compressed", sans-serif;
-
+    --ff-trade-gothic:trade-gothic-next-compressed, sans-serif;
+  
+    
     /* font weights */
 
     --fw-nav:400;
@@ -433,6 +434,63 @@ margin-bottom: 69px;
 /* ------------------- */
 /*       about         */
 /* ------------------- */
+
+#about{
+    height: 100vh;
+    
+    color: black;
+}
+.about-container{
+    background-color: #F0F5F5;
+    border:1px solid black;
+    height: 100%;
+    /* width: 110%; */
+    overflow-y: hidden;
+    border-radius:40% ;
+}
+
+/* about top styles */
+.about-top{
+    border: 1px solid red;
+    margin-top: 3rem;
+    height: 347px;
+    grid-column: 2/3;
+    display: flex;
+}
+
+/* top right */
+.about-top_left{
+    border: 1px solid green;
+    display: grid;
+    place-items: center;
+    letter-spacing: 0px;
+}
+.about-top-title_eng{
+    color: #FFFFFF;
+    font-size: 130px;
+    white-space: nowrap; 
+    z-index: 2;
+    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.about-top-title_jp{
+    z-index: 3;
+    position: absolute;
+    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0px;
+    font-size: 30px;
+}
+.about-top_right p{
+    font-size: 22px;
+    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
 
 /* ------------------- */
 /*       service        */

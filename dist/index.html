@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.typekit.net/znv6mla.css">
     <title><%= htmlWebpackPlugin.options.title %></title>
-<script defer src="main1087a6bcb9a021436e30.js"></script></head>
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'oha8hqo',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
+<script defer src="main8f962673a80271475f68.js"></script></head>
 <body>
     <section id="nav">
         <div class="logo-wrapper">
@@ -37,15 +46,33 @@
                 </a>
             </div>
         </div>
-        <div class="hero-carousel">
-            <img src="kv_01-min.jpg" alt="" class="kv">
-            <img src="kv_02-min.jpg" alt="" class="kv">
-            <img src="kv_03-min.jpg" alt="" class="kv">
+        <div class="hero-carousel main-grid">
+            <img src="kv_01-min.jpg" alt="" class="kv kv1">
+            <img src="kv_02-min.jpg" alt="" class="kv kv2">
+            <img src="kv_03-min.jpg" alt="" class="kv kv3">
         </div>
-
-
+        <div class="company-name main-grid">
+            <h3>FUTURE L DAYS INC.</h3>
+        </div>
     </section>
-    <section id="about"></section>
+    <section id="about">
+        <div class="about-container main-grid">
+            <div class="about-top">
+                
+                <div class="about-top_left">
+                    <h1 class="about-top-title_eng">WE DO</h1>
+                    <h2 class="about-top-title_jp">私たちについて</h2>
+                </div>
+                <div class="about-top_right">
+                    <p class="about-top-description about-top-description_one ">未来は好きで溢れてる</p>
+                    <p class="about-top-description about-top-description_two ">私たちは、業界を超えて様々な パートナーシップを結び、 共にプロジェクト成功への道を切り拓きます</p>
+                    <p class="about-top-description about-top-description_three "> PR戦略から企業様タイアップまで、 多岐にわたるサポートを提供いたします。</p>
+                </div>
+            </div>
+            <div class="about-center"></div>
+            <div class="about-contact-btn"></div>
+        </div>
+    </section>
     <section id="service"></section>
     <section id="topics"></section>
     <section id="company"></section>
