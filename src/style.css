@@ -588,6 +588,19 @@ margin-bottom: 69px;
 
  }
 
+
+ /* about bottom */
+ .about-bottom{
+    grid-column: 2/3;
+    margin-top: 169px;
+ }
+ .about-btn{
+    border: none;
+    background-color: transparent;
+ }
+.about-btn:hover{
+    cursor: pointer;
+ }
 /* ------------------- */
 /*       service        */
 /* ------------------- */
