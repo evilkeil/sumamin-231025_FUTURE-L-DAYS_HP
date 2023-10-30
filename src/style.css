@@ -413,7 +413,7 @@ margin-bottom: 69px;
 
 /* hero Key visual */
 .carousel-container{
-    margin: 0 auto;
+    /* margin: 0 auto; */
     height: 568.26px;
     overflow: hidden;
     position: relative;
@@ -422,13 +422,16 @@ margin-bottom: 69px;
     display: flex;
     height: 100%;
     gap: 4px;
+  
 }
 .slide{
     min-width: 1010.23px;
+    transform: translateX(505px);
 }
 .kv{
     height: 100%;
     width: 100%;
+ 
 
 }
 /* company name */
