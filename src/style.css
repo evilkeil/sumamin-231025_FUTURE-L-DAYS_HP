@@ -412,37 +412,25 @@ margin-bottom: 69px;
 
 
 /* hero Key visual */
-
-.kv{
-    width: 1010px;
+.carousel-container{
+    margin: 0 auto;
     height: 568.26px;
-    /* height: 568.26px; */
+    overflow: hidden;
+    position: relative;
+}
+.slides{
+    display: flex;
     height: 100%;
-    object-fit: cover;
-}
-
-.hero-carousel{
-    display: grid;
-    grid-template-columns: 1fr 1010px 1fr;
     gap: 4px;
-    height: 568.26px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-   
 }
-.kv1{
-    grid-column:2;
-    grid-row: 1;
+.slide{
+    min-width: 1010.23px;
 }
-.kv2{
-    grid-column: 1;
-    grid-row: 1;
-}
-.kv3{
-    grid-column: 3;
-    grid-row: 1;
-}
+.kv{
+    height: 100%;
+    width: 100%;
 
+}
 /* company name */
 .company-name{
     font-size: 2.4125rem; /* 38.6 px */
