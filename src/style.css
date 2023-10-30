@@ -109,15 +109,13 @@ ol[role='list'] {
     } 
 }
 
+
+
 /* ------------------- */
 /*       decor-images     */
 /* ------------------- */
 
 /* loop in company name section */
-.hero-carousel{
-    /* position: relative; */
-    
-}
 
 .loop-one{
     width: 1543px;
@@ -125,7 +123,7 @@ ol[role='list'] {
     position: absolute;
     top: 817px;
     left: 500px;
-    z-index: 3;
+   z-index: 2;
 }
 
 /* ------------------- */
@@ -444,6 +442,7 @@ margin-bottom: 69px;
     grid-column: 2/3;
     justify-self: end;
     font-family: var(--ff-trade-gothic);
+    z-index: 3;
 }
 
 /* ------------------- */
@@ -504,6 +503,7 @@ margin-bottom: 69px;
     font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;
     font-weight: 300;
     font-style: normal;
+    z-index: 3;
 }
 .about-top_right {
     display: flex;
@@ -541,6 +541,7 @@ margin-bottom: 69px;
     left: 50%;
     top:50%;
     margin: -100px;
+    z-index: 3;
 
 }
 
