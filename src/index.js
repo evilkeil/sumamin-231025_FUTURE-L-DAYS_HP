@@ -11,12 +11,16 @@ const interval = 3000;
 const firstClone = slides[0].cloneNode(true);
 const lastClone = slides[slides.length - 1].cloneNode(true);
 
+const secondClone = slides[1].cloneNode(true);
+
+
 firstClone.id = 'first-clone';
 lastClone.id = 'last-clone';
 
 
 slide.append(firstClone);
 slide.prepend(lastClone);
+slide.append(secondClone); //add this clone so that when the carosel reaches the end we wont see it resetting
 
 
 const slidesWidth = slides[index].clientWidth;
