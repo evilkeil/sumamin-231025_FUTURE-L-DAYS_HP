@@ -25,7 +25,7 @@ slide.append(secondClone); //add this clone so that when the carosel reaches the
 
 const slidesWidth = slides[index].clientWidth;
 
-const getSlides = ()=> document.querySelectorAll('.slide');
+// const getSlides = ()=> document.querySelectorAll('.slide');
 
 slide.style.transform= `translateX(${-slidesWidth * index}px)`;
 
@@ -38,7 +38,7 @@ const startSlide = () => {
 }
 
 slide.addEventListener('transitionend',()=>{
-    slides = getSlides();
+    slides = document.querySelectorAll('.slide');
     if(slides[index].id === firstClone.id){
         slide.style.transition= `none`;
         index = 1;
