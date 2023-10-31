@@ -436,19 +436,41 @@ margin-bottom: 69px;
 /* hero Key visual */
 .carousel-container{
     /* margin: 0 auto; */
-    height: 568.26px;
+    /* height: 568.26px; */
     overflow: hidden;
     position: relative;
 }
 .slides{
+    /* height: 568.26px; */
     display: flex;
     height: 100%;
     gap: 4px;
+    margin-left: 24%;
   
 }
 .slide{
-    min-width: 1010.23px;
-    transform: translateX(505px);
+   min-width: 1010.23px;
+    /* transform: translateX(50%); */
+   
+}
+
+.slide1{
+    background: url(./assets/images/hero-img/kv_01-min.jpg);
+    background-size:cover;
+    background-position: center;
+
+}
+.slide2{
+    background: url(./assets/images/hero-img/kv_02-min.jpg);
+    background-size:cover;
+    background-position: center;
+
+}
+.slide3{
+    background: url(./assets/images/hero-img/kv_03-min.jpg);
+    background-size:cover;
+    background-position: center;
+
 }
 .kv{
     height: 100%;
@@ -458,6 +480,24 @@ margin-bottom: 69px;
 }
 
 @media (max-width:950px){
+    .slide{
+        width: 320px !important;
+        height: 180px !important;
+        transform: translateX(33px);
+    }
+    .carousel-container{
+        /* margin: 0 auto; */
+        /* height: 180px; */
+       
+    }
+    .slides{
+        /* height: 568.26px; */
+        display: flex;
+        height: 100%;
+        gap: 4px;
+        margin-left: 0;
+      
+    }
     
 }
 /* company name */
@@ -473,22 +513,28 @@ margin-bottom: 69px;
     z-index: 3;
 }
 
+@media (max-width:600px){
+    .company-name{
+        font-size: 1.5rem; /* 24 px */
+        letter-spacing: -0.77px;
+    }
+}
+
 /* ------------------- */
 /*       about         */
 /* ------------------- */
 
 #about{
     height: 100%;
-    
     color: black;
 }
 .about-container{
     background-color: #F0F5F5;
     /* border:1px solid black; */
     height: 100%;
-    /* width: 110%; */
+    /* width: 100%; */
     overflow-y: hidden;
-    border-radius:40% ;
+    /* border-radius:40% ; */
 }
 
 /* about top styles */
@@ -498,6 +544,13 @@ margin-bottom: 69px;
     height: 347px;
     grid-column: 2/3;
     display: flex;
+}
+@media (max-width:600px){
+    .about-top{
+        flex-direction: column;
+    }
+   
+    
 }
 
 /* top right */
@@ -538,6 +591,29 @@ margin-bottom: 69px;
     flex-direction: column;
     justify-content: space-between;
     width: 370px;
+}
+
+@media (max-width:600px){
+    .about-top-title_eng{
+        color: #FFFFFF;
+        font-size: 80px;
+        
+    }
+    
+    .about-top-title_jp{
+        font-size: 22px;
+    }
+    .about-top_right p{
+        font-size: 16px; 
+    }
+    .about-top_right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 270px;
+        text-align: center;
+        gap: 50px;
+    }
 }
 
 /* about center */
@@ -632,7 +708,66 @@ margin-bottom: 69px;
 
  }
 
-
+ @media (max-width:600px){
+    .about-us-list{
+        width: 272.5px;
+    }
+    .about-us-list-item{
+        width: 92px;
+        
+        margin: -46px;
+        z-index: 3;
+    
+    }
+    .sub-item{
+        font-size: 14px;
+        width: 92px;
+    
+     }
+     .center{
+        border: none;
+        font-size: 46px;
+        width: 272.5px;
+        margin: -136.255px;
+        
+     }
+     .center p{
+        width: 152px;
+        height: 114px;
+        font-size: 19px;
+     }
+     .item-1{
+        transform: rotate(22.5deg) translate(136.255px) rotate(-22.5deg);
+    }
+    .item-2 {
+        transform: rotate( 67.5deg) translate(136.255px) rotate(-67.5deg);
+    }
+    
+    .item-3 {
+        transform: rotate(112.5deg) translate(136.255px) rotate(-112.5deg);
+    }
+    
+    .item-4 {
+        transform: rotate(157.5deg) translate(136.255px) rotate(-157.5deg);
+    }
+    
+    .item-5 {
+        transform: rotate(202.5deg) translate(136.255px) rotate(-202.5deg);
+    }
+    
+    .item-6 {
+        transform: rotate(247.5deg) translate(136.255px)rotate(-247.5deg);
+    }
+    
+    .item-7 {
+        transform: rotate(292.5deg) translate(136.255px) rotate(-292.5deg);
+    }
+    
+    .item-8 {
+        transform: rotate(337.5deg) translate(136.255px) rotate(-337.5deg);
+    }
+    
+}
  /* about bottom */
  .about-bottom{
     grid-column: 2/3;
@@ -644,6 +779,15 @@ margin-bottom: 69px;
  }
 .about-btn:hover{
     cursor: pointer;
+ }
+
+ @media (max-width:600px){
+    .about-bottom{
+        margin-top: 75px;
+        width: 158.11px;
+        height: 64.69px;
+     }
+     
  }
 
 /* ------------------- */
