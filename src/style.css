@@ -372,7 +372,7 @@ margin-bottom: 69px;
   /* hero top image styles */
   .hero-top-img{
     /* border: 1px solid red; */
-    width: 435px;
+    width: 30.208vw;
     height: 71px;
     position: relative;
   }
@@ -396,7 +396,7 @@ margin-bottom: 69px;
   @media (max-width:950px){
     .hero-top-img{
         /* border: 1px solid red; */
-        width: 207.54px;
+        width: 207px;
         height: 33.84px;
         
       }
