@@ -8,10 +8,8 @@
     /* fonts */
 
     --ff-trade-gothic:trade-gothic-next-compressed, sans-serif;
-  
     
     /* font weights */
-
     --fw-nav:400;
 
     /* hamburger menu vaiables */
@@ -436,7 +434,7 @@ margin-bottom: 69px;
 /* hero Key visual */
 .carousel-container{
     /* margin: 0 auto; */
-    /* height: 568.26px; */
+    height: 568.26px;
     overflow: hidden;
     position: relative;
 }
@@ -487,7 +485,7 @@ margin-bottom: 69px;
     }
     .carousel-container{
         /* margin: 0 auto; */
-        /* height: 180px; */
+        height: 180px;
        
     }
     .slides{
@@ -773,26 +771,31 @@ margin-bottom: 69px;
     grid-column: 2/3;
     margin-top: 169px;
  }
- .about-btn{
+
+ .contact-btn{
     border: none;
     background-color: transparent;
  }
-.about-btn:hover{
+.contact-btn:hover{
     cursor: pointer;
  }
 
  @media (max-width:600px){
     .about-bottom{
         margin-top: 75px;
+     }
+     .contact-btn-wrapper{
         width: 158.11px;
         height: 64.69px;
      }
-     
  }
 
 /* ------------------- */
 /*       service        */
 /* ------------------- */
+
+
+
 
 /* ------------------- */
 /*       topics         */

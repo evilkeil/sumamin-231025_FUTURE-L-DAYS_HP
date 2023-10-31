@@ -22,9 +22,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./assets/images/transparentBkg/transparentBkg2x.png */ "./src/assets/images/transparentBkg/transparentBkg2x.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./assets/images/decor/loop1.png */ "./src/assets/images/decor/loop1.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ./assets/images/hero-img/kv_01-min.jpg */ "./src/assets/images/hero-img/kv_01-min.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ./assets/images/hero-img/kv_02-min.jpg */ "./src/assets/images/hero-img/kv_02-min.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(/*! ./assets/images/hero-img/kv_03-min.jpg */ "./src/assets/images/hero-img/kv_03-min.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_4___ = new URL(/* asset import */ __webpack_require__(/*! ./assets/images/transparentBkg/transparentBkg2x.png */ "./src/assets/images/transparentBkg/transparentBkg2x.png"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
+var ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_3___);
+var ___CSS_LOADER_URL_REPLACEMENT_4___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_4___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `
 /* ------------------- */
@@ -36,10 +44,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `
     /* fonts */
 
     --ff-trade-gothic:trade-gothic-next-compressed, sans-serif;
-  
     
     /* font weights */
-
     --fw-nav:400;
 
     /* hamburger menu vaiables */
@@ -84,11 +90,14 @@ picture {
 body {
     line-height: 1.5;
     min-height: 100dvh;
+    max-width: 100%;
     overflow-x: hidden;
     position: relative;
     color: var(--main-color);
     margin: 0;
     padding: 0;
+
+   
 }
 
 /* make images easier to work with */
@@ -145,21 +154,40 @@ ol[role='list'] {
 
 /* loop in company name section */
 
+#about{
+    position: relative;
+    overflow-x: hidden;
+
+}
+.loop-one_wrapper{
+  
+    position: absolute;
+    inset: 0;
+    left: 600px;
+    top: -1000px;
+    margin: auto;
+    z-index: 2;
+    overflow: hidden;
+    width: 1543px;
+    height: 702px;
+    background: transparent url(${___CSS_LOADER_URL_REPLACEMENT_0___}) 0% 0% no-repeat padding-box;
+}
+/* 
 .loop-one{
     width: 1543px;
     height: 702px;
-    position: absolute;
-    top: 817px;
-    left: 500px;
-   z-index: 2;
-}
+    grid-column: 2/4;
+    width: 1543px;
+height: 702px;
+} */
 
 /* ------------------- */
 /*       Nav           */
 /* ------------------- */
 body{
-    /* border: 5px solid green; */
+    border: 5px solid green;
     /* background-color: red; */
+    max-width: 100vw;
 }
 #nav{
     /* border: 1px solid red; */
@@ -378,7 +406,7 @@ margin-bottom: 69px;
   /* hero top image styles */
   .hero-top-img{
     /* border: 1px solid red; */
-    width: 435px;
+    width: 30.208vw;
     height: 71px;
     position: relative;
   }
@@ -388,7 +416,8 @@ margin-bottom: 69px;
     letter-spacing: 2.95px;
     color: #F0F5F5;
     opacity: 1;
-    font-size: 73.79px;
+    font-size: 73.79px; 
+    font-size: clamp(1.563rem, 5.124vw, 4.612rem);
     width: max-content;
     height: 90px;
     /* white-space: nowrap; */
@@ -397,10 +426,11 @@ margin-bottom: 69px;
     top: 26px;
    
   }
+  /* mobile */
   @media (max-width:950px){
     .hero-top-img{
         /* border: 1px solid red; */
-        width: 207.54px;
+        width: 207px;
         height: 33.84px;
         
       }
@@ -445,20 +475,64 @@ margin-bottom: 69px;
     position: relative;
 }
 .slides{
+    /* height: 568.26px; */
     display: flex;
     height: 100%;
     gap: 4px;
+    margin-left: 24%;
   
 }
 .slide{
-    min-width: 1010.23px;
-    transform: translateX(505px);
+   min-width: 1010.23px;
+    /* transform: translateX(50%); */
+   
+}
+
+.slide1{
+    background: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+    background-size:cover;
+    background-position: center;
+
+}
+.slide2{
+    background: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
+    background-size:cover;
+    background-position: center;
+
+}
+.slide3{
+    background: url(${___CSS_LOADER_URL_REPLACEMENT_3___});
+    background-size:cover;
+    background-position: center;
+
 }
 .kv{
     height: 100%;
     width: 100%;
  
 
+}
+
+@media (max-width:950px){
+    .slide{
+        width: 320px !important;
+        height: 180px !important;
+        transform: translateX(33px);
+    }
+    .carousel-container{
+        /* margin: 0 auto; */
+        height: 180px;
+       
+    }
+    .slides{
+        /* height: 568.26px; */
+        display: flex;
+        height: 100%;
+        gap: 4px;
+        margin-left: 0;
+      
+    }
+    
 }
 /* company name */
 .company-name{
@@ -473,22 +547,28 @@ margin-bottom: 69px;
     z-index: 3;
 }
 
+@media (max-width:600px){
+    .company-name{
+        font-size: 1.5rem; /* 24 px */
+        letter-spacing: -0.77px;
+    }
+}
+
 /* ------------------- */
 /*       about         */
 /* ------------------- */
 
 #about{
     height: 100%;
-    
     color: black;
 }
 .about-container{
     background-color: #F0F5F5;
     /* border:1px solid black; */
     height: 100%;
-    /* width: 110%; */
+    /* width: 100%; */
     overflow-y: hidden;
-    border-radius:40% ;
+    /* border-radius:40% ; */
 }
 
 /* about top styles */
@@ -498,6 +578,13 @@ margin-bottom: 69px;
     height: 347px;
     grid-column: 2/3;
     display: flex;
+}
+@media (max-width:600px){
+    .about-top{
+        flex-direction: column;
+    }
+   
+    
 }
 
 /* top right */
@@ -540,6 +627,29 @@ margin-bottom: 69px;
     width: 370px;
 }
 
+@media (max-width:600px){
+    .about-top-title_eng{
+        color: #FFFFFF;
+        font-size: 80px;
+        
+    }
+    
+    .about-top-title_jp{
+        font-size: 22px;
+    }
+    .about-top_right p{
+        font-size: 16px; 
+    }
+    .about-top_right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 270px;
+        text-align: center;
+        gap: 50px;
+    }
+}
+
 /* about center */
 .about-center{
     grid-column: 2/3;
@@ -573,37 +683,37 @@ margin-bottom: 69px;
 
 }
 
-.deg25{
-    transform: rotate(25deg) translate(330px) rotate(-25deg);
+.item-1{
+    transform: rotate(22.5deg) translate(330px) rotate(-22.5deg);
 }
 
 
-.deg65 {
-    transform: rotate(65deg) translateX(330px) rotate(-65deg);
+.item-2 {
+    transform: rotate( 67.5deg) translateX(330px) rotate(-67.5deg);
 }
 
-.deg115 {
-    transform: rotate(115deg) translateX(330px) rotate(-115deg);
+.item-3 {
+    transform: rotate(112.5deg) translateX(330px) rotate(-112.5deg);
 }
 
-.deg155 {
-    transform: rotate(155deg) translateX(330px) rotate(-155deg);
+.item-4 {
+    transform: rotate(157.5deg) translateX(330px) rotate(-157.5deg);
 }
 
-.deg205 {
-    transform: rotate(205deg) translateX(330px) rotate(-205deg);
+.item-5 {
+    transform: rotate(202.5deg) translateX(330px) rotate(-202.5deg);
 }
 
-.deg245 {
-    transform: rotate(245deg) translateX(330px) rotate(-245deg);
+.item-6 {
+    transform: rotate(247.5deg) translateX(330px) rotate(-247.5deg);
 }
 
-.deg295 {
-    transform: rotate(295deg) translateX(330px) rotate(-295deg);
+.item-7 {
+    transform: rotate(292.5deg) translateX(330px) rotate(-292.5deg);
 }
 
-.deg335 {
-    transform: rotate(335deg) translateX(330px) rotate(-335deg);
+.item-8 {
+    transform: rotate(337.5deg) translateX(330px) rotate(-337.5deg);
 }
 .center{
     border: none;
@@ -627,28 +737,101 @@ margin-bottom: 69px;
     font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;
     font-weight: 300;
     font-style: normal;
-    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_4___});
     background-size: cover;
 
  }
 
-
+ @media (max-width:600px){
+    .about-us-list{
+        width: 272.5px;
+    }
+    .about-us-list-item{
+        width: 92px;
+        
+        margin: -46px;
+        z-index: 3;
+    
+    }
+    .sub-item{
+        font-size: 14px;
+        width: 92px;
+    
+     }
+     .center{
+        border: none;
+        font-size: 46px;
+        width: 272.5px;
+        margin: -136.255px;
+        
+     }
+     .center p{
+        width: 152px;
+        height: 114px;
+        font-size: 19px;
+     }
+     .item-1{
+        transform: rotate(22.5deg) translate(136.255px) rotate(-22.5deg);
+    }
+    .item-2 {
+        transform: rotate( 67.5deg) translate(136.255px) rotate(-67.5deg);
+    }
+    
+    .item-3 {
+        transform: rotate(112.5deg) translate(136.255px) rotate(-112.5deg);
+    }
+    
+    .item-4 {
+        transform: rotate(157.5deg) translate(136.255px) rotate(-157.5deg);
+    }
+    
+    .item-5 {
+        transform: rotate(202.5deg) translate(136.255px) rotate(-202.5deg);
+    }
+    
+    .item-6 {
+        transform: rotate(247.5deg) translate(136.255px)rotate(-247.5deg);
+    }
+    
+    .item-7 {
+        transform: rotate(292.5deg) translate(136.255px) rotate(-292.5deg);
+    }
+    
+    .item-8 {
+        transform: rotate(337.5deg) translate(136.255px) rotate(-337.5deg);
+    }
+    
+}
  /* about bottom */
  .about-bottom{
     grid-column: 2/3;
     margin-top: 169px;
  }
- .about-btn{
+
+ .contact-btn{
     border: none;
     background-color: transparent;
  }
-.about-btn:hover{
+.contact-btn:hover{
     cursor: pointer;
+ }
+
+ @media (max-width:600px){
+    .about-bottom{
+        margin-top: 75px;
+     }
+     .contact-btn-wrapper{
+        width: 158.11px;
+        height: 64.69px;
+     }
  }
 
 /* ------------------- */
 /*       service        */
 /* ------------------- */
+
+
+
 
 /* ------------------- */
 /*       topics         */
@@ -664,7 +847,7 @@ margin-bottom: 69px;
 
 /* ------------------- */
 /*       footer        */
-/* ------------------- */`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"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","sourcesContent":["\n/* ------------------- */\n/* Variables           */\n/* ------------------- */\n:root{\n    --main-color:#000000;\n\n    /* fonts */\n\n    --ff-trade-gothic:trade-gothic-next-compressed, sans-serif;\n  \n    \n    /* font weights */\n\n    --fw-nav:400;\n\n    /* hamburger menu vaiables */\n\n    --bar-width:30px;\n    --bar-height:1.17px;\n    --bar-gap:11.24px;\n    --foreground:#606060;\n    --background:#FFFFFF;\n    --animation-timing:350ms ease-in-out;\n    --hamburger-height: calc(var(--bar-height) * 3  + var(--bar-gap) * 2);\n\n\n}\n\n\n/* ------------------- */\n/* CSS - Reset               */\n/* ------------------- */\n\n/* Box sizing */\n*,\n*::before,\n*::after {\n    box-sizing: border-box;\n}\n\n/* Reset margins */\nbody,\nh1,\nh2,\nh3,\nh4,\nh5,\np,\nfigure,\npicture {\n    margin: 0;\n}\n\n/* set up the body */\nbody {\n    line-height: 1.5;\n    min-height: 100dvh;\n    overflow-x: hidden;\n    position: relative;\n    color: var(--main-color);\n    margin: 0;\n    padding: 0;\n}\n\n/* make images easier to work with */\nimg,\npicture {\n    max-width: 100%;\n    display: block;\n}\n\n/* make form elements easier to work with */\ninput,\nbutton,\ntextarea,\nselect {\n    font: inherit;\n}\n\nul[role='list'],\nol[role='list'] {\n  list-style: none;\n}\n\n/* remove animations for people who've turned them off */\n@media (prefers-reduced-motion: reduce) {  \n  *,\n  *::before,\n  *::after {\n    animation-duration: 0.01ms !important;\n    animation-iteration-count: 1 !important;\n    transition-duration: 0.01ms !important;\n    scroll-behavior: auto !important;\n  }\n}\n/* ------------------- */\n/*       UTILITY CLASSES          */\n/* ------------------- */\n.main-grid{\n    display: grid;\n    grid-template-columns: 1fr 70% 1fr;\n    justify-items: center;\n}\n@media (max-width:600px){\n    .main-grid{\n        display: grid;\n        grid-template-columns: 1fr 85% 1fr;\n    } \n}\n\n\n\n/* ------------------- */\n/*       decor-images     */\n/* ------------------- */\n\n/* loop in company name section */\n\n.loop-one{\n    width: 1543px;\n    height: 702px;\n    position: absolute;\n    top: 817px;\n    left: 500px;\n   z-index: 2;\n}\n\n/* ------------------- */\n/*       Nav           */\n/* ------------------- */\nbody{\n    /* border: 5px solid green; */\n    /* background-color: red; */\n}\n#nav{\n    /* border: 1px solid red; */\n    display: flex;\n    \n    justify-content: center;\n    align-items: center;\n    margin-left: 61.93px;\n    margin-top: 34.38px;\n    position: relative;\n}\n.primary-nav-svg{\n    width: 8.8791px;\n    height: 9.0395px;\n    \n}\n\n.logo{\n    position: absolute;\n    top:4px;\n    left: 0;\n    width: 196.19px;\n    height: 57.6px;\n    /* border: 1px soild green; */\n}\n.nav-links{\n    text-decoration: none;\n    color: var(--main-color);\n    font-style: normal;\n    font-family: var(--ff-trade-gothic);\n    font-weight: var(--fw-nav);\n    font-size: 1.25rem;\n}\n\n.primary-nav{\n    display: flex;\n    gap: 2.6875rem;\n    height: 100%;\n    /* border: 1px solid black; */\n    padding: 0;\n}\n\n.primary-nav-item{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 0.5938rem;\n    height: 100%;\n    /* border: 1px solid blue; */\n}\n\n.primary-nav-item:hover{\n    cursor: pointer;\n}\n\n\n.hamburger-menu{\n    display: none;\n}\n\n/* tablet and mobile  */\n@media (max-width:950px){\n    .primary-nav-wrapper{\n        background-color: white;\n        position: fixed;\n        top: 0;\n        right: 0;\n        height: 100%;\n        width: 100%;\n        transition: transform var(--animation-timing);\n        transform: translateX(100%);\n        z-index: 4;\n    }\n\n    .primary-nav{\n        flex-direction: column;\n        gap: 1rem;\n        align-items: flex-start;\n        padding-left: 1rem;\n    }\n\n    .nav-links{\n        font-size: 2rem;\n    }\n    .primary-nav-svg{\n        width: 16px;\n        height: 18px;\n    }\n \n    .logo{\n        position: static;\n    }\n    #nav{\n        justify-content: space-between;\n        margin-left: 20px;\n        margin-right: 20px;\n        margin-top: 9.57px;\n    }\n    .hamburger-menu{\n        --x-width:calc(var(--hamburger-height) * 1.41421356237); /* the length of the bar when its an X (hamburger menu height  * squareroot of 2) */\n        display: flex;\n        flex-direction: column;\n        gap: var(--bar-gap);\n        width: max-content;\n        z-index: 5;\n        cursor: pointer;\n    }\n\n    .hamburger-menu::before,\n    .hamburger-menu::after,\n    .hamburger-menu input{\n        content: \"\";\n        width: var(--bar-width);\n        height: var(--bar-height);\n        background-color: var(--foreground);\n        border-radius: 9999px;\n        transform-origin: left center;\n        transition: opacity var(--animation-timing), width var(--animation-timing),translate var(--animation-timing),rotate var(--animation-timing);\n       \n    }\n    \n    .hamburger-menu input{\n        appearance: none;\n        padding: 0;\n        margin: 0;\n        outline: none;\n        pointer-events: none;\n    }\n\n    .hamburger-menu:has(input:checked)::before{\n        rotate: 45deg;\n        width: var(--x-width);\n        translate: 0 calc(var(--bar-height) / -2);\n       \n    }\n\n    .hamburger-menu:has(input:checked)::after{\n        rotate: -45deg;\n        width: var(--x-width);\n        translate: 0 calc(var(--bar-height)/2);\n        \n    }\n    .hamburger-menu input:checked{\n        opacity: 0;\n        width: 0;\n    }\n\n    .hamburger-menu:has(input:checked) + .primary-nav-wrapper{\n        transform: translateX(0);\n    }\n}\n\n/* mobile */\n@media (max-width:600px){\n    .logo{\n        width: 160px;\n        height: 46.97px;\n    }\n    #nav{\n        gap: 120px;\n        margin-left: 20px;\n        margin-top: 9.57px;\n    }\n}\n\n/* ------------------- */\n/*       hero          */\n/* ------------------- */\n\n/* hero top */\n.hero-top-container{\n/* border: 1px solid black; */\ndisplay: flex;\njustify-content: space-between;\nalign-items: center;\n/* gap: 557.5px; */\nmargin-top: 70px;\nmargin-left: 240px;\nmargin-right: 85px;\nmargin-bottom: 69px;\n}\n/* scroll to contact btn */\n.scroll-btn{\n    position: relative;\n    /* border: 1px solid green; */\n    width: 122.02px;\n    /* height: 122.05px; */\n    aspect-ratio: 1;\n    display: grid;\n    place-items: center;\n}\n.scroll-btn-arrow{\n    width: 37px;\n    height: 37px;\n    /* position: absolute;\n    top: 41.17px;\n    left: 42.68px; */\n    z-index: 2;\n}\n\n.rotate-text{\n    position: absolute;\n    inset: 0;\n    animation-name: rotate-circle;\n    animation-duration: 10s;\n    animation-timing-function: linear;\n    animation-iteration-count: infinite;\n}\n\n@keyframes rotate-circle {\n    to {\n      transform: rotate(1turn);\n    }\n  }\n\n  /* hero top image styles */\n  .hero-top-img{\n    /* border: 1px solid red; */\n    width: 435px;\n    height: 71px;\n    position: relative;\n  }\n  .hero-top-img::after{\n    content: \"The future is full of likes.\";\n    text-align: left;\n    letter-spacing: 2.95px;\n    color: #F0F5F5;\n    opacity: 1;\n    font-size: 73.79px;\n    width: max-content;\n    height: 90px;\n    /* white-space: nowrap; */\n    z-index: -1;\n    position: absolute;\n    top: 26px;\n   \n  }\n  @media (max-width:950px){\n    .hero-top-img{\n        /* border: 1px solid red; */\n        width: 207.54px;\n        height: 33.84px;\n        \n      }\n      .hero-top-img::after{\n        font-size: 35.17px;\n        height: 43px;\n        letter-spacing: 1.41px;\n      }\n      .hero-top-container{\n        margin-top: 0px;\n        margin-left: 19.97px;\n        margin-right: 18.39px;\n        }\n        .scroll-btn{\n            width: 73.21px;\n        }\n        .scroll-btn-arrow{\n            width: 22px;\n            height: 22.35px;\n        }\n  }\n  @media (max-width:600px){\n    .hero-top-img::after{\n        font-size: 25px;\n        height: 43px;\n      }\n    .scroll-btn{\n        width: 60px;\n    }\n    .scroll-btn-arrow{\n        width: 16px;\n        height: 17px;\n    }\n  }\n\n\n/* hero Key visual */\n.carousel-container{\n    /* margin: 0 auto; */\n    height: 568.26px;\n    overflow: hidden;\n    position: relative;\n}\n.slides{\n    display: flex;\n    height: 100%;\n    gap: 4px;\n  \n}\n.slide{\n    min-width: 1010.23px;\n    transform: translateX(505px);\n}\n.kv{\n    height: 100%;\n    width: 100%;\n \n\n}\n/* company name */\n.company-name{\n    font-size: 2.4125rem; /* 38.6 px */\n    letter-spacing: -0.77px;\n}\n\n.company-name h3{\n    grid-column: 2/3;\n    justify-self: end;\n    font-family: var(--ff-trade-gothic);\n    z-index: 3;\n}\n\n/* ------------------- */\n/*       about         */\n/* ------------------- */\n\n#about{\n    height: 100%;\n    \n    color: black;\n}\n.about-container{\n    background-color: #F0F5F5;\n    /* border:1px solid black; */\n    height: 100%;\n    /* width: 110%; */\n    overflow-y: hidden;\n    border-radius:40% ;\n}\n\n/* about top styles */\n.about-top{\n    /* border: 1px solid red; */\n    margin-top: 3rem;\n    height: 347px;\n    grid-column: 2/3;\n    display: flex;\n}\n\n/* top right */\n.about-top_left{\n    /* border: 1px solid green; */\n    display: grid;\n    place-items: center;\n    letter-spacing: 0px;\n}\n.about-top-title_eng{\n    color: #FFFFFF;\n    font-size: 130px;\n    white-space: nowrap; \n    z-index: 2;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n}\n\n.about-top-title_jp{\n    z-index: 3;\n    position: absolute;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    letter-spacing: 0px;\n    font-size: 30px;\n}\n.about-top_right p{\n    font-size: 22px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    z-index: 3;\n}\n.about-top_right {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    width: 370px;\n}\n\n/* about center */\n.about-center{\n    grid-column: 2/3;\n    margin-top: 155px;\n    display: grid;\n    place-items: center;\n}\n\n\n.about-us-list{\n    width: 660px;\n    aspect-ratio: 1;\n    border-radius: 50%;\n    position: relative;\n}\n\n.about-us-list-item{\n    width: 200px;\n    aspect-ratio: 1;\n    border-radius: 50%;\n    /* border: 1px solid red; */\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    position: absolute;\n    left: 50%;\n    top:50%;\n    margin: -100px;\n    z-index: 3;\n\n}\n\n.deg25{\n    transform: rotate(25deg) translate(330px) rotate(-25deg);\n}\n\n\n.deg65 {\n    transform: rotate(65deg) translateX(330px) rotate(-65deg);\n}\n\n.deg115 {\n    transform: rotate(115deg) translateX(330px) rotate(-115deg);\n}\n\n.deg155 {\n    transform: rotate(155deg) translateX(330px) rotate(-155deg);\n}\n\n.deg205 {\n    transform: rotate(205deg) translateX(330px) rotate(-205deg);\n}\n\n.deg245 {\n    transform: rotate(245deg) translateX(330px) rotate(-245deg);\n}\n\n.deg295 {\n    transform: rotate(295deg) translateX(330px) rotate(-295deg);\n}\n\n.deg335 {\n    transform: rotate(335deg) translateX(330px) rotate(-335deg);\n}\n.center{\n    border: none;\n    font-size: 46px;\n    width: 660px;\n    aspect-ratio: 1;\n    margin: -330px;\n    letter-spacing: 0px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    background-color: #FFFFFF;\n }\n .center p{\n    width: 368px;\n    height: 277px;\n }\n\n .sub-item{\n    font-size: 24px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    background-image: url(./assets/images/transparentBkg/transparentBkg2x.png);\n    background-size: cover;\n\n }\n\n\n /* about bottom */\n .about-bottom{\n    grid-column: 2/3;\n    margin-top: 169px;\n }\n .about-btn{\n    border: none;\n    background-color: transparent;\n }\n.about-btn:hover{\n    cursor: pointer;\n }\n\n/* ------------------- */\n/*       service        */\n/* ------------------- */\n\n/* ------------------- */\n/*       topics         */\n/* ------------------- */\n\n/* ------------------- */\n/*       company       */\n/* ------------------- */\n\n/* ------------------- */\n/*       contact       */\n/* ------------------- */\n\n/* ------------------- */\n/*       footer        */\n/* ------------------- */"],"sourceRoot":""}]);
+/* ------------------- */`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"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","sourcesContent":["\n/* ------------------- */\n/* Variables           */\n/* ------------------- */\n:root{\n    --main-color:#000000;\n\n    /* fonts */\n\n    --ff-trade-gothic:trade-gothic-next-compressed, sans-serif;\n    \n    /* font weights */\n    --fw-nav:400;\n\n    /* hamburger menu vaiables */\n\n    --bar-width:30px;\n    --bar-height:1.17px;\n    --bar-gap:11.24px;\n    --foreground:#606060;\n    --background:#FFFFFF;\n    --animation-timing:350ms ease-in-out;\n    --hamburger-height: calc(var(--bar-height) * 3  + var(--bar-gap) * 2);\n\n\n}\n\n\n/* ------------------- */\n/* CSS - Reset               */\n/* ------------------- */\n\n/* Box sizing */\n*,\n*::before,\n*::after {\n    box-sizing: border-box;\n}\n\n/* Reset margins */\nbody,\nh1,\nh2,\nh3,\nh4,\nh5,\np,\nfigure,\npicture {\n    margin: 0;\n}\n\n/* set up the body */\nbody {\n    line-height: 1.5;\n    min-height: 100dvh;\n    max-width: 100%;\n    overflow-x: hidden;\n    position: relative;\n    color: var(--main-color);\n    margin: 0;\n    padding: 0;\n\n   \n}\n\n/* make images easier to work with */\nimg,\npicture {\n    max-width: 100%;\n    display: block;\n}\n\n/* make form elements easier to work with */\ninput,\nbutton,\ntextarea,\nselect {\n    font: inherit;\n}\n\nul[role='list'],\nol[role='list'] {\n  list-style: none;\n}\n\n/* remove animations for people who've turned them off */\n@media (prefers-reduced-motion: reduce) {  \n  *,\n  *::before,\n  *::after {\n    animation-duration: 0.01ms !important;\n    animation-iteration-count: 1 !important;\n    transition-duration: 0.01ms !important;\n    scroll-behavior: auto !important;\n  }\n}\n/* ------------------- */\n/*       UTILITY CLASSES          */\n/* ------------------- */\n.main-grid{\n    display: grid;\n    grid-template-columns: 1fr 70% 1fr;\n    justify-items: center;\n}\n@media (max-width:600px){\n    .main-grid{\n        display: grid;\n        grid-template-columns: 1fr 85% 1fr;\n    } \n}\n\n\n\n/* ------------------- */\n/*       decor-images     */\n/* ------------------- */\n\n/* loop in company name section */\n\n#about{\n    position: relative;\n    overflow-x: hidden;\n\n}\n.loop-one_wrapper{\n  \n    position: absolute;\n    inset: 0;\n    left: 600px;\n    top: -1000px;\n    margin: auto;\n    z-index: 2;\n    overflow: hidden;\n    width: 1543px;\n    height: 702px;\n    background: transparent url('./assets/images/decor/loop1.png') 0% 0% no-repeat padding-box;\n}\n/* \n.loop-one{\n    width: 1543px;\n    height: 702px;\n    grid-column: 2/4;\n    width: 1543px;\nheight: 702px;\n} */\n\n/* ------------------- */\n/*       Nav           */\n/* ------------------- */\nbody{\n    border: 5px solid green;\n    /* background-color: red; */\n    max-width: 100vw;\n}\n#nav{\n    /* border: 1px solid red; */\n    display: flex;\n    \n    justify-content: center;\n    align-items: center;\n    margin-left: 61.93px;\n    margin-top: 34.38px;\n    position: relative;\n}\n.primary-nav-svg{\n    width: 8.8791px;\n    height: 9.0395px;\n    \n}\n\n.logo{\n    position: absolute;\n    top:4px;\n    left: 0;\n    width: 196.19px;\n    height: 57.6px;\n    /* border: 1px soild green; */\n}\n.nav-links{\n    text-decoration: none;\n    color: var(--main-color);\n    font-style: normal;\n    font-family: var(--ff-trade-gothic);\n    font-weight: var(--fw-nav);\n    font-size: 1.25rem;\n}\n\n.primary-nav{\n    display: flex;\n    gap: 2.6875rem;\n    height: 100%;\n    /* border: 1px solid black; */\n    padding: 0;\n}\n\n.primary-nav-item{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 0.5938rem;\n    height: 100%;\n    /* border: 1px solid blue; */\n}\n\n.primary-nav-item:hover{\n    cursor: pointer;\n}\n\n\n.hamburger-menu{\n    display: none;\n}\n\n/* tablet and mobile  */\n@media (max-width:950px){\n    .primary-nav-wrapper{\n        background-color: white;\n        position: fixed;\n        top: 0;\n        right: 0;\n        height: 100%;\n        width: 100%;\n        transition: transform var(--animation-timing);\n        transform: translateX(100%);\n        z-index: 4;\n    }\n\n    .primary-nav{\n        flex-direction: column;\n        gap: 1rem;\n        align-items: flex-start;\n        padding-left: 1rem;\n    }\n\n    .nav-links{\n        font-size: 2rem;\n    }\n    .primary-nav-svg{\n        width: 16px;\n        height: 18px;\n    }\n \n    .logo{\n        position: static;\n    }\n    #nav{\n        justify-content: space-between;\n        margin-left: 20px;\n        margin-right: 20px;\n        margin-top: 9.57px;\n    }\n    .hamburger-menu{\n        --x-width:calc(var(--hamburger-height) * 1.41421356237); /* the length of the bar when its an X (hamburger menu height  * squareroot of 2) */\n        display: flex;\n        flex-direction: column;\n        gap: var(--bar-gap);\n        width: max-content;\n        z-index: 5;\n        cursor: pointer;\n    }\n\n    .hamburger-menu::before,\n    .hamburger-menu::after,\n    .hamburger-menu input{\n        content: \"\";\n        width: var(--bar-width);\n        height: var(--bar-height);\n        background-color: var(--foreground);\n        border-radius: 9999px;\n        transform-origin: left center;\n        transition: opacity var(--animation-timing), width var(--animation-timing),translate var(--animation-timing),rotate var(--animation-timing);\n       \n    }\n    \n    .hamburger-menu input{\n        appearance: none;\n        padding: 0;\n        margin: 0;\n        outline: none;\n        pointer-events: none;\n    }\n\n    .hamburger-menu:has(input:checked)::before{\n        rotate: 45deg;\n        width: var(--x-width);\n        translate: 0 calc(var(--bar-height) / -2);\n       \n    }\n\n    .hamburger-menu:has(input:checked)::after{\n        rotate: -45deg;\n        width: var(--x-width);\n        translate: 0 calc(var(--bar-height)/2);\n        \n    }\n    .hamburger-menu input:checked{\n        opacity: 0;\n        width: 0;\n    }\n\n    .hamburger-menu:has(input:checked) + .primary-nav-wrapper{\n        transform: translateX(0);\n    }\n}\n\n/* mobile */\n@media (max-width:600px){\n    .logo{\n        width: 160px;\n        height: 46.97px;\n    }\n    #nav{\n        gap: 120px;\n        margin-left: 20px;\n        margin-top: 9.57px;\n    }\n}\n\n/* ------------------- */\n/*       hero          */\n/* ------------------- */\n\n/* hero top */\n.hero-top-container{\n/* border: 1px solid black; */\ndisplay: flex;\njustify-content: space-between;\nalign-items: center;\n/* gap: 557.5px; */\nmargin-top: 70px;\nmargin-left: 240px;\nmargin-right: 85px;\nmargin-bottom: 69px;\n}\n/* scroll to contact btn */\n.scroll-btn{\n    position: relative;\n    /* border: 1px solid green; */\n    width: 122.02px;\n    /* height: 122.05px; */\n    aspect-ratio: 1;\n    display: grid;\n    place-items: center;\n}\n.scroll-btn-arrow{\n    width: 37px;\n    height: 37px;\n    /* position: absolute;\n    top: 41.17px;\n    left: 42.68px; */\n    z-index: 2;\n}\n\n.rotate-text{\n    position: absolute;\n    inset: 0;\n    animation-name: rotate-circle;\n    animation-duration: 10s;\n    animation-timing-function: linear;\n    animation-iteration-count: infinite;\n}\n\n@keyframes rotate-circle {\n    to {\n      transform: rotate(1turn);\n    }\n  }\n\n  /* hero top image styles */\n  .hero-top-img{\n    /* border: 1px solid red; */\n    width: 30.208vw;\n    height: 71px;\n    position: relative;\n  }\n  .hero-top-img::after{\n    content: \"The future is full of likes.\";\n    text-align: left;\n    letter-spacing: 2.95px;\n    color: #F0F5F5;\n    opacity: 1;\n    font-size: 73.79px; \n    font-size: clamp(1.563rem, 5.124vw, 4.612rem);\n    width: max-content;\n    height: 90px;\n    /* white-space: nowrap; */\n    z-index: -1;\n    position: absolute;\n    top: 26px;\n   \n  }\n  /* mobile */\n  @media (max-width:950px){\n    .hero-top-img{\n        /* border: 1px solid red; */\n        width: 207px;\n        height: 33.84px;\n        \n      }\n      .hero-top-img::after{\n        font-size: 35.17px;\n        height: 43px;\n        letter-spacing: 1.41px;\n      }\n      .hero-top-container{\n        margin-top: 0px;\n        margin-left: 19.97px;\n        margin-right: 18.39px;\n        }\n        .scroll-btn{\n            width: 73.21px;\n        }\n        .scroll-btn-arrow{\n            width: 22px;\n            height: 22.35px;\n        }\n  }\n  @media (max-width:600px){\n    .hero-top-img::after{\n        font-size: 25px;\n        height: 43px;\n      }\n    .scroll-btn{\n        width: 60px;\n    }\n    .scroll-btn-arrow{\n        width: 16px;\n        height: 17px;\n    }\n  }\n\n\n/* hero Key visual */\n.carousel-container{\n    /* margin: 0 auto; */\n    height: 568.26px;\n    overflow: hidden;\n    position: relative;\n}\n.slides{\n    /* height: 568.26px; */\n    display: flex;\n    height: 100%;\n    gap: 4px;\n    margin-left: 24%;\n  \n}\n.slide{\n   min-width: 1010.23px;\n    /* transform: translateX(50%); */\n   \n}\n\n.slide1{\n    background: url(./assets/images/hero-img/kv_01-min.jpg);\n    background-size:cover;\n    background-position: center;\n\n}\n.slide2{\n    background: url(./assets/images/hero-img/kv_02-min.jpg);\n    background-size:cover;\n    background-position: center;\n\n}\n.slide3{\n    background: url(./assets/images/hero-img/kv_03-min.jpg);\n    background-size:cover;\n    background-position: center;\n\n}\n.kv{\n    height: 100%;\n    width: 100%;\n \n\n}\n\n@media (max-width:950px){\n    .slide{\n        width: 320px !important;\n        height: 180px !important;\n        transform: translateX(33px);\n    }\n    .carousel-container{\n        /* margin: 0 auto; */\n        height: 180px;\n       \n    }\n    .slides{\n        /* height: 568.26px; */\n        display: flex;\n        height: 100%;\n        gap: 4px;\n        margin-left: 0;\n      \n    }\n    \n}\n/* company name */\n.company-name{\n    font-size: 2.4125rem; /* 38.6 px */\n    letter-spacing: -0.77px;\n}\n\n.company-name h3{\n    grid-column: 2/3;\n    justify-self: end;\n    font-family: var(--ff-trade-gothic);\n    z-index: 3;\n}\n\n@media (max-width:600px){\n    .company-name{\n        font-size: 1.5rem; /* 24 px */\n        letter-spacing: -0.77px;\n    }\n}\n\n/* ------------------- */\n/*       about         */\n/* ------------------- */\n\n#about{\n    height: 100%;\n    color: black;\n}\n.about-container{\n    background-color: #F0F5F5;\n    /* border:1px solid black; */\n    height: 100%;\n    /* width: 100%; */\n    overflow-y: hidden;\n    /* border-radius:40% ; */\n}\n\n/* about top styles */\n.about-top{\n    /* border: 1px solid red; */\n    margin-top: 3rem;\n    height: 347px;\n    grid-column: 2/3;\n    display: flex;\n}\n@media (max-width:600px){\n    .about-top{\n        flex-direction: column;\n    }\n   \n    \n}\n\n/* top right */\n.about-top_left{\n    /* border: 1px solid green; */\n    display: grid;\n    place-items: center;\n    letter-spacing: 0px;\n}\n.about-top-title_eng{\n    color: #FFFFFF;\n    font-size: 130px;\n    white-space: nowrap; \n    z-index: 2;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n}\n\n.about-top-title_jp{\n    z-index: 3;\n    position: absolute;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    letter-spacing: 0px;\n    font-size: 30px;\n}\n.about-top_right p{\n    font-size: 22px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    z-index: 3;\n}\n.about-top_right {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    width: 370px;\n}\n\n@media (max-width:600px){\n    .about-top-title_eng{\n        color: #FFFFFF;\n        font-size: 80px;\n        \n    }\n    \n    .about-top-title_jp{\n        font-size: 22px;\n    }\n    .about-top_right p{\n        font-size: 16px; \n    }\n    .about-top_right {\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between;\n        width: 270px;\n        text-align: center;\n        gap: 50px;\n    }\n}\n\n/* about center */\n.about-center{\n    grid-column: 2/3;\n    margin-top: 155px;\n    display: grid;\n    place-items: center;\n}\n\n\n.about-us-list{\n    width: 660px;\n    aspect-ratio: 1;\n    border-radius: 50%;\n    position: relative;\n}\n\n.about-us-list-item{\n    width: 200px;\n    aspect-ratio: 1;\n    border-radius: 50%;\n    /* border: 1px solid red; */\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    position: absolute;\n    left: 50%;\n    top:50%;\n    margin: -100px;\n    z-index: 3;\n\n}\n\n.item-1{\n    transform: rotate(22.5deg) translate(330px) rotate(-22.5deg);\n}\n\n\n.item-2 {\n    transform: rotate( 67.5deg) translateX(330px) rotate(-67.5deg);\n}\n\n.item-3 {\n    transform: rotate(112.5deg) translateX(330px) rotate(-112.5deg);\n}\n\n.item-4 {\n    transform: rotate(157.5deg) translateX(330px) rotate(-157.5deg);\n}\n\n.item-5 {\n    transform: rotate(202.5deg) translateX(330px) rotate(-202.5deg);\n}\n\n.item-6 {\n    transform: rotate(247.5deg) translateX(330px) rotate(-247.5deg);\n}\n\n.item-7 {\n    transform: rotate(292.5deg) translateX(330px) rotate(-292.5deg);\n}\n\n.item-8 {\n    transform: rotate(337.5deg) translateX(330px) rotate(-337.5deg);\n}\n.center{\n    border: none;\n    font-size: 46px;\n    width: 660px;\n    aspect-ratio: 1;\n    margin: -330px;\n    letter-spacing: 0px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    background-color: #FFFFFF;\n }\n .center p{\n    width: 368px;\n    height: 277px;\n }\n\n .sub-item{\n    font-size: 24px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    background-image: url(./assets/images/transparentBkg/transparentBkg2x.png);\n    background-size: cover;\n\n }\n\n @media (max-width:600px){\n    .about-us-list{\n        width: 272.5px;\n    }\n    .about-us-list-item{\n        width: 92px;\n        \n        margin: -46px;\n        z-index: 3;\n    \n    }\n    .sub-item{\n        font-size: 14px;\n        width: 92px;\n    \n     }\n     .center{\n        border: none;\n        font-size: 46px;\n        width: 272.5px;\n        margin: -136.255px;\n        \n     }\n     .center p{\n        width: 152px;\n        height: 114px;\n        font-size: 19px;\n     }\n     .item-1{\n        transform: rotate(22.5deg) translate(136.255px) rotate(-22.5deg);\n    }\n    .item-2 {\n        transform: rotate( 67.5deg) translate(136.255px) rotate(-67.5deg);\n    }\n    \n    .item-3 {\n        transform: rotate(112.5deg) translate(136.255px) rotate(-112.5deg);\n    }\n    \n    .item-4 {\n        transform: rotate(157.5deg) translate(136.255px) rotate(-157.5deg);\n    }\n    \n    .item-5 {\n        transform: rotate(202.5deg) translate(136.255px) rotate(-202.5deg);\n    }\n    \n    .item-6 {\n        transform: rotate(247.5deg) translate(136.255px)rotate(-247.5deg);\n    }\n    \n    .item-7 {\n        transform: rotate(292.5deg) translate(136.255px) rotate(-292.5deg);\n    }\n    \n    .item-8 {\n        transform: rotate(337.5deg) translate(136.255px) rotate(-337.5deg);\n    }\n    \n}\n /* about bottom */\n .about-bottom{\n    grid-column: 2/3;\n    margin-top: 169px;\n }\n\n .contact-btn{\n    border: none;\n    background-color: transparent;\n }\n.contact-btn:hover{\n    cursor: pointer;\n }\n\n @media (max-width:600px){\n    .about-bottom{\n        margin-top: 75px;\n     }\n     .contact-btn-wrapper{\n        width: 158.11px;\n        height: 64.69px;\n     }\n }\n\n/* ------------------- */\n/*       service        */\n/* ------------------- */\n\n\n\n\n/* ------------------- */\n/*       topics         */\n/* ------------------- */\n\n/* ------------------- */\n/*       company       */\n/* ------------------- */\n\n/* ------------------- */\n/*       contact       */\n/* ------------------- */\n\n/* ------------------- */\n/*       footer        */\n/* ------------------- */"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1146,6 +1329,46 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/assets/images/decor/loop1.png":
+/*!*******************************************!*\
+  !*** ./src/assets/images/decor/loop1.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "loop1.png";
+
+/***/ }),
+
+/***/ "./src/assets/images/hero-img/kv_01-min.jpg":
+/*!**************************************************!*\
+  !*** ./src/assets/images/hero-img/kv_01-min.jpg ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "kv_01-min.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/hero-img/kv_02-min.jpg":
+/*!**************************************************!*\
+  !*** ./src/assets/images/hero-img/kv_02-min.jpg ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "kv_02-min.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/hero-img/kv_03-min.jpg":
+/*!**************************************************!*\
+  !*** ./src/assets/images/hero-img/kv_03-min.jpg ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "kv_03-min.jpg";
+
+/***/ }),
+
 /***/ "./src/assets/images/transparentBkg/transparentBkg2x.png":
 /*!***************************************************************!*\
   !*** ./src/assets/images/transparentBkg/transparentBkg2x.png ***!
@@ -1328,7 +1551,7 @@ slide.append(secondClone); //add this clone so that when the carosel reaches the
 
 const slidesWidth = slides[index].clientWidth;
 
-const getSlides = ()=> document.querySelectorAll('.slide');
+// const getSlides = ()=> document.querySelectorAll('.slide');
 
 slide.style.transform= `translateX(${-slidesWidth * index}px)`;
 
@@ -1341,7 +1564,7 @@ const startSlide = () => {
 }
 
 slide.addEventListener('transitionend',()=>{
-    slides = getSlides();
+    slides = document.querySelectorAll('.slide');
     if(slides[index].id === firstClone.id){
         slide.style.transition= `none`;
         index = 1;
@@ -1358,4 +1581,4 @@ startSlide();
 
 /******/ })()
 ;
-//# sourceMappingURL=main361e798d59460fbc90db.js.map
+//# sourceMappingURL=main47a75b1ddb283e8fbd01.js.map
