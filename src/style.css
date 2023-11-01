@@ -1077,9 +1077,71 @@ margin-bottom: 69px;
 /*       topics         */
 /* ------------------- */
 
+#topics{
+    height: 1000px;
+    margin-top: 80px;
+    background-color: var(--section-bg);
+}
 /* ------------------- */
 /*       company       */
 /* ------------------- */
+ /* mobile first */
+ .company-container{
+    background-color: var(--section-bg);
+    margin-top: 80px;
+    padding-bottom: 81px;
+ }
+.company-title{
+    width: 100%;
+}
+.company-info{
+    border: 1px solid red;
+    display: grid;
+    place-content: center;
+}
+.info-list{
+    
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+.info-list-item{
+    display: grid;
+    grid-template-columns: 50px  201px 1fr;
+    gap:50px;
+    border: 1px solid black;
+    width: 350px;
+    height: 90px;
+    
+}
+
+.info-title{
+    font-size: 1rem;
+    text-align: left;
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-description{
+    font-size: 1rem;
+    text-align: left;
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.company_tel p{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.fax{
+    padding-left: 10px;
+   
+}
 
 /* ------------------- */
 /*       contact       */
