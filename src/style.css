@@ -950,7 +950,9 @@ margin-bottom: 69px;
 }
 
 /*service carosel marker*/
-
+.service-carousel-marker{
+    display: none;
+}
 .marker{
     display: flex;
     margin: 0;
@@ -983,7 +985,10 @@ margin-bottom: 69px;
     justify-content: center;
     align-items: center;
     margin-top: 33.5px;
+    /* border: 1px solid red; */
+    width: 100%;
 }
+
 
 /* desktop version  */
 
@@ -998,10 +1003,44 @@ margin-bottom: 69px;
        align-items: center;
        position: relative;
     }
+    .service-card_title{
+        font-size: 1.69rem;
+        
+        margin-top: 23.51px;
+        margin-bottom: 9.34px;
+        font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    /* current card */
     .current{
         width: 410px;
         height: 545px;
     }
+
+    .current .service-card_img{
+        width: 290.8px;
+        height: 225.66px;
+        /* border-radius: 50%;
+        margin-bottom: 30.34px; */
+    }
+
+    .current .service-card_title{
+        font-size: 2.253rem; /*36.05px*/
+        text-align: center;
+        letter-spacing: 1.44px;
+        margin-top: 32.31px;
+        margin-bottom: 11.78px;
+    }
+  
+    .current .service_card_description{
+        width: 334px;
+        height: 93px;
+        padding-bottom: 63.49px;
+        font-size: 1.125rem; /* 18px */
+    }
+
     .service-container{
         position: static;
     }
@@ -1029,6 +1068,9 @@ margin-bottom: 69px;
     }
     .service-contact-btn{
         margin-top: 53.7px;
+    }
+    .service-carousel-marker{
+        display: block;
     }
 }
 /* ------------------- */
