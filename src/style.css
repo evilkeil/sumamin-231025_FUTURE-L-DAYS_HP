@@ -115,7 +115,9 @@ ol[role='list'] {
     } 
 }
 
-
+.cursor-pointer:hover{
+    cursor: pointer;
+}
 
 /* ------------------- */
 /*       decor-images     */
@@ -975,6 +977,14 @@ margin-bottom: 69px;
     background-color: #000000;
 }
 
+/* service contact button */
+.service-contact-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 33.5px;
+}
+
 /* desktop version  */
 
 @media (min-width:1200px){
@@ -1016,6 +1026,9 @@ margin-bottom: 69px;
     }
     .title_jp{
         font-size: 1.875rem;/*30px */
+    }
+    .service-contact-btn{
+        margin-top: 53.7px;
     }
 }
 /* ------------------- */
