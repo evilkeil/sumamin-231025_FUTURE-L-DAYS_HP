@@ -114,3 +114,21 @@ slide.addEventListener('transitionend', () => {
 });
 
 startSlide();
+
+
+//nav 
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the checkbox input and navigation links
+    const checkbox = document.getElementById("hamburger-btn");
+    const navLinks = document.querySelectorAll(".nav-links");
+
+    // Add a click event listener to each navigation link
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        // Uncheck the checkbox to close the navigation menu
+        checkbox.checked = false;
+      });
+    });
+  });
