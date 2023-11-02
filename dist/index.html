@@ -14,7 +14,7 @@
           h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
       </script>
-<script defer src="main88d45305b968e43235e9.js"></script></head>
+<script defer src="maina61066262bfe4ce988a5.js"></script></head>
 <body>
     <!-- <div class="loop-one_wrapper"><img src="./assets/images/decor/loop1@2x.png" alt="" class="loop-one"></div> -->
     <section id="nav">
@@ -96,13 +96,13 @@
                     <li class="about-us-list-item item-8 sub-item"><p>ヘアメイク<br>スタイリスト</p></li>
                 </ul>
             </div>
-            <div class="about-bottom contact-btn-wrapper">
+            <div class="about-bottom contact-btn-wrapper cursor-pointer">
                 <button class="contact-btn"><a href="#contact"><img src="contact-btn.svg" alt="contact us"></a></button>
             </div>
         </div>
     </section>
     <section id="service">
-        <div class="service-container main-grid">
+        <div class="service-container">
             <div class="service-top title-wrapper">
                 <h1 class="title_eng">SERVICE</h1>
                 <h2 class="title_jp">サービス</h2>
@@ -110,11 +110,11 @@
             <div class="servive-carousel-container">
                 <div class="service_slides">
                     <div class="service_card">
-                        <h3 class="service-card_title">デザイン会社 代行営業</h3>
+                        <h3 class="service-card_title">デザイン会社 <br>代行営業</h3>
                         <img src="Asset 4-min.jpg" alt="" class="service-card_img">
                         <p class="service_card_description">クライアントとデザイン会社を結びつけ、<br> プロジェクトを円滑に進行させ、<br> デザインニーズを満たします。</p>
                     </div>
-                    <div class="service_card">
+                    <div class="service_card current">
                         <h3 class="service-card_title">ヘアメイク・<br> スタイリスト派遣</h3>
                         <img src="Asset 3-min.jpg" alt="" class="service-card_img">
                         <p class="service_card_description">プロのヘアメイクアーティストと<br> スタイリストを提供し、<br>  美容・ファッションニーズに応えます。</p>
@@ -134,7 +134,7 @@
             </div>
             <div class="service-carousel-marker">
                 <ul class="marker" role="list">
-                    <li class="marker_item"></li>
+                    <li class="marker_item selected"></li>
                     <li class="marker_item"></li>
                     <li class="marker_item"></li>
                     <li class="marker_item"></li>
@@ -142,15 +142,49 @@
                     <li class="marker_item"></li>
                 </ul>
             </div>
-            <div class="service-contact-btn contact-btn-wrapper">
+            <div class="service-contact-btn contact-btn-wrapper cursor-pointer">
                 <button class="contact-btn"><a href="#contact"><img src="contact-btn.svg" alt="contact us"></a></button>
             </div>
         </div>
     </section>
     <section id="topics"></section>
-    <section id="company"></section>
+    <section id="company">
+        <div class="company-container">
+            <div class="company-title title-wrapper">
+                <h1 class="title_eng">COMPANY</h1>
+                <h2 class="title_jp">会社概要</h2>
+            </div>
+                
+            <div class="company-info">
+                <ul role="list" class="info-list">
+                    <li class="info-list-item company_name">
+                        <h3 class="info-title">社名</h3>
+                        <p class="info-description">株式会社 FUTURE L DAYS</p>
+                    </li>
+                    <li class="info-list-item company_year">
+                        <h3 class="info-title">設立年</h3>
+                        <p class="info-description">2009年5月14日</p>
+                    </li>
+                    <li class="info-list-item company_address">
+                        <h3 class="info-title">所在地</h3>
+                        <p class="info-description">東京都渋谷区宇田川町36-6 ワールド宇田川ビル3F</p>
+                    </li>
+                    <li class="info-list-item company_tel">
+                        <h3 class="info-title">TEL</h3>
+                        <p class="info-description">03-6381-3216 <br> <span class="fax">&lpar;FAX 03-6862-9005&rpar;</span></p>
+                    </li>
+                    <li class="info-list-item company_mail">
+                        <h3 class="info-title info-title_mail">メール</h3>
+                        <p class="info-description">info@fld-co.tokyo</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <section id="contact"></section>
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <small><p class="copyright">Copyright &copy; FUTURE L DAYS All Rights Reserved.</p></small>
+    </footer>
     
 </body>
 </html>
