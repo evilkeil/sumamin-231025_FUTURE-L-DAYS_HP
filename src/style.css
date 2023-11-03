@@ -216,6 +216,10 @@ body{
     display: none;
 }
 
+.nav-link-label{
+    width: 100%;
+    display: flex;
+}
 /* tablet and mobile  */
 @media (max-width:950px){
     .primary-nav-wrapper{
@@ -232,7 +236,7 @@ body{
 
     .primary-nav{
         flex-direction: column;
-        gap: 1rem;
+        justify-content: space-evenly;
         align-items: flex-start;
         padding-left: 1rem;
     }
@@ -305,6 +309,21 @@ body{
     .hamburger-menu:has(input:checked) + .primary-nav-wrapper{
         transform: translateX(0);
     }
+
+/* Style the labels for the navigation links */
+.nav-link-label {
+    cursor: pointer;
+  }
+  
+  /* Style the labels when the checkbox is checked */
+  .hamburger-checkbox:checked + .primary-nav-wrapper .nav-link-label {
+    display: block;
+  }
+  
+  /* Style the labels when the checkbox is unchecked */
+  .hamburger-checkbox + .primary-nav-wrapper .nav-link-label {
+    display: none;
+  }
 }
 
 /* mobile */
@@ -349,9 +368,6 @@ margin-bottom: 69px;
 .scroll-btn-arrow{
     width: 37px;
     height: 37px;
-    /* position: absolute;
-    top: 41.17px;
-    left: 42.68px; */
     z-index: 2;
 }
 
@@ -387,7 +403,6 @@ margin-bottom: 69px;
     font-size: clamp(1.563rem, 5.124vw, 4.612rem);
     width: max-content;
     height: 90px;
-    /* white-space: nowrap; */
     z-index: -1;
     position: absolute;
     top: 26px;
@@ -410,6 +425,7 @@ margin-bottom: 69px;
         margin-top: 0px;
         margin-left: 19.97px;
         margin-right: 18.39px;
+        margin-bottom: 20px;
         }
         .scroll-btn{
             width: 73.21px;
@@ -436,71 +452,64 @@ margin-bottom: 69px;
 
 /* hero Key visual */
 .carousel-container{
-    /* margin: 0 auto; */
-    height: 568.26px;
-    overflow: hidden;
-    position: relative;
+  /* border: 1px solid red; */
+  overflow: hidden;
+  height: 180px;
+}
+.kv {
+    width: 320px;
+    height: 180px;
 }
 .slides{
-    /* height: 568.26px; */
-    display: flex;
-    height: 100%;
-    gap: 4px;
-    margin-left: 24%;
-  
+   width: 100%;
+   border: 1px solid green;
+   display: flex;
+   gap: 5px;
 }
 .slide{
-   min-width: 1010.23px;
-    /* transform: translateX(50%); */
+    flex-grow: 1;
+   flex-shrink: 0;
+   transform: translateX(10vw);
    
+
 }
 
 .slide1{
-    background: url(./assets/images/hero-img/kv_01-min.jpg);
+    /* background: url(./assets/images/hero-img/kv_01-min.jpg);
+    border: 1px solid red;
     background-size:cover;
     background-position: center;
+   width: 320px;
+    height: 180px;
+     */
+   
 
 }
 .slide2{
-    background: url(./assets/images/hero-img/kv_02-min.jpg);
+    /* background: url(./assets/images/hero-img/kv_02-min.jpg);
+   border: 1px solid blue;
     background-size:cover;
     background-position: center;
+    min-width: 320px;
+    height: 180px; */
 
 }
 .slide3{
-    background: url(./assets/images/hero-img/kv_03-min.jpg);
+    /* background: url(./assets/images/hero-img/kv_03-min.jpg);
+    border: 1px solid green;
     background-size:cover;
     background-position: center;
-
+    min-width: 320px;
+    height: 180px; */
 }
 .kv{
-    height: 100%;
-    width: 100%;
- 
-
 }
 
-@media (max-width:950px){
-    .slide{
-        width: 320px !important;
-        height: 180px !important;
-        transform: translateX(33px);
-    }
-    .carousel-container{
-        /* margin: 0 auto; */
-        height: 180px;
-       
-    }
-    .slides{
-        /* height: 568.26px; */
-        display: flex;
-        height: 100%;
-        gap: 4px;
-        margin-left: 0;
-      
-    }
+@media (min-width:1200px){
+}
+
     
-}
+
 /* company name */
 .company-name{
     font-size: 2.4125rem; /* 38.6 px */

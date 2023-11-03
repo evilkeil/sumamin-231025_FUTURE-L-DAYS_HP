@@ -23,17 +23,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./assets/images/decor/loop1.png */ "./src/assets/images/decor/loop1.png"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ./assets/images/hero-img/kv_01-min.jpg */ "./src/assets/images/hero-img/kv_01-min.jpg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ./assets/images/hero-img/kv_02-min.jpg */ "./src/assets/images/hero-img/kv_02-min.jpg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(/*! ./assets/images/hero-img/kv_03-min.jpg */ "./src/assets/images/hero-img/kv_03-min.jpg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_4___ = new URL(/* asset import */ __webpack_require__(/*! ./assets/images/transparentBkg/transparentBkg2x.png */ "./src/assets/images/transparentBkg/transparentBkg2x.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ./assets/images/transparentBkg/transparentBkg2x.png */ "./src/assets/images/transparentBkg/transparentBkg2x.png"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
-var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
-var ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_3___);
-var ___CSS_LOADER_URL_REPLACEMENT_4___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_4___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `/* ------------------- */
 /* Variables           */
@@ -252,6 +246,10 @@ body{
     display: none;
 }
 
+.nav-link-label{
+    width: 100%;
+    display: flex;
+}
 /* tablet and mobile  */
 @media (max-width:950px){
     .primary-nav-wrapper{
@@ -268,7 +266,7 @@ body{
 
     .primary-nav{
         flex-direction: column;
-        gap: 1rem;
+        justify-content: space-evenly;
         align-items: flex-start;
         padding-left: 1rem;
     }
@@ -325,7 +323,6 @@ body{
         rotate: 45deg;
         width: var(--x-width);
         translate: 0 calc(var(--bar-height) / -2);
-       
     }
 
     .hamburger-menu:has(input:checked)::after{
@@ -342,6 +339,21 @@ body{
     .hamburger-menu:has(input:checked) + .primary-nav-wrapper{
         transform: translateX(0);
     }
+
+/* Style the labels for the navigation links */
+.nav-link-label {
+    cursor: pointer;
+  }
+  
+  /* Style the labels when the checkbox is checked */
+  .hamburger-checkbox:checked + .primary-nav-wrapper .nav-link-label {
+    display: block;
+  }
+  
+  /* Style the labels when the checkbox is unchecked */
+  .hamburger-checkbox + .primary-nav-wrapper .nav-link-label {
+    display: none;
+  }
 }
 
 /* mobile */
@@ -386,9 +398,6 @@ margin-bottom: 69px;
 .scroll-btn-arrow{
     width: 37px;
     height: 37px;
-    /* position: absolute;
-    top: 41.17px;
-    left: 42.68px; */
     z-index: 2;
 }
 
@@ -424,7 +433,6 @@ margin-bottom: 69px;
     font-size: clamp(1.563rem, 5.124vw, 4.612rem);
     width: max-content;
     height: 90px;
-    /* white-space: nowrap; */
     z-index: -1;
     position: absolute;
     top: 26px;
@@ -447,6 +455,7 @@ margin-bottom: 69px;
         margin-top: 0px;
         margin-left: 19.97px;
         margin-right: 18.39px;
+        margin-bottom: 20px;
         }
         .scroll-btn{
             width: 73.21px;
@@ -473,71 +482,63 @@ margin-bottom: 69px;
 
 /* hero Key visual */
 .carousel-container{
-    /* margin: 0 auto; */
-    height: 568.26px;
-    overflow: hidden;
-    position: relative;
+  /* border: 1px solid red; */
+  overflow: hidden;
+  height: 180px;
+}
+.kv {
+    width: 320px;
+    height: 180px;
 }
 .slides{
-    /* height: 568.26px; */
-    display: flex;
-    height: 100%;
-    gap: 4px;
-    margin-left: 24%;
-  
+   width: 100%;
+   border: 1px solid green;
+   display: flex;
+   gap: 5px;
 }
 .slide{
-   min-width: 1010.23px;
-    /* transform: translateX(50%); */
+   flex-shrink: 0;
+   transform: translateX(10vw);
    
+
 }
 
 .slide1{
-    background: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+    /* background: url(./assets/images/hero-img/kv_01-min.jpg);
+    border: 1px solid red;
     background-size:cover;
     background-position: center;
+   width: 320px;
+    height: 180px;
+     */
+   
 
 }
 .slide2{
-    background: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
+    /* background: url(./assets/images/hero-img/kv_02-min.jpg);
+   border: 1px solid blue;
     background-size:cover;
     background-position: center;
+    min-width: 320px;
+    height: 180px; */
 
 }
 .slide3{
-    background: url(${___CSS_LOADER_URL_REPLACEMENT_3___});
+    /* background: url(./assets/images/hero-img/kv_03-min.jpg);
+    border: 1px solid green;
     background-size:cover;
     background-position: center;
-
+    min-width: 320px;
+    height: 180px; */
 }
 .kv{
-    height: 100%;
-    width: 100%;
- 
-
 }
 
-@media (max-width:950px){
-    .slide{
-        width: 320px !important;
-        height: 180px !important;
-        transform: translateX(33px);
-    }
-    .carousel-container{
-        /* margin: 0 auto; */
-        height: 180px;
-       
-    }
-    .slides{
-        /* height: 568.26px; */
-        display: flex;
-        height: 100%;
-        gap: 4px;
-        margin-left: 0;
-      
-    }
+@media (min-width:1200px){
+}
+
     
-}
+
 /* company name */
 .company-name{
     font-size: 2.4125rem; /* 38.6 px */
@@ -741,7 +742,7 @@ margin-bottom: 69px;
     font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;
     font-weight: 300;
     font-style: normal;
-    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_4___});
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
     background-size: cover;
 
  }
@@ -811,8 +812,7 @@ margin-bottom: 69px;
     grid-column: 2/3;
     margin-top: 169px;
  }
-
- .contact-btn{
+.contact-btn{
     border: none;
     background-color: transparent;
  }
@@ -833,7 +833,9 @@ margin-bottom: 69px;
 /* ------------------- */
 /*       service        */
 /* ------------------- */
+
  /* mobile first */
+
 .service-container{
     margin-top: 40px;
     background-color: var( --section-bg);
@@ -856,11 +858,9 @@ margin-bottom: 69px;
 
 /* mobile service grid */
 
- .title-wrapper{
+.title-wrapper{
     position: relative;
-    
- }
-
+}
 .title_eng{
     font-size: 5rem; /*80px*/
     font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;
@@ -869,10 +869,7 @@ margin-bottom: 69px;
     color: #FFFFFF;
     white-space: nowrap; 
     z-index: 2;
-    /* width: 328px;
-    height: 80px; */
 }
-
 .title_jp{
     z-index: 3;
     position: absolute;
@@ -881,9 +878,7 @@ margin-bottom: 69px;
     font-style: normal;
     letter-spacing: 0px;
     font-size: 22px;
-
 }
-
 .title-wrapper{
     display: grid;
     place-items: center;
@@ -908,10 +903,10 @@ margin-bottom: 69px;
     align-items: center;
     border-radius: 40px;
     background-color: rgba(255, 255, 255, 0.6);;
-     
 }
 
 /* carousel next and prev buttons */
+
 .servive-carousel-container{
     overflow: hidden;
 }
@@ -930,23 +925,18 @@ margin-bottom: 69px;
     right: 0;
     margin: auto;
     right: 10px;
-/* display: none; */
 }
-
 .carosel-prev-btn{
     position: absolute;
     top:50%;
     left: 0;
     margin: auto;
     left: 10px;
-    /* display: none; */
 }
 .service-carosel-btn_img{
     width: 100%;
     height: 100%;
-
 }
-
 .carosel-btn:hover{
     cursor: pointer;
 }
@@ -961,14 +951,12 @@ margin-bottom: 69px;
     font-weight: 300;
     font-style: normal;
 }
-
 .service-card_img{
     width: 218px;
     height: 169px;
     border-radius: 50%;
     margin-bottom: 30.34px;
 }
-
 .service_card_description{
     text-align: center;
     width: 260px;
@@ -977,12 +965,12 @@ margin-bottom: 69px;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 0.875rem; /* 24px */
 }
-
 .service-top{
     width: 100%;
 }
 
 /*service carosel marker*/
+
 .service-carousel-marker{
     display: none;
 }
@@ -995,7 +983,6 @@ margin-bottom: 69px;
     justify-content: center;
     gap: 9.38px;
 }
-
 .marker_item{
     width: 10px;
     aspect-ratio: 1;
@@ -1007,29 +994,25 @@ margin-bottom: 69px;
     cursor: pointer;
     
 }
-
 .selected{
     background-color: #000000;
 }
 
 /* service contact button */
+
 .service-contact-btn{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 33.5px;
-    /* border: 1px solid red; */
     width: 100%;
 }
-
 
 /* desktop version  */
 
 @media (min-width:1200px){
     .servive-carousel-container{
         width: 100%;
-       
-       
     }
     .service_slides{
        justify-content: space-around;
@@ -1038,7 +1021,6 @@ margin-bottom: 69px;
     }
     .service-card_title{
         font-size: 1.69rem;
-        
         margin-top: 23.51px;
         margin-bottom: 9.34px;
         font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;
@@ -1047,18 +1029,17 @@ margin-bottom: 69px;
     }
 
     /* current card */
+
     .current{
         width: 410px;
         height: 545px;
     }
-
     .current .service-card_img{
         width: 290.8px;
         height: 225.66px;
         /* border-radius: 50%;
         margin-bottom: 30.34px; */
     }
-
     .current .service-card_title{
         font-size: 2.253rem; /*36.05px*/
         text-align: center;
@@ -1066,14 +1047,12 @@ margin-bottom: 69px;
         margin-top: 32.31px;
         margin-bottom: 11.78px;
     }
-  
     .current .service_card_description{
         width: 334px;
         height: 93px;
         padding-bottom: 63.49px;
         font-size: 1.125rem; /* 18px */
     }
-
     .service-container{
         position: static;
     }
@@ -1082,7 +1061,6 @@ margin-bottom: 69px;
         top: 50%;
         right:30%;
     }
-    
     .carosel-prev-btn{
         position: absolute;
         top:50%;
@@ -1128,7 +1106,6 @@ margin-bottom: 69px;
     width: 100%;
 }
 .company-info{
-    /* border: 1px solid red; */
     display: grid;
     place-content: center;
 }
@@ -1141,11 +1118,8 @@ margin-bottom: 69px;
     display: grid;
     grid-template-columns: 50px  201px 1fr;
     gap:50px;
-    /* border-top: 1px solid rgb(230, 235, 345);
-    border-bottom:  1px solid rgb(230, 235, 345); */
     width: 350px;
-    height: 90px;
-    
+    height: 90px; 
 }
 .info-title_mail{
     /* border-bottom: 5px solid white; */
@@ -1169,9 +1143,7 @@ margin-bottom: 69px;
     justify-content: flex-start;
     align-items: center;
     flex: 1;
-
 }
-
 .company_tel p{
     display: flex;
     flex-direction: column;
@@ -1184,9 +1156,6 @@ margin-bottom: 69px;
 }
 
 /* styles for the lines */
-/* .info-title{
-    position: relative;
-} */
 
 .info-list-item{
     position: relative;
@@ -1211,16 +1180,6 @@ margin-bottom: 69px;
     top: 1px;
     left: 0;
 }
-/* .info-title_mail{
-    position: relative;
-}
-.test{
-    width: 100%;
-    background-color: black;
-    height: 5px;
-    position: absolute;
-} */
-
 
 
 @media (min-width:1200px){
@@ -1272,7 +1231,7 @@ margin-bottom: 69px;
         letter-spacing: 0.72px;
     }
     
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"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","sourcesContent":["/* ------------------- */\n/* Variables           */\n/* ------------------- */\n:root{\n    --main-color:#000000;\n\n    /* fonts */\n\n    --ff-trade-gothic:trade-gothic-next-compressed, sans-serif;\n    \n    /* font weights */\n    --fw-nav:400;\n\n    /* hamburger menu vaiables */\n\n    --bar-width:30px;\n    --bar-height:1.17px;\n    --bar-gap:11.24px;\n    --foreground:#606060;\n    --background:#FFFFFF;\n    --animation-timing:350ms ease-in-out;\n    --hamburger-height: calc(var(--bar-height) * 3  + var(--bar-gap) * 2);\n\n    /* section background color */\n    --section-bg: #F0F5F5;\n\n}\n\n/* fonts */\n@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');\n\n\n/* ------------------- */\n/* CSS - Reset               */\n/* ------------------- */\n\n/* Box sizing */\n*,\n*::before,\n*::after {\n    box-sizing: border-box;\n}\n\n/* Reset margins */\nbody,\nh1,\nh2,\nh3,\nh4,\nh5,\np,\nfigure,\npicture {\n    margin: 0;\n}\n\n/* set up the body */\nbody {\n    line-height: 1.5;\n    min-height: 100dvh;\n    max-width: 100vw;\n    overflow-x: hidden;\n    position: relative;\n    color: var(--main-color);\n    margin: 0;\n    padding: 0;\n\n   \n}\n\n/* make images easier to work with */\nimg,\npicture {\n    max-width: 100%;\n    display: block;\n}\n\n/* make form elements easier to work with */\ninput,\nbutton,\ntextarea,\nselect {\n    font: inherit;\n}\n\nul[role='list'],\nol[role='list'] {\n  list-style: none;\n}\n\n/* remove animations for people who've turned them off */\n@media (prefers-reduced-motion: reduce) {  \n  *,\n  *::before,\n  *::after {\n    animation-duration: 0.01ms !important;\n    animation-iteration-count: 1 !important;\n    transition-duration: 0.01ms !important;\n    scroll-behavior: auto !important;\n  }\n}\n/* ------------------- */\n/*       UTILITY CLASSES          */\n/* ------------------- */\n.main-grid{\n    display: grid;\n    grid-template-columns: 1fr 70% 1fr;\n    justify-items: center;\n}\n@media (max-width:600px){\n    .main-grid{\n        display: grid;\n        grid-template-columns: 1fr 85% 1fr;\n    } \n}\n\n.cursor-pointer:hover{\n    cursor: pointer;\n}\n\n/* ------------------- */\n/*       decor-images     */\n/* ------------------- */\n\n/* loop in company name section */\n\n#about{\n    position: relative;\n    overflow-x: hidden;\n\n}\n.loop-one_wrapper{\n  \n    position: absolute;\n    inset: 0;\n    left: 600px;\n    top: -1000px;\n    margin: auto;\n    z-index: 2;\n    overflow: hidden;\n    width: 1543px;\n    height: 702px;\n    background: transparent url('./assets/images/decor/loop1.png') 0% 0% no-repeat padding-box;\n}\n/* \n.loop-one{\n    width: 1543px;\n    height: 702px;\n    grid-column: 2/4;\n    width: 1543px;\nheight: 702px;\n} */\n\n/* ------------------- */\n/*       Nav           */\n/* ------------------- */\nbody{\n    max-width: 100vw;\n}\n#nav{\n    /* border: 1px solid red; */\n    display: flex;\n    \n    justify-content: center;\n    align-items: center;\n    margin-left: 61.93px;\n    margin-top: 34.38px;\n    position: relative;\n}\n.primary-nav-svg{\n    width: 8.8791px;\n    height: 9.0395px;\n    \n}\n\n.logo{\n    position: absolute;\n    top:4px;\n    left: 0;\n    width: 196.19px;\n    height: 57.6px;\n    /* border: 1px soild green; */\n}\n.nav-links{\n    text-decoration: none;\n    color: var(--main-color);\n    font-style: normal;\n    font-family: var(--ff-trade-gothic);\n    font-weight: var(--fw-nav);\n    font-size: 1.25rem;\n}\n\n.primary-nav{\n    display: flex;\n    gap: 2.6875rem;\n    height: 100%;\n    /* border: 1px solid black; */\n    padding: 0;\n}\n\n.primary-nav-item{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 0.5938rem;\n    height: 100%;\n    /* border: 1px solid blue; */\n}\n\n.primary-nav-item:hover{\n    cursor: pointer;\n}\n\n\n.hamburger-menu{\n    display: none;\n}\n\n/* tablet and mobile  */\n@media (max-width:950px){\n    .primary-nav-wrapper{\n        background-color: white;\n        position: fixed;\n        top: 0;\n        right: 0;\n        height: 100%;\n        width: 100%;\n        transition: transform var(--animation-timing);\n        transform: translateX(100%);\n        z-index: 4;\n    }\n\n    .primary-nav{\n        flex-direction: column;\n        gap: 1rem;\n        align-items: flex-start;\n        padding-left: 1rem;\n    }\n\n    .nav-links{\n        font-size: 2rem;\n    }\n    .primary-nav-svg{\n        width: 16px;\n        height: 18px;\n    }\n \n    .logo{\n        position: static;\n    }\n    #nav{\n        justify-content: space-between;\n        margin-left: 20px;\n        margin-right: 20px;\n        margin-top: 9.57px;\n    }\n    .hamburger-menu{\n        --x-width:calc(var(--hamburger-height) * 1.41421356237); /* the length of the bar when its an X (hamburger menu height  * squareroot of 2) */\n        display: flex;\n        flex-direction: column;\n        gap: var(--bar-gap);\n        width: max-content;\n        z-index: 5;\n        cursor: pointer;\n    }\n\n    .hamburger-menu::before,\n    .hamburger-menu::after,\n    .hamburger-menu input{\n        content: \"\";\n        width: var(--bar-width);\n        height: var(--bar-height);\n        background-color: var(--foreground);\n        border-radius: 9999px;\n        transform-origin: left center;\n        transition: opacity var(--animation-timing), width var(--animation-timing),translate var(--animation-timing),rotate var(--animation-timing);\n       \n    }\n    \n    .hamburger-menu input{\n        appearance: none;\n        padding: 0;\n        margin: 0;\n        outline: none;\n        pointer-events: none;\n    }\n\n    .hamburger-menu:has(input:checked)::before{\n        rotate: 45deg;\n        width: var(--x-width);\n        translate: 0 calc(var(--bar-height) / -2);\n       \n    }\n\n    .hamburger-menu:has(input:checked)::after{\n        rotate: -45deg;\n        width: var(--x-width);\n        translate: 0 calc(var(--bar-height)/2);\n        \n    }\n    .hamburger-menu input:checked{\n        opacity: 0;\n        width: 0;\n    }\n\n    .hamburger-menu:has(input:checked) + .primary-nav-wrapper{\n        transform: translateX(0);\n    }\n}\n\n/* mobile */\n@media (max-width:600px){\n    .logo{\n        width: 160px;\n        height: 46.97px;\n    }\n    #nav{\n        gap: 120px;\n        margin-left: 20px;\n        margin-top: 9.57px;\n    }\n}\n\n/* ------------------- */\n/*       hero          */\n/* ------------------- */\n\n/* hero top */\n.hero-top-container{\n/* border: 1px solid black; */\ndisplay: flex;\njustify-content: space-between;\nalign-items: center;\n/* gap: 557.5px; */\nmargin-top: 70px;\nmargin-left: 240px;\nmargin-right: 85px;\nmargin-bottom: 69px;\n}\n/* scroll to contact btn */\n.scroll-btn{\n    position: relative;\n    /* border: 1px solid green; */\n    width: 122.02px;\n    /* height: 122.05px; */\n    aspect-ratio: 1;\n    display: grid;\n    place-items: center;\n}\n.scroll-btn-arrow{\n    width: 37px;\n    height: 37px;\n    /* position: absolute;\n    top: 41.17px;\n    left: 42.68px; */\n    z-index: 2;\n}\n\n.rotate-text{\n    position: absolute;\n    inset: 0;\n    animation-name: rotate-circle;\n    animation-duration: 10s;\n    animation-timing-function: linear;\n    animation-iteration-count: infinite;\n}\n\n@keyframes rotate-circle {\n    to {\n      transform: rotate(1turn);\n    }\n  }\n\n  /* hero top image styles */\n  .hero-top-img{\n    /* border: 1px solid red; */\n    width: 30.208vw;\n    height: 71px;\n    position: relative;\n  }\n  .hero-top-img::after{\n    content: \"The future is full of likes.\";\n    text-align: left;\n    letter-spacing: 2.95px;\n    color: #F0F5F5;\n    opacity: 1;\n    font-size: 73.79px; \n    font-size: clamp(1.563rem, 5.124vw, 4.612rem);\n    width: max-content;\n    height: 90px;\n    /* white-space: nowrap; */\n    z-index: -1;\n    position: absolute;\n    top: 26px;\n   \n  }\n  /* mobile */\n  @media (max-width:950px){\n    .hero-top-img{\n        /* border: 1px solid red; */\n        width: 207px;\n        height: 33.84px;\n        \n      }\n      .hero-top-img::after{\n        font-size: 35.17px;\n        height: 43px;\n        letter-spacing: 1.41px;\n      }\n      .hero-top-container{\n        margin-top: 0px;\n        margin-left: 19.97px;\n        margin-right: 18.39px;\n        }\n        .scroll-btn{\n            width: 73.21px;\n        }\n        .scroll-btn-arrow{\n            width: 22px;\n            height: 22.35px;\n        }\n  }\n  @media (max-width:600px){\n    .hero-top-img::after{\n        font-size: 25px;\n        height: 43px;\n      }\n    .scroll-btn{\n        width: 60px;\n    }\n    .scroll-btn-arrow{\n        width: 16px;\n        height: 17px;\n    }\n  }\n\n\n/* hero Key visual */\n.carousel-container{\n    /* margin: 0 auto; */\n    height: 568.26px;\n    overflow: hidden;\n    position: relative;\n}\n.slides{\n    /* height: 568.26px; */\n    display: flex;\n    height: 100%;\n    gap: 4px;\n    margin-left: 24%;\n  \n}\n.slide{\n   min-width: 1010.23px;\n    /* transform: translateX(50%); */\n   \n}\n\n.slide1{\n    background: url(./assets/images/hero-img/kv_01-min.jpg);\n    background-size:cover;\n    background-position: center;\n\n}\n.slide2{\n    background: url(./assets/images/hero-img/kv_02-min.jpg);\n    background-size:cover;\n    background-position: center;\n\n}\n.slide3{\n    background: url(./assets/images/hero-img/kv_03-min.jpg);\n    background-size:cover;\n    background-position: center;\n\n}\n.kv{\n    height: 100%;\n    width: 100%;\n \n\n}\n\n@media (max-width:950px){\n    .slide{\n        width: 320px !important;\n        height: 180px !important;\n        transform: translateX(33px);\n    }\n    .carousel-container{\n        /* margin: 0 auto; */\n        height: 180px;\n       \n    }\n    .slides{\n        /* height: 568.26px; */\n        display: flex;\n        height: 100%;\n        gap: 4px;\n        margin-left: 0;\n      \n    }\n    \n}\n/* company name */\n.company-name{\n    font-size: 2.4125rem; /* 38.6 px */\n    letter-spacing: -0.77px;\n}\n\n.company-name h3{\n    grid-column: 2/3;\n    justify-self: end;\n    font-family: var(--ff-trade-gothic);\n    z-index: 3;\n}\n\n@media (max-width:600px){\n    .company-name{\n        font-size: 1.5rem; /* 24 px */\n        letter-spacing: -0.77px;\n    }\n}\n\n/* ------------------- */\n/*       about         */\n/* ------------------- */\n\n#about{\n    height: 100%;\n    color: black;\n}\n.about-container{\n    background-color: var(--section-bg);\n    /* border:1px solid black; */\n    height: 100%;\n    /* width: 100%; */\n    overflow-y: hidden;\n    /* border-radius:40% ; */\n}\n\n/* about top styles */\n.about-top{\n    /* border: 1px solid red; */\n    margin-top: 3rem;\n    height: 347px;\n    grid-column: 2/3;\n    display: flex;\n}\n@media (max-width:600px){\n    .about-top{\n        flex-direction: column;\n    }\n   \n    \n}\n\n/* top right */\n.about-top_left{\n    /* border: 1px solid green; */\n    display: grid;\n    place-items: center;\n    letter-spacing: 0px;\n}\n.about-top-title_eng{\n    color: #FFFFFF;\n    font-size: 130px;\n    white-space: nowrap; \n    z-index: 2;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n}\n\n.about-top-title_jp{\n    z-index: 3;\n    position: absolute;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    letter-spacing: 0px;\n    font-size: 30px;\n}\n.about-top_right p{\n    font-size: 22px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    z-index: 3;\n}\n.about-top_right {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    width: 370px;\n}\n\n@media (max-width:600px){\n    .about-top-title_eng{\n        color: #FFFFFF;\n        font-size: 80px;\n        \n    }\n    \n    .about-top-title_jp{\n        font-size: 22px;\n    }\n    .about-top_right p{\n        font-size: 16px; \n    }\n    .about-top_right {\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between;\n        width: 270px;\n        text-align: center;\n        gap: 50px;\n    }\n}\n\n/* about center */\n.about-center{\n    grid-column: 2/3;\n    margin-top: 155px;\n    display: grid;\n    place-items: center;\n}\n\n\n.about-us-list{\n    width: 660px;\n    aspect-ratio: 1;\n    border-radius: 50%;\n    position: relative;\n}\n\n.about-us-list-item{\n    width: 200px;\n    aspect-ratio: 1;\n    border-radius: 50%;\n    /* border: 1px solid red; */\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    position: absolute;\n    left: 50%;\n    top:50%;\n    margin: -100px;\n    z-index: 3;\n\n}\n\n.item-1{\n    transform: rotate(22.5deg) translate(330px) rotate(-22.5deg);\n}\n\n\n.item-2 {\n    transform: rotate( 67.5deg) translateX(330px) rotate(-67.5deg);\n}\n\n.item-3 {\n    transform: rotate(112.5deg) translateX(330px) rotate(-112.5deg);\n}\n\n.item-4 {\n    transform: rotate(157.5deg) translateX(330px) rotate(-157.5deg);\n}\n\n.item-5 {\n    transform: rotate(202.5deg) translateX(330px) rotate(-202.5deg);\n}\n\n.item-6 {\n    transform: rotate(247.5deg) translateX(330px) rotate(-247.5deg);\n}\n\n.item-7 {\n    transform: rotate(292.5deg) translateX(330px) rotate(-292.5deg);\n}\n\n.item-8 {\n    transform: rotate(337.5deg) translateX(330px) rotate(-337.5deg);\n}\n.center{\n    border: none;\n    font-size: 46px;\n    width: 660px;\n    aspect-ratio: 1;\n    margin: -330px;\n    letter-spacing: 0px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    background-color: #FFFFFF;\n }\n .center p{\n    width: 368px;\n    height: 277px;\n }\n\n .sub-item{\n    font-size: 24px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    background-image: url(./assets/images/transparentBkg/transparentBkg2x.png);\n    background-size: cover;\n\n }\n\n @media (max-width:600px){\n    .about-us-list{\n        width: 272.5px;\n    }\n    .about-us-list-item{\n        width: 92px;\n        \n        margin: -46px;\n        z-index: 3;\n    \n    }\n    .sub-item{\n        font-size: 14px;\n        width: 92px;\n    \n     }\n     .center{\n        border: none;\n        font-size: 46px;\n        width: 272.5px;\n        margin: -136.255px;\n        \n     }\n     .center p{\n        width: 152px;\n        height: 114px;\n        font-size: 19px;\n     }\n     .item-1{\n        transform: rotate(22.5deg) translate(136.255px) rotate(-22.5deg);\n    }\n    .item-2 {\n        transform: rotate( 67.5deg) translate(136.255px) rotate(-67.5deg);\n    }\n    \n    .item-3 {\n        transform: rotate(112.5deg) translate(136.255px) rotate(-112.5deg);\n    }\n    \n    .item-4 {\n        transform: rotate(157.5deg) translate(136.255px) rotate(-157.5deg);\n    }\n    \n    .item-5 {\n        transform: rotate(202.5deg) translate(136.255px) rotate(-202.5deg);\n    }\n    \n    .item-6 {\n        transform: rotate(247.5deg) translate(136.255px)rotate(-247.5deg);\n    }\n    \n    .item-7 {\n        transform: rotate(292.5deg) translate(136.255px) rotate(-292.5deg);\n    }\n    \n    .item-8 {\n        transform: rotate(337.5deg) translate(136.255px) rotate(-337.5deg);\n    }\n    \n}\n /* about bottom */\n .about-bottom{\n    grid-column: 2/3;\n    margin-top: 169px;\n }\n\n .contact-btn{\n    border: none;\n    background-color: transparent;\n }\n.contact-btn:hover{\n    cursor: pointer;\n }\n\n @media (max-width:600px){\n    .about-bottom{\n        margin-top: 75px;\n     }\n     .contact-btn-wrapper{\n        width: 158.11px;\n        height: 64.69px;\n     }\n }\n\n/* ------------------- */\n/*       service        */\n/* ------------------- */\n /* mobile first */\n.service-container{\n    margin-top: 40px;\n    background-color: var( --section-bg);\n    overflow: hidden;\n    display: grid;\n    grid-template-columns: 1fr 90% 1fr;\n}\n.service-top{\n    grid-column: 2;\n}\n.servive-carousel-container{\n    grid-column: 2;\n}\n.service-carousel-marker{\n    grid-column: 2;\n}\n.service-contact-btn{\n    grid-column: 2;\n}\n\n/* mobile service grid */\n\n .title-wrapper{\n    position: relative;\n    \n }\n\n.title_eng{\n    font-size: 5rem; /*80px*/\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    color: #FFFFFF;\n    white-space: nowrap; \n    z-index: 2;\n    /* width: 328px;\n    height: 80px; */\n}\n\n.title_jp{\n    z-index: 3;\n    position: absolute;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    letter-spacing: 0px;\n    font-size: 22px;\n\n}\n\n.title-wrapper{\n    display: grid;\n    place-items: center;\n    letter-spacing: 0px;\n    width: fit-content;\n}\n.service-top{\n    margin-bottom:38.57px ;\n}\n.service_slides{\n    display: flex;\n    overflow: hidden;\n    justify-content: center;\n    gap: 50px;\n    grid-column: 2;\n}\n.service_card{\n    width: 308px;\n    height: 408px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    border-radius: 40px;\n    background-color: rgba(255, 255, 255, 0.6);;\n     \n}\n\n/* carousel next and prev buttons */\n.servive-carousel-container{\n    overflow: hidden;\n}\n.service-container{\n    position: relative;\n}\n.carosel-btn{\n    width: 50px;\n    aspect-ratio: 1;\n    border: none;\n    background-color: transparent;\n}\n.carosel-next-btn{\n    position: absolute;\n    top:50%;\n    right: 0;\n    margin: auto;\n    right: 10px;\n/* display: none; */\n}\n\n.carosel-prev-btn{\n    position: absolute;\n    top:50%;\n    left: 0;\n    margin: auto;\n    left: 10px;\n    /* display: none; */\n}\n.service-carosel-btn_img{\n    width: 100%;\n    height: 100%;\n\n}\n\n.carosel-btn:hover{\n    cursor: pointer;\n}\n.service-card_title{\n    font-size: 1.688rem;\n    text-align: center;\n    letter-spacing: 1.08px;\n    color: #000000;\n    margin-top: 23.51px;\n    margin-bottom: 9.34px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n}\n\n.service-card_img{\n    width: 218px;\n    height: 169px;\n    border-radius: 50%;\n    margin-bottom: 30.34px;\n}\n\n.service_card_description{\n    text-align: center;\n    width: 260px;\n    height: 70px;\n    padding-bottom: 47.57px;\n    font-family: 'Noto Sans JP', sans-serif;\n    font-size: 0.875rem; /* 24px */\n}\n\n.service-top{\n    width: 100%;\n}\n\n/*service carosel marker*/\n.service-carousel-marker{\n    display: none;\n}\n.marker{\n    display: flex;\n    margin: 0;\n    margin-top: 22px;\n    padding: 0;\n    align-items: center;\n    justify-content: center;\n    gap: 9.38px;\n}\n\n.marker_item{\n    width: 10px;\n    aspect-ratio: 1;\n    border-radius: 50%;\n    background-color: white;\n}\n.marker_item:hover{\n    border: 1px solid black;\n    cursor: pointer;\n    \n}\n\n.selected{\n    background-color: #000000;\n}\n\n/* service contact button */\n.service-contact-btn{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin-top: 33.5px;\n    /* border: 1px solid red; */\n    width: 100%;\n}\n\n\n/* desktop version  */\n\n@media (min-width:1200px){\n    .servive-carousel-container{\n        width: 100%;\n       \n       \n    }\n    .service_slides{\n       justify-content: space-around;\n       align-items: center;\n       position: relative;\n    }\n    .service-card_title{\n        font-size: 1.69rem;\n        \n        margin-top: 23.51px;\n        margin-bottom: 9.34px;\n        font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n        font-weight: 300;\n        font-style: normal;\n    }\n\n    /* current card */\n    .current{\n        width: 410px;\n        height: 545px;\n    }\n\n    .current .service-card_img{\n        width: 290.8px;\n        height: 225.66px;\n        /* border-radius: 50%;\n        margin-bottom: 30.34px; */\n    }\n\n    .current .service-card_title{\n        font-size: 2.253rem; /*36.05px*/\n        text-align: center;\n        letter-spacing: 1.44px;\n        margin-top: 32.31px;\n        margin-bottom: 11.78px;\n    }\n  \n    .current .service_card_description{\n        width: 334px;\n        height: 93px;\n        padding-bottom: 63.49px;\n        font-size: 1.125rem; /* 18px */\n    }\n\n    .service-container{\n        position: static;\n    }\n    .carosel-next-btn{\n        position: absolute;\n        top: 50%;\n        right:30%;\n    }\n    \n    .carosel-prev-btn{\n        position: absolute;\n        top:50%;\n        left: 30%;\n        margin: auto; \n    }\n    .carosel-btn{\n        width: 80px;\n        aspect-ratio: 1;\n    }\n    .title_eng{\n        font-size: 8.125rem; /*130px */\n    }\n    .title_jp{\n        font-size: 1.875rem;/*30px */\n    }\n    .service-contact-btn{\n        margin-top: 53.7px;\n    }\n    .service-carousel-marker{\n        display: block;\n    }\n}\n/* ------------------- */\n/*       topics         */\n/* ------------------- */\n\n#topics{\n    height: 1000px;\n    margin-top: 80px;\n    background-color: var(--section-bg);\n}\n/* ------------------- */\n/*       company       */\n/* ------------------- */\n /* mobile first */\n .company-container{\n    background-color: var(--section-bg);\n    margin-top: 80px;\n    padding-bottom: 81px;\n }\n.company-title{\n    width: 100%;\n}\n.company-info{\n    /* border: 1px solid red; */\n    display: grid;\n    place-content: center;\n}\n.info-list{\n    padding: 0;\n    width: 100%;\n    margin: 0 auto;\n}\n.info-list-item{\n    display: grid;\n    grid-template-columns: 50px  201px 1fr;\n    gap:50px;\n    /* border-top: 1px solid rgb(230, 235, 345);\n    border-bottom:  1px solid rgb(230, 235, 345); */\n    width: 350px;\n    height: 90px;\n    \n}\n.info-title_mail{\n    /* border-bottom: 5px solid white; */\n}\n.info-title{\n    font-size: 1rem;\n    text-align: left;\n    font-family: 'Noto Sans JP', sans-serif;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    width: 49px;\n    /* border-top: 5px solid white; */\n    \n}\n.info-description{\n    font-size: 1rem;\n    text-align: left;\n    font-family: 'Noto Sans JP', sans-serif;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    flex: 1;\n\n}\n\n.company_tel p{\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    justify-content: center;\n}\n.fax{\n    padding-left: 10px;\n   \n}\n\n/* styles for the lines */\n/* .info-title{\n    position: relative;\n} */\n\n.info-list-item{\n    position: relative;\n}\n.info-title::before{\n    content: \"\";\n    width: 55px;\n    height: 3px;\n    background-color: #FFFFFF;\n    position: absolute;\n    top: 0;\n    left: 0;\n    z-index: 3;\n\n}\n.info-title::after{\n    content: \"\";\n    width: 100%;\n    height: 1px;\n    background-color:  rgb(230, 235, 345); ;\n    position: absolute;\n    top: 1px;\n    left: 0;\n}\n/* .info-title_mail{\n    position: relative;\n}\n.test{\n    width: 100%;\n    background-color: black;\n    height: 5px;\n    position: absolute;\n} */\n\n\n\n@media (min-width:1200px){\n    .info-list-item{\n        display: flex;\n        gap:50px;\n        width: 609px;\n        height: 90px;\n    }\n    .info-title{\n        width: 55px;\n    }\n    .info-description{\n       flex: 1;\n    }\n}\n\n/* ------------------- */\n/*       contact       */\n/* ------------------- */\n#contact{\n    height: 1000px;\n    margin-top: 80px;\n    background-color: var(--section-bg);  \n}\n/* ------------------- */\n/*       footer        */\n/* ------------------- */\n\n#footer{\n    width: 100%;\n    height: 100px;\n    background-color: #000000;\n    display: grid;\n    place-items: center;\n}\n\n.copyright{\n    color: #FFFFFF;\n    font-family: 'Noto Sans JP', sans-serif;\n    font-size: 12px;\n    letter-spacing: 0.48px;\n    text-align: center;\n}\n\n@media (min-width:769px){\n    .copyright{\n        font-size: 18px;\n        letter-spacing: 0.72px;\n    }\n    \n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"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CACC,iBAAiB;CACjB;IACG,gBAAgB;IAChB,iBAAiB;CACpB;AACD;IACI,YAAY;IACZ,6BAA6B;CAChC;AACD;IACI,eAAe;CAClB;;CAEA;IACG;QACI,gBAAgB;KACnB;KACA;QACG,eAAe;QACf,eAAe;KAClB;CACJ;;AAED,wBAAwB;AACxB,yBAAyB;AACzB,wBAAwB;;CAEvB,iBAAiB;;AAElB;IACI,gBAAgB;IAChB,oCAAoC;IACpC,gBAAgB;IAChB,aAAa;IACb,kCAAkC;AACtC;AACA;IACI,cAAc;AAClB;AACA;IACI,cAAc;AAClB;AACA;IACI,cAAc;AAClB;AACA;IACI,cAAc;AAClB;;AAEA,wBAAwB;;AAExB;IACI,kBAAkB;AACtB;AACA;IACI,eAAe,EAAE,OAAO;IACxB,oDAAoD;IACpD,gBAAgB;IAChB,kBAAkB;IAClB,cAAc;IACd,mBAAmB;IACnB,UAAU;AACd;AACA;IACI,UAAU;IACV,kBAAkB;IAClB,oDAAoD;IACpD,gBAAgB;IAChB,kBAAkB;IAClB,mBAAmB;IACnB,eAAe;AACnB;AACA;IACI,aAAa;IACb,mBAAmB;IACnB,mBAAmB;IACnB,kBAAkB;AACtB;AACA;IACI,sBAAsB;AAC1B;AACA;IACI,aAAa;IACb,gBAAgB;IAChB,uBAAuB;IACvB,SAAS;IACT,cAAc;AAClB;AACA;IACI,YAAY;IACZ,aAAa;IACb,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,mBAAmB;IACnB,0CAA0C;AAC9C;;AAEA,mCAAmC;;AAEnC;IACI,gBAAgB;AACpB;AACA;IACI,kBAAkB;AACtB;AACA;IACI,WAAW;IACX,eAAe;IACf,YAAY;IACZ,6BAA6B;AACjC;AACA;IACI,kBAAkB;IAClB,OAAO;IACP,QAAQ;IACR,YAAY;IACZ,WAAW;AACf;AACA;IACI,kBAAkB;IAClB,OAAO;IACP,OAAO;IACP,YAAY;IACZ,UAAU;AACd;AACA;IACI,WAAW;IACX,YAAY;AAChB;AACA;IACI,eAAe;AACnB;AACA;IACI,mBAAmB;IACnB,kBAAkB;IAClB,sBAAsB;IACtB,cA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","sourcesContent":["/* ------------------- */\n/* Variables           */\n/* ------------------- */\n:root{\n    --main-color:#000000;\n\n    /* fonts */\n\n    --ff-trade-gothic:trade-gothic-next-compressed, sans-serif;\n    \n    /* font weights */\n    --fw-nav:400;\n\n    /* hamburger menu vaiables */\n\n    --bar-width:30px;\n    --bar-height:1.17px;\n    --bar-gap:11.24px;\n    --foreground:#606060;\n    --background:#FFFFFF;\n    --animation-timing:350ms ease-in-out;\n    --hamburger-height: calc(var(--bar-height) * 3  + var(--bar-gap) * 2);\n\n    /* section background color */\n    --section-bg: #F0F5F5;\n\n}\n\n/* fonts */\n@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');\n\n\n/* ------------------- */\n/* CSS - Reset               */\n/* ------------------- */\n\n/* Box sizing */\n*,\n*::before,\n*::after {\n    box-sizing: border-box;\n}\n\n/* Reset margins */\nbody,\nh1,\nh2,\nh3,\nh4,\nh5,\np,\nfigure,\npicture {\n    margin: 0;\n}\n\n/* set up the body */\nbody {\n    line-height: 1.5;\n    min-height: 100dvh;\n    max-width: 100vw;\n    overflow-x: hidden;\n    position: relative;\n    color: var(--main-color);\n    margin: 0;\n    padding: 0;\n\n   \n}\n\n/* make images easier to work with */\nimg,\npicture {\n    max-width: 100%;\n    display: block;\n}\n\n/* make form elements easier to work with */\ninput,\nbutton,\ntextarea,\nselect {\n    font: inherit;\n}\n\nul[role='list'],\nol[role='list'] {\n  list-style: none;\n}\n\n/* remove animations for people who've turned them off */\n@media (prefers-reduced-motion: reduce) {  \n  *,\n  *::before,\n  *::after {\n    animation-duration: 0.01ms !important;\n    animation-iteration-count: 1 !important;\n    transition-duration: 0.01ms !important;\n    scroll-behavior: auto !important;\n  }\n}\n/* ------------------- */\n/*       UTILITY CLASSES          */\n/* ------------------- */\n.main-grid{\n    display: grid;\n    grid-template-columns: 1fr 70% 1fr;\n    justify-items: center;\n}\n@media (max-width:600px){\n    .main-grid{\n        display: grid;\n        grid-template-columns: 1fr 85% 1fr;\n    } \n}\n\n.cursor-pointer:hover{\n    cursor: pointer;\n}\n\n/* ------------------- */\n/*       decor-images     */\n/* ------------------- */\n\n/* loop in company name section */\n\n#about{\n    position: relative;\n    overflow-x: hidden;\n\n}\n.loop-one_wrapper{\n  \n    position: absolute;\n    inset: 0;\n    left: 600px;\n    top: -1000px;\n    margin: auto;\n    z-index: 2;\n    overflow: hidden;\n    width: 1543px;\n    height: 702px;\n    background: transparent url('./assets/images/decor/loop1.png') 0% 0% no-repeat padding-box;\n}\n/* \n.loop-one{\n    width: 1543px;\n    height: 702px;\n    grid-column: 2/4;\n    width: 1543px;\nheight: 702px;\n} */\n\n/* ------------------- */\n/*       Nav           */\n/* ------------------- */\nbody{\n    max-width: 100vw;\n}\n#nav{\n    /* border: 1px solid red; */\n    display: flex;\n    \n    justify-content: center;\n    align-items: center;\n    margin-left: 61.93px;\n    margin-top: 34.38px;\n    position: relative;\n}\n.primary-nav-svg{\n    width: 8.8791px;\n    height: 9.0395px;\n    \n}\n\n.logo{\n    position: absolute;\n    top:4px;\n    left: 0;\n    width: 196.19px;\n    height: 57.6px;\n    /* border: 1px soild green; */\n}\n.nav-links{\n    text-decoration: none;\n    color: var(--main-color);\n    font-style: normal;\n    font-family: var(--ff-trade-gothic);\n    font-weight: var(--fw-nav);\n    font-size: 1.25rem;\n}\n\n.primary-nav{\n    display: flex;\n    gap: 2.6875rem;\n    height: 100%;\n    /* border: 1px solid black; */\n    padding: 0;\n}\n\n.primary-nav-item{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 0.5938rem;\n    height: 100%;\n    /* border: 1px solid blue; */\n}\n\n.primary-nav-item:hover{\n    cursor: pointer;\n}\n\n\n.hamburger-menu{\n    display: none;\n}\n\n.nav-link-label{\n    width: 100%;\n    display: flex;\n}\n/* tablet and mobile  */\n@media (max-width:950px){\n    .primary-nav-wrapper{\n        background-color: white;\n        position: fixed;\n        top: 0;\n        right: 0;\n        height: 100%;\n        width: 100%;\n        transition: transform var(--animation-timing);\n        transform: translateX(100%);\n        z-index: 4;\n    }\n\n    .primary-nav{\n        flex-direction: column;\n        justify-content: space-evenly;\n        align-items: flex-start;\n        padding-left: 1rem;\n    }\n\n    .nav-links{\n        font-size: 2rem;\n    }\n    .primary-nav-svg{\n        width: 16px;\n        height: 18px;\n    }\n \n    .logo{\n        position: static;\n    }\n    #nav{\n        justify-content: space-between;\n        margin-left: 20px;\n        margin-right: 20px;\n        margin-top: 9.57px;\n    }\n    .hamburger-menu{\n        --x-width:calc(var(--hamburger-height) * 1.41421356237); /* the length of the bar when its an X (hamburger menu height  * squareroot of 2) */\n        display: flex;\n        flex-direction: column;\n        gap: var(--bar-gap);\n        width: max-content;\n        z-index: 5;\n        cursor: pointer;\n    }\n\n    .hamburger-menu::before,\n    .hamburger-menu::after,\n    .hamburger-menu input{\n        content: \"\";\n        width: var(--bar-width);\n        height: var(--bar-height);\n        background-color: var(--foreground);\n        border-radius: 9999px;\n        transform-origin: left center;\n        transition: opacity var(--animation-timing), width var(--animation-timing),translate var(--animation-timing),rotate var(--animation-timing);\n       \n    }\n    \n    .hamburger-menu input{\n        appearance: none;\n        padding: 0;\n        margin: 0;\n        outline: none;\n        pointer-events: none;\n    }\n\n    .hamburger-menu:has(input:checked)::before{\n        rotate: 45deg;\n        width: var(--x-width);\n        translate: 0 calc(var(--bar-height) / -2);\n    }\n\n    .hamburger-menu:has(input:checked)::after{\n        rotate: -45deg;\n        width: var(--x-width);\n        translate: 0 calc(var(--bar-height)/2);\n        \n    }\n    .hamburger-menu input:checked{\n        opacity: 0;\n        width: 0;\n    }\n\n    .hamburger-menu:has(input:checked) + .primary-nav-wrapper{\n        transform: translateX(0);\n    }\n\n/* Style the labels for the navigation links */\n.nav-link-label {\n    cursor: pointer;\n  }\n  \n  /* Style the labels when the checkbox is checked */\n  .hamburger-checkbox:checked + .primary-nav-wrapper .nav-link-label {\n    display: block;\n  }\n  \n  /* Style the labels when the checkbox is unchecked */\n  .hamburger-checkbox + .primary-nav-wrapper .nav-link-label {\n    display: none;\n  }\n}\n\n/* mobile */\n@media (max-width:600px){\n    .logo{\n        width: 160px;\n        height: 46.97px;\n    }\n    #nav{\n        gap: 120px;\n        margin-left: 20px;\n        margin-top: 9.57px;\n    }\n}\n\n/* ------------------- */\n/*       hero          */\n/* ------------------- */\n\n/* hero top */\n.hero-top-container{\n/* border: 1px solid black; */\ndisplay: flex;\njustify-content: space-between;\nalign-items: center;\n/* gap: 557.5px; */\nmargin-top: 70px;\nmargin-left: 240px;\nmargin-right: 85px;\nmargin-bottom: 69px;\n}\n/* scroll to contact btn */\n.scroll-btn{\n    position: relative;\n    /* border: 1px solid green; */\n    width: 122.02px;\n    /* height: 122.05px; */\n    aspect-ratio: 1;\n    display: grid;\n    place-items: center;\n}\n.scroll-btn-arrow{\n    width: 37px;\n    height: 37px;\n    z-index: 2;\n}\n\n.rotate-text{\n    position: absolute;\n    inset: 0;\n    animation-name: rotate-circle;\n    animation-duration: 10s;\n    animation-timing-function: linear;\n    animation-iteration-count: infinite;\n}\n\n@keyframes rotate-circle {\n    to {\n      transform: rotate(1turn);\n    }\n  }\n\n  /* hero top image styles */\n  .hero-top-img{\n    /* border: 1px solid red; */\n    width: 30.208vw;\n    height: 71px;\n    position: relative;\n  }\n  .hero-top-img::after{\n    content: \"The future is full of likes.\";\n    text-align: left;\n    letter-spacing: 2.95px;\n    color: #F0F5F5;\n    opacity: 1;\n    font-size: 73.79px; \n    font-size: clamp(1.563rem, 5.124vw, 4.612rem);\n    width: max-content;\n    height: 90px;\n    z-index: -1;\n    position: absolute;\n    top: 26px;\n   \n  }\n  /* mobile */\n  @media (max-width:950px){\n    .hero-top-img{\n        /* border: 1px solid red; */\n        width: 207px;\n        height: 33.84px;\n        \n      }\n      .hero-top-img::after{\n        font-size: 35.17px;\n        height: 43px;\n        letter-spacing: 1.41px;\n      }\n      .hero-top-container{\n        margin-top: 0px;\n        margin-left: 19.97px;\n        margin-right: 18.39px;\n        margin-bottom: 20px;\n        }\n        .scroll-btn{\n            width: 73.21px;\n        }\n        .scroll-btn-arrow{\n            width: 22px;\n            height: 22.35px;\n        }\n  }\n  @media (max-width:600px){\n    .hero-top-img::after{\n        font-size: 25px;\n        height: 43px;\n      }\n    .scroll-btn{\n        width: 60px;\n    }\n    .scroll-btn-arrow{\n        width: 16px;\n        height: 17px;\n    }\n  }\n\n\n/* hero Key visual */\n.carousel-container{\n  /* border: 1px solid red; */\n  overflow: hidden;\n  height: 180px;\n}\n.kv {\n    width: 320px;\n    height: 180px;\n}\n.slides{\n   width: 100%;\n   border: 1px solid green;\n   display: flex;\n   gap: 5px;\n}\n.slide{\n   flex-shrink: 0;\n   transform: translateX(10vw);\n   \n\n}\n\n.slide1{\n    /* background: url(./assets/images/hero-img/kv_01-min.jpg);\n    border: 1px solid red;\n    background-size:cover;\n    background-position: center;\n   width: 320px;\n    height: 180px;\n     */\n   \n\n}\n.slide2{\n    /* background: url(./assets/images/hero-img/kv_02-min.jpg);\n   border: 1px solid blue;\n    background-size:cover;\n    background-position: center;\n    min-width: 320px;\n    height: 180px; */\n\n}\n.slide3{\n    /* background: url(./assets/images/hero-img/kv_03-min.jpg);\n    border: 1px solid green;\n    background-size:cover;\n    background-position: center;\n    min-width: 320px;\n    height: 180px; */\n}\n.kv{\n}\n\n@media (min-width:1200px){\n}\n\n    \n\n/* company name */\n.company-name{\n    font-size: 2.4125rem; /* 38.6 px */\n    letter-spacing: -0.77px;\n}\n\n.company-name h3{\n    grid-column: 2/3;\n    justify-self: end;\n    font-family: var(--ff-trade-gothic);\n    z-index: 3;\n}\n\n@media (max-width:600px){\n    .company-name{\n        font-size: 1.5rem; /* 24 px */\n        letter-spacing: -0.77px;\n    }\n}\n\n/* ------------------- */\n/*       about         */\n/* ------------------- */\n\n#about{\n    height: 100%;\n    color: black;\n}\n.about-container{\n    background-color: var(--section-bg);\n    /* border:1px solid black; */\n    height: 100%;\n    /* width: 100%; */\n    overflow-y: hidden;\n    /* border-radius:40% ; */\n}\n\n/* about top styles */\n.about-top{\n    /* border: 1px solid red; */\n    margin-top: 3rem;\n    height: 347px;\n    grid-column: 2/3;\n    display: flex;\n}\n@media (max-width:600px){\n    .about-top{\n        flex-direction: column;\n    }\n   \n    \n}\n\n/* top right */\n.about-top_left{\n    /* border: 1px solid green; */\n    display: grid;\n    place-items: center;\n    letter-spacing: 0px;\n}\n.about-top-title_eng{\n    color: #FFFFFF;\n    font-size: 130px;\n    white-space: nowrap; \n    z-index: 2;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n}\n\n.about-top-title_jp{\n    z-index: 3;\n    position: absolute;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    letter-spacing: 0px;\n    font-size: 30px;\n}\n.about-top_right p{\n    font-size: 22px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    z-index: 3;\n}\n.about-top_right {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    width: 370px;\n}\n\n@media (max-width:600px){\n    .about-top-title_eng{\n        color: #FFFFFF;\n        font-size: 80px;\n        \n    }\n    \n    .about-top-title_jp{\n        font-size: 22px;\n    }\n    .about-top_right p{\n        font-size: 16px; \n    }\n    .about-top_right {\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between;\n        width: 270px;\n        text-align: center;\n        gap: 50px;\n    }\n}\n\n/* about center */\n.about-center{\n    grid-column: 2/3;\n    margin-top: 155px;\n    display: grid;\n    place-items: center;\n}\n\n\n.about-us-list{\n    width: 660px;\n    aspect-ratio: 1;\n    border-radius: 50%;\n    position: relative;\n}\n\n.about-us-list-item{\n    width: 200px;\n    aspect-ratio: 1;\n    border-radius: 50%;\n    /* border: 1px solid red; */\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    position: absolute;\n    left: 50%;\n    top:50%;\n    margin: -100px;\n    z-index: 3;\n\n}\n\n.item-1{\n    transform: rotate(22.5deg) translate(330px) rotate(-22.5deg);\n}\n\n\n.item-2 {\n    transform: rotate( 67.5deg) translateX(330px) rotate(-67.5deg);\n}\n\n.item-3 {\n    transform: rotate(112.5deg) translateX(330px) rotate(-112.5deg);\n}\n\n.item-4 {\n    transform: rotate(157.5deg) translateX(330px) rotate(-157.5deg);\n}\n\n.item-5 {\n    transform: rotate(202.5deg) translateX(330px) rotate(-202.5deg);\n}\n\n.item-6 {\n    transform: rotate(247.5deg) translateX(330px) rotate(-247.5deg);\n}\n\n.item-7 {\n    transform: rotate(292.5deg) translateX(330px) rotate(-292.5deg);\n}\n\n.item-8 {\n    transform: rotate(337.5deg) translateX(330px) rotate(-337.5deg);\n}\n.center{\n    border: none;\n    font-size: 46px;\n    width: 660px;\n    aspect-ratio: 1;\n    margin: -330px;\n    letter-spacing: 0px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    background-color: #FFFFFF;\n }\n .center p{\n    width: 368px;\n    height: 277px;\n }\n\n .sub-item{\n    font-size: 24px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    background-image: url(./assets/images/transparentBkg/transparentBkg2x.png);\n    background-size: cover;\n\n }\n\n @media (max-width:600px){\n    .about-us-list{\n        width: 272.5px;\n    }\n    .about-us-list-item{\n        width: 92px;\n        \n        margin: -46px;\n        z-index: 3;\n    \n    }\n    .sub-item{\n        font-size: 14px;\n        width: 92px;\n    \n     }\n     .center{\n        border: none;\n        font-size: 46px;\n        width: 272.5px;\n        margin: -136.255px;\n        \n     }\n     .center p{\n        width: 152px;\n        height: 114px;\n        font-size: 19px;\n     }\n     .item-1{\n        transform: rotate(22.5deg) translate(136.255px) rotate(-22.5deg);\n    }\n    .item-2 {\n        transform: rotate( 67.5deg) translate(136.255px) rotate(-67.5deg);\n    }\n    \n    .item-3 {\n        transform: rotate(112.5deg) translate(136.255px) rotate(-112.5deg);\n    }\n    \n    .item-4 {\n        transform: rotate(157.5deg) translate(136.255px) rotate(-157.5deg);\n    }\n    \n    .item-5 {\n        transform: rotate(202.5deg) translate(136.255px) rotate(-202.5deg);\n    }\n    \n    .item-6 {\n        transform: rotate(247.5deg) translate(136.255px)rotate(-247.5deg);\n    }\n    \n    .item-7 {\n        transform: rotate(292.5deg) translate(136.255px) rotate(-292.5deg);\n    }\n    \n    .item-8 {\n        transform: rotate(337.5deg) translate(136.255px) rotate(-337.5deg);\n    }\n    \n}\n /* about bottom */\n .about-bottom{\n    grid-column: 2/3;\n    margin-top: 169px;\n }\n.contact-btn{\n    border: none;\n    background-color: transparent;\n }\n.contact-btn:hover{\n    cursor: pointer;\n }\n\n @media (max-width:600px){\n    .about-bottom{\n        margin-top: 75px;\n     }\n     .contact-btn-wrapper{\n        width: 158.11px;\n        height: 64.69px;\n     }\n }\n\n/* ------------------- */\n/*       service        */\n/* ------------------- */\n\n /* mobile first */\n\n.service-container{\n    margin-top: 40px;\n    background-color: var( --section-bg);\n    overflow: hidden;\n    display: grid;\n    grid-template-columns: 1fr 90% 1fr;\n}\n.service-top{\n    grid-column: 2;\n}\n.servive-carousel-container{\n    grid-column: 2;\n}\n.service-carousel-marker{\n    grid-column: 2;\n}\n.service-contact-btn{\n    grid-column: 2;\n}\n\n/* mobile service grid */\n\n.title-wrapper{\n    position: relative;\n}\n.title_eng{\n    font-size: 5rem; /*80px*/\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    color: #FFFFFF;\n    white-space: nowrap; \n    z-index: 2;\n}\n.title_jp{\n    z-index: 3;\n    position: absolute;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    letter-spacing: 0px;\n    font-size: 22px;\n}\n.title-wrapper{\n    display: grid;\n    place-items: center;\n    letter-spacing: 0px;\n    width: fit-content;\n}\n.service-top{\n    margin-bottom:38.57px ;\n}\n.service_slides{\n    display: flex;\n    overflow: hidden;\n    justify-content: center;\n    gap: 50px;\n    grid-column: 2;\n}\n.service_card{\n    width: 308px;\n    height: 408px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    border-radius: 40px;\n    background-color: rgba(255, 255, 255, 0.6);;\n}\n\n/* carousel next and prev buttons */\n\n.servive-carousel-container{\n    overflow: hidden;\n}\n.service-container{\n    position: relative;\n}\n.carosel-btn{\n    width: 50px;\n    aspect-ratio: 1;\n    border: none;\n    background-color: transparent;\n}\n.carosel-next-btn{\n    position: absolute;\n    top:50%;\n    right: 0;\n    margin: auto;\n    right: 10px;\n}\n.carosel-prev-btn{\n    position: absolute;\n    top:50%;\n    left: 0;\n    margin: auto;\n    left: 10px;\n}\n.service-carosel-btn_img{\n    width: 100%;\n    height: 100%;\n}\n.carosel-btn:hover{\n    cursor: pointer;\n}\n.service-card_title{\n    font-size: 1.688rem;\n    text-align: center;\n    letter-spacing: 1.08px;\n    color: #000000;\n    margin-top: 23.51px;\n    margin-bottom: 9.34px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n}\n.service-card_img{\n    width: 218px;\n    height: 169px;\n    border-radius: 50%;\n    margin-bottom: 30.34px;\n}\n.service_card_description{\n    text-align: center;\n    width: 260px;\n    height: 70px;\n    padding-bottom: 47.57px;\n    font-family: 'Noto Sans JP', sans-serif;\n    font-size: 0.875rem; /* 24px */\n}\n.service-top{\n    width: 100%;\n}\n\n/*service carosel marker*/\n\n.service-carousel-marker{\n    display: none;\n}\n.marker{\n    display: flex;\n    margin: 0;\n    margin-top: 22px;\n    padding: 0;\n    align-items: center;\n    justify-content: center;\n    gap: 9.38px;\n}\n.marker_item{\n    width: 10px;\n    aspect-ratio: 1;\n    border-radius: 50%;\n    background-color: white;\n}\n.marker_item:hover{\n    border: 1px solid black;\n    cursor: pointer;\n    \n}\n.selected{\n    background-color: #000000;\n}\n\n/* service contact button */\n\n.service-contact-btn{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin-top: 33.5px;\n    width: 100%;\n}\n\n/* desktop version  */\n\n@media (min-width:1200px){\n    .servive-carousel-container{\n        width: 100%;\n    }\n    .service_slides{\n       justify-content: space-around;\n       align-items: center;\n       position: relative;\n    }\n    .service-card_title{\n        font-size: 1.69rem;\n        margin-top: 23.51px;\n        margin-bottom: 9.34px;\n        font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n        font-weight: 300;\n        font-style: normal;\n    }\n\n    /* current card */\n\n    .current{\n        width: 410px;\n        height: 545px;\n    }\n    .current .service-card_img{\n        width: 290.8px;\n        height: 225.66px;\n        /* border-radius: 50%;\n        margin-bottom: 30.34px; */\n    }\n    .current .service-card_title{\n        font-size: 2.253rem; /*36.05px*/\n        text-align: center;\n        letter-spacing: 1.44px;\n        margin-top: 32.31px;\n        margin-bottom: 11.78px;\n    }\n    .current .service_card_description{\n        width: 334px;\n        height: 93px;\n        padding-bottom: 63.49px;\n        font-size: 1.125rem; /* 18px */\n    }\n    .service-container{\n        position: static;\n    }\n    .carosel-next-btn{\n        position: absolute;\n        top: 50%;\n        right:30%;\n    }\n    .carosel-prev-btn{\n        position: absolute;\n        top:50%;\n        left: 30%;\n        margin: auto; \n    }\n    .carosel-btn{\n        width: 80px;\n        aspect-ratio: 1;\n    }\n    .title_eng{\n        font-size: 8.125rem; /*130px */\n    }\n    .title_jp{\n        font-size: 1.875rem;/*30px */\n    }\n    .service-contact-btn{\n        margin-top: 53.7px;\n    }\n    .service-carousel-marker{\n        display: block;\n    }\n}\n/* ------------------- */\n/*       topics         */\n/* ------------------- */\n\n#topics{\n    height: 1000px;\n    margin-top: 80px;\n    background-color: var(--section-bg);\n}\n/* ------------------- */\n/*       company       */\n/* ------------------- */\n /* mobile first */\n .company-container{\n    background-color: var(--section-bg);\n    margin-top: 80px;\n    padding-bottom: 81px;\n }\n.company-title{\n    width: 100%;\n}\n.company-info{\n    display: grid;\n    place-content: center;\n}\n.info-list{\n    padding: 0;\n    width: 100%;\n    margin: 0 auto;\n}\n.info-list-item{\n    display: grid;\n    grid-template-columns: 50px  201px 1fr;\n    gap:50px;\n    width: 350px;\n    height: 90px; \n}\n.info-title_mail{\n    /* border-bottom: 5px solid white; */\n}\n.info-title{\n    font-size: 1rem;\n    text-align: left;\n    font-family: 'Noto Sans JP', sans-serif;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    width: 49px;\n    /* border-top: 5px solid white; */\n    \n}\n.info-description{\n    font-size: 1rem;\n    text-align: left;\n    font-family: 'Noto Sans JP', sans-serif;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    flex: 1;\n}\n.company_tel p{\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    justify-content: center;\n}\n.fax{\n    padding-left: 10px;\n   \n}\n\n/* styles for the lines */\n\n.info-list-item{\n    position: relative;\n}\n.info-title::before{\n    content: \"\";\n    width: 55px;\n    height: 3px;\n    background-color: #FFFFFF;\n    position: absolute;\n    top: 0;\n    left: 0;\n    z-index: 3;\n\n}\n.info-title::after{\n    content: \"\";\n    width: 100%;\n    height: 1px;\n    background-color:  rgb(230, 235, 345); ;\n    position: absolute;\n    top: 1px;\n    left: 0;\n}\n\n\n@media (min-width:1200px){\n    .info-list-item{\n        display: flex;\n        gap:50px;\n        width: 609px;\n        height: 90px;\n    }\n    .info-title{\n        width: 55px;\n    }\n    .info-description{\n       flex: 1;\n    }\n}\n\n/* ------------------- */\n/*       contact       */\n/* ------------------- */\n#contact{\n    height: 1000px;\n    margin-top: 80px;\n    background-color: var(--section-bg);  \n}\n/* ------------------- */\n/*       footer        */\n/* ------------------- */\n\n#footer{\n    width: 100%;\n    height: 100px;\n    background-color: #000000;\n    display: grid;\n    place-items: center;\n}\n\n.copyright{\n    color: #FFFFFF;\n    font-family: 'Noto Sans JP', sans-serif;\n    font-size: 12px;\n    letter-spacing: 0.48px;\n    text-align: center;\n}\n\n@media (min-width:769px){\n    .copyright{\n        font-size: 18px;\n        letter-spacing: 0.72px;\n    }\n    \n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1764,36 +1723,6 @@ module.exports = __webpack_require__.p + "loop1.png";
 
 /***/ }),
 
-/***/ "./src/assets/images/hero-img/kv_01-min.jpg":
-/*!**************************************************!*\
-  !*** ./src/assets/images/hero-img/kv_01-min.jpg ***!
-  \**************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "kv_01-min.jpg";
-
-/***/ }),
-
-/***/ "./src/assets/images/hero-img/kv_02-min.jpg":
-/*!**************************************************!*\
-  !*** ./src/assets/images/hero-img/kv_02-min.jpg ***!
-  \**************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "kv_02-min.jpg";
-
-/***/ }),
-
-/***/ "./src/assets/images/hero-img/kv_03-min.jpg":
-/*!**************************************************!*\
-  !*** ./src/assets/images/hero-img/kv_03-min.jpg ***!
-  \**************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "kv_03-min.jpg";
-
-/***/ }),
-
 /***/ "./src/assets/images/transparentBkg/transparentBkg2x.png":
 /*!***************************************************************!*\
   !*** ./src/assets/images/transparentBkg/transparentBkg2x.png ***!
@@ -1952,59 +1881,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// const container = document.querySelector('.carousel-container');
-// const slide = document.querySelector('.slides');
-
-// let slides = document.querySelectorAll('.slide');
-// let index = 1;
-// const interval = 3000;
-
-// const firstClone = slides[0].cloneNode(true);
-// const lastClone = slides[slides.length - 1].cloneNode(true);
-
-// const secondClone = slides[1].cloneNode(true);
-
-
-// firstClone.id = 'first-clone';
-// lastClone.id = 'last-clone';
-
-
-// slide.append(firstClone);
-// slide.prepend(lastClone);
-// slide.append(secondClone); //add this clone so that when the carosel reaches the end we wont see it resetting
-
-
-// const slidesWidth = slides[index].clientWidth;
-
-// // const getSlides = ()=> document.querySelectorAll('.slide');
-
-// slide.style.transform= `translateX(${-slidesWidth * index}px)`;
-
-// const startSlide = () => {
-//     setInterval(()=>{
-//         index++;
-//         slide.style.transform= `translateX(${-slidesWidth * index}px)`;
-//         slide.style.transition= `0.7s`
-//     },interval)
-// }
-
-
-
-// slide.addEventListener('transitionend',()=>{
-//     slides = document.querySelectorAll('.slide');
-//     if(slides[index].id === firstClone.id){
-//         slide.style.transition= `none`;
-//         index = 1;
-//         slide.style.transform= `translateX(${-slidesWidth * index}px)`;
-//     }
-// })
-
-
-
-
-// startSlide();
-
-
 // new
 
 const container = document.querySelector('.carousel-container');
@@ -2066,8 +1942,26 @@ slide.addEventListener('transitionend', () => {
 
 startSlide();
 
+
+//nav 
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the checkbox input and navigation links
+    const checkbox = document.getElementById("hamburger-btn");
+    const navLinks = document.querySelectorAll(".nav-links");
+
+    // Add a click event listener to each navigation link
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        // Uncheck the checkbox to close the navigation menu
+        checkbox.checked = false;
+      });
+    });
+  });
+
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main2db9cc56cb57d6ae4383.js.map
+//# sourceMappingURL=main11d98366273ce65fa4a7.js.map
