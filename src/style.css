@@ -316,6 +316,12 @@ body{
         transform: translateX(0);
     }
 
+    [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+        opacity: 1;
+        position: static;
+    }
+
 /* Style the labels for the navigation links */
 .nav-link-label {
     cursor: pointer;
