@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>FUTURE L DAYS</title>
     <script>
         (function(d) {
@@ -117,32 +118,65 @@
                 <h1 class="title_eng">SERVICE</h1>
                 <h2 class="title_jp">サービス</h2>
             </div>
-            <div class="servive-carousel-container">
-                <div class="service_slides">
-                    <div class="service_card">
+
+                <div class="carousel">
+                    <div class="service_card carousel-item">
                         <h3 class="service-card_title">デザイン会社 <br>代行営業</h3>
-                        <img src="./assets/images/carosel-img/Asset 4-min.jpg" alt="" class="service-card_img">
+                        <img src="./assets/images/carosel-img/design.jpg" alt="" class="service-card_img" id="image">
                         <p class="service_card_description">クライアントとデザイン会社を結びつけ、<br> プロジェクトを円滑に進行させ、<br> デザインニーズを満たします。</p>
                     </div>
-                    <div class="service_card current">
+                    <div class="service_card carousel-item">
                         <h3 class="service-card_title">ヘアメイク・<br> スタイリスト派遣</h3>
-                        <img src="./assets/images/carosel-img/Asset 3-min.jpg" alt="" class="service-card_img">
+                        <img src="./assets/images/carosel-img/hairmake.jpg" alt="" class="service-card_img" id="image">
                         <p class="service_card_description">プロのヘアメイクアーティストと<br> スタイリストを提供し、<br>  美容・ファッションニーズに応えます。</p>
                     </div>
-                    <div class="service_card">
+                    <div class="service_card carousel-item">
                         <h3 class="service-card_title">映像クリエイティブ</h3>
-                        <img src="./assets/images/carosel-img/Asset 5-min.jpg" alt="" class="service-card_img">
+                        <img src="./assets/images/carosel-img/creative.jpg" alt="" class="service-card_img" id="image">
                         <p class="service_card_description">Lyric Movie / Music Video <br>ライブ映像</p>
                     </div>
-                    <button class="carosel-prev-btn carosel-btn">
-                        <img src="./assets/images/btn/prev@2x-min.png" alt="" class="service-carosel-btn_img">
-                    </button>
-                    <button class="carosel-next-btn carosel-btn">
-                        <img src="./assets/images/btn/next@2x-min.png" alt="" class="service-carosel-btn_img">
-                    </button>
+                    <div class="service_card carousel-item">
+                        <h3 class="service-card_title">企画・制作</h3>
+                        <img src="./assets/images/carosel-img/aperrel.jpg" alt="" class="service-card_img" id="image">
+                        <p class="service_card_description">アパレルブランドの企画・製造 <br>オリジナルブランド～OEM</p>
+                    </div>
+                    <div class="service_card carousel-item">
+                        <h3 class="service-card_title">広告代理店</h3>
+                        <img src="./assets/images/carosel-img/makeup.jpg" alt="" class="service-card_img" id="image">
+                        <p class="service_card_description">スキンケア・化粧品・ヘアケアブランド、<br> メディカルエステ プロモーション</p>
+                    </div>
+                    <div class="service_card carousel-item">
+                        <h3 class="service-card_title">キャスティング</h3>
+                        <img src="./assets/images/carosel-img/business.jpg" alt="" class="service-card_img" id="image">
+                        <p class="service_card_description">番組・広告・イベント・雑誌・写真集 キャスティング</p>
+                    </div>
+                    <div class="service_card carousel-item">
+                        <h3 class="service-card_title">インフルエンサーマーケティング</h3>
+                        <img src="./assets/images/carosel-img/youtuber.jpg" alt="" class="service-card_img" id="image">
+                        <p class="service_card_description">芸能特化型 ライバーエージェント業務 <br>TikTok / ライブ配信プラットフォームにおいてのプロモーション</p>
+                    </div>
+                    <!-- <div class="prev">
+                        <button class="carosel-prev-btn carosel-btn">
+                           <img src="img/prev@2x-min.png" alt="" class="service-carosel-btn_img">
+                       </button>
+                   </div>
+                   <div class="next">
+                       <button class="carosel-next-btn carosel-btn">
+                           <img src="img/next@2x-min.png" alt="" class="service-carosel-btn_img">
+                       </button>
+                   </div> -->
                 </div>
-            </div>
-            <div class="service-carousel-marker">
+                <div class="prev">
+                    <button class="carosel-prev-btn carosel-btn">
+                       <img src="./assets/images/btn/prev@2x-min.png" alt="" class="service-carosel-btn_img">
+                   </button>
+               </div>
+               <div class="next">
+                   <button class="carosel-next-btn carosel-btn">
+                       <img src="./assets/images/btn/next@2x-min.png" alt="" class="service-carosel-btn_img">
+                   </button>
+               </div>
+            <!-- <div class="service-carousel-marker">
                 <ul class="marker" role="list">
                     <li class="marker_item selected"></li>
                     <li class="marker_item"></li>
@@ -151,7 +185,7 @@
                     <li class="marker_item"></li>
                     <li class="marker_item"></li>
                 </ul>
-            </div>
+            </div> -->
             <div class="service-contact-btn contact-btn-wrapper cursor-pointer">
                 <button class="contact-btn"><a href="#contact"><img src="./assets/images/btn/contact-btn.svg" alt="contact us"></a></button>
             </div>
@@ -199,6 +233,22 @@
     <footer id="footer">
         <small><p class="copyright">Copyright &copy; FUTURE L DAYS All Rights Reserved.</p></small>
     </footer>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function(){
+            $('.carousel').carousel({
+                indicators:true
+            });
+
+            $('.next').click(function(){
+                $('.carousel').carousel('next');
+            })
+            $('.prev').click(function(){
+                $('.carousel').carousel('prev');
+            })
+        });
+       
+    </script>
 </body>
 </html>

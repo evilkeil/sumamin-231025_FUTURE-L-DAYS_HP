@@ -830,9 +830,6 @@ margin-bottom: 69px;
 .servive-carousel-container{
     grid-column: 2;
 }
-.service-carousel-marker{
-    grid-column: 2;
-}
 .service-contact-btn{
     grid-column: 2;
 }
@@ -869,57 +866,20 @@ margin-bottom: 69px;
 .service-top{
     margin-bottom:38.57px ;
 }
-.service_slides{
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-    gap: 50px;
+/* service carosel  */
+
+
+.carousel{
     grid-column: 2;
+    height: 500px;
+    position: relative;
+    border: 1px solid;
+    /* width: 50%; */
 }
-.service_card{
+.carousel .carousel-item{
     width: 308px;
     height: 408px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 40px;
-    background-color: rgba(255, 255, 255, 0.6);;
-}
-
-/* carousel next and prev buttons */
-
-.servive-carousel-container{
-    overflow: hidden;
-}
-.service-container{
-    position: relative;
-}
-.carosel-btn{
-    width: 50px;
-    aspect-ratio: 1;
-    border: none;
-    background-color: transparent;
-}
-.carosel-next-btn{
-    position: absolute;
-    top:50%;
-    right: 0;
-    margin: auto;
-    right: 10px;
-}
-.carosel-prev-btn{
-    position: absolute;
-    top:50%;
-    left: 0;
-    margin: auto;
-    left: 10px;
-}
-.service-carosel-btn_img{
-    width: 100%;
-    height: 100%;
-}
-.carosel-btn:hover{
-    cursor: pointer;
+    background-color: rgba(255, 255, 255, 1);
 }
 .service-card_title{
     font-size: 1.688rem;
@@ -932,12 +892,7 @@ margin-bottom: 69px;
     font-weight: 300;
     font-style: normal;
 }
-.service-card_img{
-    width: 218px;
-    height: 169px;
-    border-radius: 50%;
-    margin-bottom: 30.34px;
-}
+
 .service_card_description{
     text-align: center;
     width: 260px;
@@ -946,29 +901,63 @@ margin-bottom: 69px;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 0.875rem; /* 24px */
 }
-.service-top{
-    width: 100%;
+
+.service_card{
+    width: 308px;
+    height: 408px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
+
+#image{
+    width: 218px;
+    height: 169px;
+    border-radius: 50%;
+    margin-bottom: 30.34px;
+}
+
+.service-carosel-btn_img{
+    width: 100%;
+    height: 100%;
+}
+
+.carosel-btn{
+    width: 50px;
+    aspect-ratio: 1;
+    border: none;
+    background-color: transparent;
+}
 /*service carosel marker*/
 
-.service-carousel-marker{
+.carousel .indicators .indicator-item {
+
+    height: 10px !important;
+    width: 10px !important;
+    
+
+}
+
+.carousel .indicators .indicator-item.active {
+
+    height: 10px !important;
+    width: 10px !important;
+    background-color: #000000 !important;
+    
+
+}
+/* .service-carousel-marker{
     display: none;
 }
-.marker{
-    display: flex;
-    margin: 0;
-    margin-top: 22px;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-    gap: 9.38px;
-}
-.marker_item{
-    width: 10px;
+
+.indicator-item{
+    width: 10px !important;
+    height: 10px !important;
     aspect-ratio: 1;
-    border-radius: 50%;
-    background-color: white;
+  
 }
 .marker_item:hover{
     border: 1px solid black;
@@ -977,7 +966,7 @@ margin-bottom: 69px;
 }
 .selected{
     background-color: #000000;
-}
+} */
 
 /* service contact button */
 
@@ -1011,46 +1000,9 @@ margin-bottom: 69px;
 
     /* current card */
 
-    .current{
-        width: 410px;
-        height: 545px;
-    }
-    .current .service-card_img{
-        width: 290.8px;
-        height: 225.66px;
-        /* border-radius: 50%;
-        margin-bottom: 30.34px; */
-    }
-    .current .service-card_title{
-        font-size: 2.253rem; /*36.05px*/
-        text-align: center;
-        letter-spacing: 1.44px;
-        margin-top: 32.31px;
-        margin-bottom: 11.78px;
-    }
-    .current .service_card_description{
-        width: 334px;
-        height: 93px;
-        padding-bottom: 63.49px;
-        font-size: 1.125rem; /* 18px */
-    }
+    
     .service-container{
         position: static;
-    }
-    .carosel-next-btn{
-        position: absolute;
-        top: 50%;
-        right:30%;
-    }
-    .carosel-prev-btn{
-        position: absolute;
-        top:50%;
-        left: 30%;
-        margin: auto; 
-    }
-    .carosel-btn{
-        width: 80px;
-        aspect-ratio: 1;
     }
     .title_eng{
         font-size: 8.125rem; /*130px */
