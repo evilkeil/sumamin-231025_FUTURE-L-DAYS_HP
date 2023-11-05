@@ -157,16 +157,16 @@
                     </div>
                     <!-- <div class="prev">
                         <button class="carosel-prev-btn carosel-btn">
-                           <img src="img/prev@2x-min.png" alt="" class="service-carosel-btn_img">
+                           <img src="./assets/images/btn/prev@2x-min.png" alt="" class="service-carosel-btn_img">
                        </button>
                    </div>
                    <div class="next">
                        <button class="carosel-next-btn carosel-btn">
-                           <img src="img/next@2x-min.png" alt="" class="service-carosel-btn_img">
+                           <img src="./assets/images/btn/next@2x-min.png" alt="" class="service-carosel-btn_img">
                        </button>
                    </div> -->
                 </div>
-                <div class="prev">
+                <!-- <div class="prev">
                     <button class="carosel-prev-btn carosel-btn">
                        <img src="./assets/images/btn/prev@2x-min.png" alt="" class="service-carosel-btn_img">
                    </button>
@@ -175,7 +175,7 @@
                    <button class="carosel-next-btn carosel-btn">
                        <img src="./assets/images/btn/next@2x-min.png" alt="" class="service-carosel-btn_img">
                    </button>
-               </div>
+               </div> -->
             <!-- <div class="service-carousel-marker">
                 <ul class="marker" role="list">
                     <li class="marker_item selected"></li>
@@ -237,9 +237,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         //script for the service section carosel
+        
         $(document).ready(function(){
             $('.carousel').carousel({
-                indicators:true
+                indicators:true,
+                shift:100,
+                
             });
 
             $('.next').click(function(){
