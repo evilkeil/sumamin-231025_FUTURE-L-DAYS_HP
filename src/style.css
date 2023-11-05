@@ -160,12 +160,16 @@ body{
 #nav{
     /* border: 1px solid red; */
     display: flex;
-    
+    background-color: white !important;
     justify-content: center;
     align-items: center;
     margin-left: 61.93px;
     margin-top: 34.38px;
     position: relative;
+}
+
+#navigation{
+    box-shadow: none;
 }
 .primary-nav-svg{
     width: 8.8791px;
@@ -196,6 +200,8 @@ body{
     height: 100%;
     /* border: 1px solid black; */
     padding: 0;
+    background-color: white !important;
+    box-shadow: none !important;
 }
 
 .primary-nav-item{
@@ -826,6 +832,7 @@ margin-bottom: 69px;
 }
 .service-top{
     grid-column: 2;
+    width: 100%;
 }
 .servive-carousel-container{
     grid-column: 2;
@@ -949,24 +956,8 @@ margin-bottom: 69px;
     
 
 }
-/* .service-carousel-marker{
-    display: none;
-}
 
-.indicator-item{
-    width: 10px !important;
-    height: 10px !important;
-    aspect-ratio: 1;
-  
-}
-.marker_item:hover{
-    border: 1px solid black;
-    cursor: pointer;
-    
-}
-.selected{
-    background-color: #000000;
-} */
+
 
 /* service contact button */
 
