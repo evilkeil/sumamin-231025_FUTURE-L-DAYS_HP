@@ -110,51 +110,64 @@ function raf(time) {
 requestAnimationFrame(raf);
 
   //animations
+  
 
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.to('.about-container',{
-    borderRadius:0,
+  gsap.from('.about-container',{
+    borderRadius:"50%",
     duration:3,
     scrollTrigger:{
-        toggleActions:"play none reverse restart",
-        trigger:'.about-top',
-        start:'top 80%',
+        toggleActions:"play reverse reverse reset",
+        trigger:'.about-container',
+        start:'top center',
         end:'bottom center',
-        scrub:15,
+        markers:true
+    }
+  })
+  gsap.from('.service-container',{
+    borderRadius:"50%",
+    duration:3,
+    scrollTrigger:{
+        toggleActions:"play reverse reverse reset",
+        trigger:'.service-container',
+        start:'top center',
+        end:'bottom center',
+        markers:true
+    }
+  })
+  gsap.from('.company-container',{
+    borderRadius:"30%",
+    duration:5,
+    scrollTrigger:{
+        toggleActions:"play reverse reverse reset",
+        trigger:'.company-container',
+        start:'top center',
+        end:'bottom center',
         markers:true
     }
   })
 
- 
-
-//   gsap.from('.animate',{
-//     y:100,
-//     duration:2,
-//     scrollTrigger:{
-//         trigger:'.about-center',
-//         start:'top center'
-//     }
-//   })
-
-//   gsap.from('.animate',{
-//     opacity:0,
-//     duration:2,
-//     scrollTrigger:{
-//         trigger:'.about-center',
-//         start:'top center'
-//     }
-//   })
+  
 
 
 const tl = gsap.timeline({
+    scrollTrigger:".about-top",
+    start:'top 80%',
+    end:'bottom center',
+
+});
+
+
+
+const tl2 = gsap.timeline({
     scrollTrigger:".about-center",
     start:"bottom 40%",
     
 
 });
 
-tl.from(".animate-1",{y:100,opacity:0,duration:0.7})
+tl2.from(".animate-1",{y:100,opacity:0,duration:0.7})
   .from(".animate-2",{y:100,opacity:0,duration:0.7})
   .from(".animate-3",{y:100,opacity:0,duration:0.7})
   .from(".animate-4",{y:100,opacity:0,duration:0.7})

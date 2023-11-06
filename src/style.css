@@ -555,8 +555,9 @@ margin-bottom: 69px;
     background-color: var(--section-bg);
     height: 100%;
     overflow-y: hidden;
-    border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
+    /* border-radius: 50% 50% 50% 50%/50% 50% 50% 50%; */
 }
+
 
 /* about top styles */
 .about-top{
@@ -564,6 +565,7 @@ margin-bottom: 69px;
     height: 347px;
     grid-column: 2/3;
     display: flex;
+    
 }
 @media (max-width:600px){
     .about-top{
@@ -613,6 +615,10 @@ margin-bottom: 69px;
 }
 
 @media (max-width:600px){
+    /* .about-container{
+    
+        border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
+    } */
     .about-top-title_eng{
         color: #FFFFFF;
         font-size: 80px;
@@ -821,6 +827,8 @@ margin-bottom: 69px;
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 90% 1fr;
+    /* border-radius: 50% 50% 50% 50%/50% 50% 50% 50%; */
+    min-height: 100vh;
 }
 .service-top{
     grid-column: 2;
@@ -1049,10 +1057,12 @@ margin-bottom: 69px;
     background-color: var(--section-bg);
     margin-top: 80px;
     padding-bottom: 81px;
+    padding-top: 100px;
     min-height: 100vh;
  }
 .company-title{
     width: 100%;
+   
 }
 .company-info{
     display: grid;
