@@ -93,9 +93,7 @@ body {
     position: relative;
     color: var(--main-color);
     margin: 0;
-    padding: 0;
-
-   
+    padding: 0; 
 }
 
 /* make images easier to work with */
@@ -157,10 +155,8 @@ ol[role='list'] {
 #about{
     position: relative;
     overflow-x: hidden;
-
 }
 .loop-one_wrapper{
-  
     position: absolute;
     inset: 0;
     left: 600px;
@@ -188,7 +184,6 @@ body{
     max-width: 100vw;
 }
 #nav{
-   
     display: flex;
     background-color: white !important;
     justify-content: center;
@@ -203,8 +198,7 @@ body{
 }
 .primary-nav-svg{
     width: 8.8791px;
-    height: 9.0395px;
-    
+    height: 9.0395px; 
 }
 
 .logo{
@@ -243,8 +237,6 @@ body{
 .primary-nav-item:hover{
     cursor: pointer;
 }
-
-
 .hamburger-menu{
     display: none;
 }
@@ -311,7 +303,6 @@ body{
         border-radius: 9999px;
         transform-origin: left center;
         transition: opacity var(--animation-timing), width var(--animation-timing),translate var(--animation-timing),rotate var(--animation-timing);
-       
     }
     
     .hamburger-menu input{
@@ -442,7 +433,6 @@ margin-bottom: 69px;
     z-index: -1;
     position: absolute;
     top: 26px;
-   
   }
   /* mobile */
   @media (max-width:950px){
@@ -503,22 +493,18 @@ margin-bottom: 69px;
     flex-grow: 1;
    flex-shrink: 0;
    transform: translateX(10vw);
-   
-
 }
 
 @media (min-width: 720px) and (max-width: 1200px) {
     .carousel-container {
-        
-        height: 339px; /* 60% of the desktop height (568px) */
+        height: 339px; 
     }
     .kv {
-        width: 600px; /* Adjust this width as needed */
-        height:339px; /* 60% of the mobile height (180px) */
+        width: 600px; 
+        height:339px; 
     }
     .slides {
-        /* Adjust slide widths and gaps as needed */
-        gap: 5px; /* Adjust the gap between slides */
+        gap: 5px; 
     }
     .slide{
         flex-grow: 1;
@@ -538,16 +524,12 @@ margin-bottom: 69px;
         height:568px;
     }
     .slides {
-       
         gap: 5px; 
     }
     .slide{
         flex-grow: 1;
        flex-shrink: 0;
        transform: translateX(400px);
-       
-       
-    
     }
 }
 
@@ -585,8 +567,9 @@ margin-bottom: 69px;
     background-color: var(--section-bg);
     height: 100%;
     overflow-y: hidden;
-    border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
+    /* border-radius: 50% 50% 50% 50%/50% 50% 50% 50%; */
 }
+
 
 /* about top styles */
 .about-top{
@@ -598,9 +581,7 @@ margin-bottom: 69px;
 @media (max-width:600px){
     .about-top{
         flex-direction: column;
-    }
-   
-    
+    } 
 }
 
 /* top right */
@@ -643,10 +624,13 @@ margin-bottom: 69px;
 }
 
 @media (max-width:600px){
+    /* .about-container{
+    
+        border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
+    } */
     .about-top-title_eng{
         color: #FFFFFF;
-        font-size: 80px;
-        
+        font-size: 80px; 
     }
     
     .about-top-title_jp{
@@ -700,8 +684,6 @@ margin-bottom: 69px;
 .item-1{
     transform: rotate(22.5deg) translate(330px) rotate(-22.5deg);
 }
-
-
 .item-2 {
     transform: rotate( 67.5deg) translateX(330px) rotate(-67.5deg);
 }
@@ -753,7 +735,6 @@ margin-bottom: 69px;
     font-style: normal;
     background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
     background-size: cover;
-
  }
 
  @media (max-width:600px){
@@ -851,6 +832,8 @@ margin-bottom: 69px;
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 90% 1fr;
+    /* border-radius: 50% 50% 50% 50%/50% 50% 50% 50%; */
+    min-height: 100vh;
 }
 .service-top{
     grid-column: 2;
@@ -1079,10 +1062,12 @@ margin-bottom: 69px;
     background-color: var(--section-bg);
     margin-top: 80px;
     padding-bottom: 81px;
+    padding-top: 100px;
     min-height: 100vh;
  }
 .company-title{
     width: 100%;
+   
 }
 .company-info{
     display: grid;
@@ -1206,9 +1191,8 @@ margin-bottom: 69px;
     .copyright{
         font-size: 18px;
         letter-spacing: 0.72px;
-    }
-    
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"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","sourcesContent":["/* ------------------- */\n/* Variables           */\n/* ------------------- */\n:root{\n    --main-color:#000000;\n\n    /* fonts */\n\n    --ff-trade-gothic:trade-gothic-next-compressed, sans-serif;\n    \n    /* font weights */\n    --fw-nav:400;\n\n    /* hamburger menu vaiables */\n\n    --bar-width:30px;\n    --bar-height:1.17px;\n    --bar-gap:11.24px;\n    --foreground:#606060;\n    --background:#FFFFFF;\n    --animation-timing:350ms ease-in-out;\n    --hamburger-height: calc(var(--bar-height) * 3  + var(--bar-gap) * 2);\n\n    /* section background color */\n    --section-bg: #F0F5F5;\n\n}\n\n/* fonts */\n@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');\n\n\n/* ------------------- */\n/* CSS - Reset               */\n/* ------------------- */\n\n/* Box sizing */\n*,\n*::before,\n*::after {\n    box-sizing: border-box;\n}\n\n/* Reset margins */\nbody,\nh1,\nh2,\nh3,\nh4,\nh5,\np,\nfigure,\npicture {\n    margin: 0;\n}\n\n/* set up the body */\nbody {\n    line-height: 1.5;\n    min-height: 100dvh;\n    max-width: 100vw;\n    overflow-x: hidden;\n    position: relative;\n    color: var(--main-color);\n    margin: 0;\n    padding: 0;\n\n   \n}\n\n/* make images easier to work with */\nimg,\npicture {\n    max-width: 100%;\n    display: block;\n}\n\n/* make form elements easier to work with */\ninput,\nbutton,\ntextarea,\nselect {\n    font: inherit;\n}\n\nul[role='list'],\nol[role='list'] {\n  list-style: none;\n}\n\n/* remove animations for people who've turned them off */\n@media (prefers-reduced-motion: reduce) {  \n  *,\n  *::before,\n  *::after {\n    animation-duration: 0.01ms !important;\n    animation-iteration-count: 1 !important;\n    transition-duration: 0.01ms !important;\n    scroll-behavior: auto !important;\n  }\n}\n/* ------------------- */\n/*       UTILITY CLASSES          */\n/* ------------------- */\n.main-grid{\n    display: grid;\n    grid-template-columns: 1fr 70% 1fr;\n    justify-items: center;\n}\n@media (max-width:600px){\n    .main-grid{\n        display: grid;\n        grid-template-columns: 1fr 85% 1fr;\n    } \n}\n\n.cursor-pointer:hover{\n    cursor: pointer;\n}\n\n/* ------------------- */\n/*       decor-images     */\n/* ------------------- */\n\n/* loop in company name section */\n\n#about{\n    position: relative;\n    overflow-x: hidden;\n\n}\n.loop-one_wrapper{\n  \n    position: absolute;\n    inset: 0;\n    left: 600px;\n    top: -1000px;\n    margin: auto;\n    z-index: 2;\n    overflow: hidden;\n    width: 1543px;\n    height: 702px;\n    background: transparent url('./assets/images/decor/loop1.png') 0% 0% no-repeat padding-box;\n}\n/* \n.loop-one{\n    width: 1543px;\n    height: 702px;\n    grid-column: 2/4;\n    width: 1543px;\nheight: 702px;\n} */\n\n/* ------------------- */\n/*       Nav           */\n/* ------------------- */\nbody{\n    max-width: 100vw;\n}\n#nav{\n   \n    display: flex;\n    background-color: white !important;\n    justify-content: center;\n    align-items: center;\n    margin-left: 61.93px;\n    margin-top: 34.38px;\n    position: relative;\n}\n\n#navigation{\n    box-shadow: none;\n}\n.primary-nav-svg{\n    width: 8.8791px;\n    height: 9.0395px;\n    \n}\n\n.logo{\n    position: absolute;\n    top:4px;\n    left: 0;\n    width: 196.19px;\n    height: 57.6px;\n}\n.nav-links{\n    text-decoration: none;\n    color: var(--main-color);\n    font-style: normal;\n    font-family: var(--ff-trade-gothic);\n    font-weight: var(--fw-nav);\n    font-size: 1.25rem;\n}\n\n.primary-nav{\n    display: flex;\n    gap: 2.6875rem;\n    height: 100%;\n    padding: 0;\n    background-color: white !important;\n    box-shadow: none !important;\n}\n\n.primary-nav-item{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 0.5938rem;\n    height: 100%;\n}\n\n.primary-nav-item:hover{\n    cursor: pointer;\n}\n\n\n.hamburger-menu{\n    display: none;\n}\n\n.nav-link-label{\n    width: 100%;\n    display: flex;\n}\n/* tablet and mobile  */\n@media (max-width:950px){\n    .primary-nav-wrapper{\n        background-color: white;\n        position: fixed;\n        top: 0;\n        right: 0;\n        height: 100%;\n        width: 100%;\n        transition: transform var(--animation-timing);\n        transform: translateX(100%);\n        z-index: 4;\n    }\n\n    .primary-nav{\n        flex-direction: column;\n        justify-content: space-evenly;\n        align-items: flex-start;\n        padding-left: 1rem;\n    }\n\n    .nav-links{\n        font-size: 2rem;\n    }\n    .primary-nav-svg{\n        width: 16px;\n        height: 18px;\n    }\n \n    .logo{\n        position: static;\n    }\n    #nav{\n        justify-content: space-between;\n        margin-left: 20px;\n        margin-right: 20px;\n        margin-top: 9.57px;\n    }\n    .hamburger-menu{\n        --x-width:calc(var(--hamburger-height) * 1.41421356237); /* the length of the bar when its an X (hamburger menu height  * squareroot of 2) */\n        display: flex;\n        flex-direction: column;\n        gap: var(--bar-gap);\n        width: max-content;\n        z-index: 5;\n        cursor: pointer;\n    }\n\n    .hamburger-menu::before,\n    .hamburger-menu::after,\n    .hamburger-menu input{\n        content: \"\";\n        width: var(--bar-width);\n        height: var(--bar-height);\n        background-color: var(--foreground);\n        border-radius: 9999px;\n        transform-origin: left center;\n        transition: opacity var(--animation-timing), width var(--animation-timing),translate var(--animation-timing),rotate var(--animation-timing);\n       \n    }\n    \n    .hamburger-menu input{\n        appearance: none;\n        padding: 0;\n        margin: 0;\n        outline: none;\n        pointer-events: none;\n    }\n\n    .hamburger-menu:has(input:checked)::before{\n        rotate: 45deg;\n        width: var(--x-width);\n        translate: 0 calc(var(--bar-height) / -2);\n    }\n\n    .hamburger-menu:has(input:checked)::after{\n        rotate: -45deg;\n        width: var(--x-width);\n        translate: 0 calc(var(--bar-height)/2);\n        \n    }\n    .hamburger-menu input:checked{\n        opacity: 0;\n        width: 0;\n    }\n\n    .hamburger-menu:has(input:checked) + .primary-nav-wrapper{\n        transform: translateX(0);\n    }\n\n    [type=\"checkbox\"]:not(:checked),\n    [type=\"checkbox\"]:checked {\n        opacity: 1;\n        position: static;\n    }\n\n/* Style the labels for the navigation links */\n.nav-link-label {\n    cursor: pointer;\n  }\n  \n  /* Style the labels when the checkbox is checked */\n  .hamburger-checkbox:checked + .primary-nav-wrapper .nav-link-label {\n    display: block;\n  }\n  \n  /* Style the labels when the checkbox is unchecked */\n  .hamburger-checkbox + .primary-nav-wrapper .nav-link-label {\n    display: none;\n  }\n}\n\n/* mobile */\n@media (max-width:600px){\n    .logo{\n        width: 160px;\n        height: 46.97px;\n    }\n    #nav{\n        gap: 120px;\n        margin-left: 20px;\n        margin-top: 9.57px;\n    }\n}\n\n/* ------------------- */\n/*       hero          */\n/* ------------------- */\n#hero{\n    min-height: 50vh;\n}\n/* hero top */\n.hero-top-container{\ndisplay: flex;\njustify-content: space-between;\nalign-items: center;\nmargin-top: 70px;\nmargin-left: 240px;\nmargin-right: 85px;\nmargin-bottom: 69px;\n}\n/* scroll to contact btn */\n.scroll-btn{\n    position: relative;\n    width: 122.02px;\n    aspect-ratio: 1;\n    display: grid;\n    place-items: center;\n}\n.scroll-btn-arrow{\n    width: 37px;\n    height: 37px;\n    z-index: 2;\n}\n\n.rotate-text{\n    position: absolute;\n    inset: 0;\n    animation-name: rotate-circle;\n    animation-duration: 10s;\n    animation-timing-function: linear;\n    animation-iteration-count: infinite;\n}\n\n@keyframes rotate-circle {\n    to {\n      transform: rotate(1turn);\n    }\n  }\n\n  /* hero top image styles */\n  .hero-top-img{\n    width: 30.208vw;\n    height: 71px;\n    position: relative;\n  }\n  .hero-top-img::after{\n    content: \"The future is full of likes.\";\n    text-align: left;\n    letter-spacing: 2.95px;\n    color: #F0F5F5;\n    opacity: 1;\n    font-size: 73.79px; \n    font-size: clamp(1.563rem, 5.124vw, 4.612rem);\n    width: max-content;\n    height: 90px;\n    z-index: -1;\n    position: absolute;\n    top: 26px;\n   \n  }\n  /* mobile */\n  @media (max-width:950px){\n    .hero-top-img{\n        width: 207px;\n        height: 33.84px;\n        \n      }\n      .hero-top-img::after{\n        font-size: 35.17px;\n        height: 43px;\n        letter-spacing: 1.41px;\n      }\n      .hero-top-container{\n        margin-top: 0px;\n        margin-left: 19.97px;\n        margin-right: 18.39px;\n        margin-bottom: 20px;\n        }\n        .scroll-btn{\n            width: 73.21px;\n        }\n        .scroll-btn-arrow{\n            width: 22px;\n            height: 22.35px;\n        }\n  }\n  @media (max-width:600px){\n    .hero-top-img::after{\n        font-size: 25px;\n        height: 43px;\n      }\n    .scroll-btn{\n        width: 60px;\n    }\n    .scroll-btn-arrow{\n        width: 16px;\n        height: 17px;\n    }\n  }\n\n\n/* hero Key visual */\n.carousel-container{\n  overflow: hidden;\n  height: 180px;\n}\n.kv {\n    width: 320px;\n    height: 180px;\n}\n.slides{\n   width: 100%;\n   display: flex;\n   gap: 5px;\n}\n.slide{\n    flex-grow: 1;\n   flex-shrink: 0;\n   transform: translateX(10vw);\n   \n\n}\n\n@media (min-width: 720px) and (max-width: 1200px) {\n    .carousel-container {\n        \n        height: 339px; /* 60% of the desktop height (568px) */\n    }\n    .kv {\n        width: 600px; /* Adjust this width as needed */\n        height:339px; /* 60% of the mobile height (180px) */\n    }\n    .slides {\n        /* Adjust slide widths and gaps as needed */\n        gap: 5px; /* Adjust the gap between slides */\n    }\n    .slide{\n        flex-grow: 1;\n       flex-shrink: 0;\n       transform: translateX(13vw);\n       \n    \n    }\n}\n\n@media (min-width:1200px){\n    .carousel-container {\n        height:568px; \n    }\n    .kv {\n        width: 1010px; \n        height:568px;\n    }\n    .slides {\n       \n        gap: 5px; \n    }\n    .slide{\n        flex-grow: 1;\n       flex-shrink: 0;\n       transform: translateX(400px);\n       \n       \n    \n    }\n}\n\n    \n\n/* company name */\n.company-name{\n    font-size: 2.4125rem; /* 38.6 px */\n    letter-spacing: -0.77px;\n}\n\n.company-name h3{\n    grid-column: 2/3;\n    justify-self: end;\n    font-family: var(--ff-trade-gothic);\n    z-index: 3;\n}\n\n@media (max-width:600px){\n    .company-name{\n        font-size: 1.5rem; /* 24 px */\n        letter-spacing: -0.77px;\n    }\n}\n\n/* ------------------- */\n/*       about         */\n/* ------------------- */\n\n#about{\n    height: 100%;\n    color: black;\n}\n.about-container{\n    background-color: var(--section-bg);\n    height: 100%;\n    overflow-y: hidden;\n    border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;\n}\n\n/* about top styles */\n.about-top{\n    margin-top: 3rem;\n    height: 347px;\n    grid-column: 2/3;\n    display: flex;\n}\n@media (max-width:600px){\n    .about-top{\n        flex-direction: column;\n    }\n   \n    \n}\n\n/* top right */\n.about-top_left{\n    display: grid;\n    place-items: center;\n    letter-spacing: 0px;\n}\n.about-top-title_eng{\n    color: #FFFFFF;\n    font-size: 130px;\n    white-space: nowrap; \n    z-index: 2;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n}\n\n.about-top-title_jp{\n    z-index: 3;\n    position: absolute;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    letter-spacing: 0px;\n    font-size: 30px;\n}\n.about-top_right p{\n    font-size: 22px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    z-index: 3;\n}\n.about-top_right {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    width: 370px;\n}\n\n@media (max-width:600px){\n    .about-top-title_eng{\n        color: #FFFFFF;\n        font-size: 80px;\n        \n    }\n    \n    .about-top-title_jp{\n        font-size: 22px;\n    }\n    .about-top_right p{\n        font-size: 16px; \n    }\n    .about-top_right {\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between;\n        width: 270px;\n        text-align: center;\n        gap: 50px;\n    }\n}\n\n/* about center */\n.about-center{\n    grid-column: 2/3;\n    margin-top: 155px;\n    display: grid;\n    place-items: center;\n}\n\n\n.about-us-list{\n    width: 660px;\n    aspect-ratio: 1;\n    border-radius: 50%;\n    position: relative;\n}\n\n.about-us-list-item{\n    width: 200px;\n    aspect-ratio: 1;\n    border-radius: 50%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    position: absolute;\n    left: 50%;\n    top:50%;\n    margin: -100px;\n    z-index: 3;\n\n}\n\n.item-1{\n    transform: rotate(22.5deg) translate(330px) rotate(-22.5deg);\n}\n\n\n.item-2 {\n    transform: rotate( 67.5deg) translateX(330px) rotate(-67.5deg);\n}\n\n.item-3 {\n    transform: rotate(112.5deg) translateX(330px) rotate(-112.5deg);\n}\n\n.item-4 {\n    transform: rotate(157.5deg) translateX(330px) rotate(-157.5deg);\n}\n\n.item-5 {\n    transform: rotate(202.5deg) translateX(330px) rotate(-202.5deg);\n}\n\n.item-6 {\n    transform: rotate(247.5deg) translateX(330px) rotate(-247.5deg);\n}\n\n.item-7 {\n    transform: rotate(292.5deg) translateX(330px) rotate(-292.5deg);\n}\n\n.item-8 {\n    transform: rotate(337.5deg) translateX(330px) rotate(-337.5deg);\n}\n.center{\n    border: none;\n    font-size: 46px;\n    width: 660px;\n    aspect-ratio: 1;\n    margin: -330px;\n    letter-spacing: 0px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    background-color: #FFFFFF;\n }\n .center p{\n    width: 368px;\n    height: 277px;\n }\n\n .sub-item{\n    font-size: 24px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    background-image: url(./assets/images/transparentBkg/transparentBkg2x.png);\n    background-size: cover;\n\n }\n\n @media (max-width:600px){\n    .about-us-list{\n        width: 272.5px;\n    }\n    .about-us-list-item{\n        width: 92px;\n        \n        margin: -46px;\n        z-index: 3;\n    \n    }\n    .sub-item{\n        font-size: 14px;\n        width: 92px;\n    \n     }\n     .center{\n        border: none;\n        font-size: 46px;\n        width: 272.5px;\n        margin: -136.255px;\n        \n     }\n     .center p{\n        width: 152px;\n        height: 114px;\n        font-size: 19px;\n     }\n     .item-1{\n        transform: rotate(22.5deg) translate(136.255px) rotate(-22.5deg);\n    }\n    .item-2 {\n        transform: rotate( 67.5deg) translate(136.255px) rotate(-67.5deg);\n    }\n    \n    .item-3 {\n        transform: rotate(112.5deg) translate(136.255px) rotate(-112.5deg);\n    }\n    \n    .item-4 {\n        transform: rotate(157.5deg) translate(136.255px) rotate(-157.5deg);\n    }\n    \n    .item-5 {\n        transform: rotate(202.5deg) translate(136.255px) rotate(-202.5deg);\n    }\n    \n    .item-6 {\n        transform: rotate(247.5deg) translate(136.255px)rotate(-247.5deg);\n    }\n    \n    .item-7 {\n        transform: rotate(292.5deg) translate(136.255px) rotate(-292.5deg);\n    }\n    \n    .item-8 {\n        transform: rotate(337.5deg) translate(136.255px) rotate(-337.5deg);\n    }\n    \n}\n /* about bottom */\n .about-bottom{\n    grid-column: 2/3;\n    margin-top: 169px;\n }\n.contact-btn{\n    border: none;\n    background-color: transparent;\n }\n.contact-btn:hover{\n    cursor: pointer;\n }\n\n @media (max-width:600px){\n    .about-bottom{\n        margin-top: 75px;\n     }\n     .contact-btn-wrapper{\n        width: 158.11px;\n        height: 64.69px;\n     }\n }\n\n/* ------------------- */\n/*       service        */\n/* ------------------- */\n\n /* mobile first */\n\n.service-container{\n    margin-top: 40px;\n    background-color: var( --section-bg);\n    overflow: hidden;\n    display: grid;\n    grid-template-columns: 1fr 90% 1fr;\n}\n.service-top{\n    grid-column: 2;\n    justify-self: center;\n    width: 100%;\n}\n.servive-carousel-container{\n    grid-column: 2;\n}\n.service-contact-btn{\n    grid-column: 2;\n}\n\n/* mobile service grid */\n\n.title-wrapper{\n    position: relative;\n}\n.title_eng{\n    font-size: 5rem; /*80px*/\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    color: #FFFFFF;\n    white-space: nowrap; \n    z-index: 2;\n}\n.title_jp{\n    z-index: 3;\n    position: absolute;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    letter-spacing: 0px;\n    font-size: 22px;\n}\n.title-wrapper{\n    display: grid;\n    place-items: center;\n    letter-spacing: 0px;\n    width: fit-content;\n}\n.service-top{\n    margin-bottom:38.57px ;\n}\n/* service carosel  */\n\n\n.carousel{\n    grid-column: 2;\n    height: 500px;\n    position: relative;\n    /* border: 1px solid black; */\n}\n.carousel .carousel-item{\n    width: 308px;\n    height: 408px;\n    background-color: rgba(255, 255, 255, 1);\n}\n.carousel-item{\n    z-index: 1;\n}\n.service-card_title{\n    font-size: 1.688rem;\n    text-align: center;\n    letter-spacing: 1.08px;\n    color: #000000;\n    margin-top: 23.51px;\n    margin-bottom: 9.34px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n}\n\n.service_card_description{\n    text-align: center;\n    width: 260px;\n    height: 70px;\n    padding-bottom: 47.57px;\n    font-family: 'Noto Sans JP', sans-serif;\n    font-size: 0.875rem; /* 24px */\n}\n\n.service_card{\n    width: 308px;\n    height: 408px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    border-radius: 40px;\n    background-color: rgba(255, 255, 255, 0.6);\n}\n\n\n#image{\n    width: 218px;\n    height: 169px;\n    border-radius: 50%;\n    margin-bottom: 30.34px;\n}\n\n.service-carosel-btn_img{\n    width: 100%;\n    height: 100%;\n}\n\n.carosel-btn{\n    width: 80px;\n    aspect-ratio: 1;\n    border: none;\n    background-color: transparent;\n}\n\n/*service carosel marker*/\n\n.carousel .indicators .indicator-item {\n    height: 10px !important;\n    width: 10px !important;\n\n}\n\n.carousel .indicators .indicator-item:hover {\n    border: 1px solid #000000 !important;\n\n}\n\n\n.carousel .indicators .indicator-item.active {\n\n    height: 10px !important;\n    width: 10px !important;\n    background-color: #000000 !important;\n    \n\n}\n\n.prev{\n    position: absolute;\n    /* top: 40%;\n    left: 30vw; */\n    left: 0;\n}\n.next{\n    position: absolute;\n    /* top: 40%;\n    right: 30vw; */\n    right: 0;\n}\n\n.prev,\n.next{\n    opacity: 0.6;\n    z-index: 2;\n}\n\n.prev:hover,\n.next:hover{\n    opacity: 1;\n    cursor: pointer;\n}\n\n/* service contact button */\n\n.service-contact-btn{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin-top: 33.5px;\n    width: 100%;\n}\n\n/* desktop version  */\n\n@media (min-width:1200px){\n    .servive-carousel-container{\n        width: 100%;\n    }\n    .service_slides{\n       justify-content: space-around;\n       align-items: center;\n       position: relative;\n    }\n    .service-card_title{\n        font-size: 1.69rem;\n        margin-top: 23.51px;\n        margin-bottom: 9.34px;\n        font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n        font-weight: 300;\n        font-style: normal;\n    }\n\n    /* current card */\n\n    \n    .service-container{\n        position: static;\n    }\n    .title_eng{\n        font-size: 8.125rem; /*130px */\n    }\n    .title_jp{\n        font-size: 1.875rem;/*30px */\n    }\n    .service-contact-btn{\n        margin-top: 53.7px;\n    }\n    .service-carousel-marker{\n        display: block;\n    }\n}\n/* ------------------- */\n/*       topics         */\n/* ------------------- */\n\n#topics{\n    height: 1000px;\n    margin-top: 80px;\n    background-color: var(--section-bg);\n}\n/* ------------------- */\n/*       company       */\n/* ------------------- */\n\n /* mobile first */\n .company-container{\n    background-color: var(--section-bg);\n    margin-top: 80px;\n    padding-bottom: 81px;\n    min-height: 100vh;\n }\n.company-title{\n    width: 100%;\n}\n.company-info{\n    display: grid;\n    place-content: center;\n}\n.info-list{\n    padding: 0;\n    width: 100%;\n    margin: 0 auto;\n}\n.info-list-item{\n    display: grid;\n    grid-template-columns: 50px  201px 1fr;\n    gap:50px;\n    width: 350px;\n    height: 90px; \n}\n\n.info-title{\n    font-size: 1rem;\n    text-align: left;\n    font-family: 'Noto Sans JP', sans-serif;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    width: 49px;\n    \n    \n}\n.info-description{\n    font-size: 1rem;\n    text-align: left;\n    font-family: 'Noto Sans JP', sans-serif;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    flex: 1;\n}\n.company_tel p{\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    justify-content: center;\n}\n.fax{\n    padding-left: 10px;\n   \n}\n\n/* styles for the lines */\n\n.info-list-item{\n    position: relative;\n}\n.info-title::before{\n    content: \"\";\n    width: 55px;\n    height: 3px;\n    background-color: #FFFFFF;\n    position: absolute;\n    top: 0;\n    left: 0;\n    z-index: 3;\n\n}\n.info-title::after{\n    content: \"\";\n    width: 100%;\n    height: 1px;\n    background-color:  rgb(230, 235, 345); ;\n    position: absolute;\n    top: 1px;\n    left: 0;\n}\n\n\n@media (min-width:1200px){\n    .info-list-item{\n        display: flex;\n        gap:50px;\n        width: 609px;\n        height: 90px;\n    }\n    .info-title{\n        width: 55px;\n    }\n    .info-description{\n       flex: 1;\n    }\n}\n\n/* ------------------- */\n/*       contact       */\n/* ------------------- */\n#contact{\n    height: 1000px;\n    margin-top: 80px;\n    background-color: var(--section-bg);  \n}\n/* ------------------- */\n/*       footer        */\n/* ------------------- */\n\n#footer{\n    width: 100%;\n    height: 100px;\n    background-color: #000000;\n    display: grid;\n    place-items: center;\n}\n\n.copyright{\n    color: #FFFFFF;\n    font-family: 'Noto Sans JP', sans-serif;\n    font-size: 12px;\n    letter-spacing: 0.48px;\n    text-align: center;\n}\n\n@media (min-width:769px){\n    .copyright{\n        font-size: 18px;\n        letter-spacing: 0.72px;\n    }\n    \n}"],"sourceRoot":""}]);
+    }  
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"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","sourcesContent":["/* ------------------- */\n/* Variables           */\n/* ------------------- */\n:root{\n    --main-color:#000000;\n\n    /* fonts */\n\n    --ff-trade-gothic:trade-gothic-next-compressed, sans-serif;\n    \n    /* font weights */\n    --fw-nav:400;\n\n    /* hamburger menu vaiables */\n\n    --bar-width:30px;\n    --bar-height:1.17px;\n    --bar-gap:11.24px;\n    --foreground:#606060;\n    --background:#FFFFFF;\n    --animation-timing:350ms ease-in-out;\n    --hamburger-height: calc(var(--bar-height) * 3  + var(--bar-gap) * 2);\n\n    /* section background color */\n    --section-bg: #F0F5F5;\n\n}\n\n/* fonts */\n@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');\n\n\n/* ------------------- */\n/* CSS - Reset               */\n/* ------------------- */\n\n/* Box sizing */\n*,\n*::before,\n*::after {\n    box-sizing: border-box;\n}\n\n/* Reset margins */\nbody,\nh1,\nh2,\nh3,\nh4,\nh5,\np,\nfigure,\npicture {\n    margin: 0;\n}\n\n/* set up the body */\nbody {\n    line-height: 1.5;\n    min-height: 100dvh;\n    max-width: 100vw;\n    overflow-x: hidden;\n    position: relative;\n    color: var(--main-color);\n    margin: 0;\n    padding: 0; \n}\n\n/* make images easier to work with */\nimg,\npicture {\n    max-width: 100%;\n    display: block;\n}\n\n/* make form elements easier to work with */\ninput,\nbutton,\ntextarea,\nselect {\n    font: inherit;\n}\n\nul[role='list'],\nol[role='list'] {\n  list-style: none;\n}\n\n/* remove animations for people who've turned them off */\n@media (prefers-reduced-motion: reduce) {  \n  *,\n  *::before,\n  *::after {\n    animation-duration: 0.01ms !important;\n    animation-iteration-count: 1 !important;\n    transition-duration: 0.01ms !important;\n    scroll-behavior: auto !important;\n  }\n}\n/* ------------------- */\n/*       UTILITY CLASSES          */\n/* ------------------- */\n.main-grid{\n    display: grid;\n    grid-template-columns: 1fr 70% 1fr;\n    justify-items: center;\n}\n@media (max-width:600px){\n    .main-grid{\n        display: grid;\n        grid-template-columns: 1fr 85% 1fr;\n    } \n}\n\n.cursor-pointer:hover{\n    cursor: pointer;\n}\n\n/* ------------------- */\n/*       decor-images     */\n/* ------------------- */\n\n/* loop in company name section */\n\n#about{\n    position: relative;\n    overflow-x: hidden;\n}\n.loop-one_wrapper{\n    position: absolute;\n    inset: 0;\n    left: 600px;\n    top: -1000px;\n    margin: auto;\n    z-index: 2;\n    overflow: hidden;\n    width: 1543px;\n    height: 702px;\n    background: transparent url('./assets/images/decor/loop1.png') 0% 0% no-repeat padding-box;\n}\n/* \n.loop-one{\n    width: 1543px;\n    height: 702px;\n    grid-column: 2/4;\n    width: 1543px;\nheight: 702px;\n} */\n\n/* ------------------- */\n/*       Nav           */\n/* ------------------- */\nbody{\n    max-width: 100vw;\n}\n#nav{\n    display: flex;\n    background-color: white !important;\n    justify-content: center;\n    align-items: center;\n    margin-left: 61.93px;\n    margin-top: 34.38px;\n    position: relative;\n}\n\n#navigation{\n    box-shadow: none;\n}\n.primary-nav-svg{\n    width: 8.8791px;\n    height: 9.0395px; \n}\n\n.logo{\n    position: absolute;\n    top:4px;\n    left: 0;\n    width: 196.19px;\n    height: 57.6px;\n}\n.nav-links{\n    text-decoration: none;\n    color: var(--main-color);\n    font-style: normal;\n    font-family: var(--ff-trade-gothic);\n    font-weight: var(--fw-nav);\n    font-size: 1.25rem;\n}\n\n.primary-nav{\n    display: flex;\n    gap: 2.6875rem;\n    height: 100%;\n    padding: 0;\n    background-color: white !important;\n    box-shadow: none !important;\n}\n\n.primary-nav-item{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 0.5938rem;\n    height: 100%;\n}\n\n.primary-nav-item:hover{\n    cursor: pointer;\n}\n.hamburger-menu{\n    display: none;\n}\n\n.nav-link-label{\n    width: 100%;\n    display: flex;\n}\n/* tablet and mobile  */\n@media (max-width:950px){\n    .primary-nav-wrapper{\n        background-color: white;\n        position: fixed;\n        top: 0;\n        right: 0;\n        height: 100%;\n        width: 100%;\n        transition: transform var(--animation-timing);\n        transform: translateX(100%);\n        z-index: 4;\n    }\n\n    .primary-nav{\n        flex-direction: column;\n        justify-content: space-evenly;\n        align-items: flex-start;\n        padding-left: 1rem;\n    }\n\n    .nav-links{\n        font-size: 2rem;\n    }\n    .primary-nav-svg{\n        width: 16px;\n        height: 18px;\n    }\n \n    .logo{\n        position: static;\n    }\n    #nav{\n        justify-content: space-between;\n        margin-left: 20px;\n        margin-right: 20px;\n        margin-top: 9.57px;\n    }\n    .hamburger-menu{\n        --x-width:calc(var(--hamburger-height) * 1.41421356237); /* the length of the bar when its an X (hamburger menu height  * squareroot of 2) */\n        display: flex;\n        flex-direction: column;\n        gap: var(--bar-gap);\n        width: max-content;\n        z-index: 5;\n        cursor: pointer;\n    }\n\n    .hamburger-menu::before,\n    .hamburger-menu::after,\n    .hamburger-menu input{\n        content: \"\";\n        width: var(--bar-width);\n        height: var(--bar-height);\n        background-color: var(--foreground);\n        border-radius: 9999px;\n        transform-origin: left center;\n        transition: opacity var(--animation-timing), width var(--animation-timing),translate var(--animation-timing),rotate var(--animation-timing);\n    }\n    \n    .hamburger-menu input{\n        appearance: none;\n        padding: 0;\n        margin: 0;\n        outline: none;\n        pointer-events: none;\n    }\n\n    .hamburger-menu:has(input:checked)::before{\n        rotate: 45deg;\n        width: var(--x-width);\n        translate: 0 calc(var(--bar-height) / -2);\n    }\n\n    .hamburger-menu:has(input:checked)::after{\n        rotate: -45deg;\n        width: var(--x-width);\n        translate: 0 calc(var(--bar-height)/2);\n        \n    }\n    .hamburger-menu input:checked{\n        opacity: 0;\n        width: 0;\n    }\n\n    .hamburger-menu:has(input:checked) + .primary-nav-wrapper{\n        transform: translateX(0);\n    }\n\n    [type=\"checkbox\"]:not(:checked),\n    [type=\"checkbox\"]:checked {\n        opacity: 1;\n        position: static;\n    }\n\n/* Style the labels for the navigation links */\n.nav-link-label {\n    cursor: pointer;\n  }\n  \n  /* Style the labels when the checkbox is checked */\n  .hamburger-checkbox:checked + .primary-nav-wrapper .nav-link-label {\n    display: block;\n  }\n  \n  /* Style the labels when the checkbox is unchecked */\n  .hamburger-checkbox + .primary-nav-wrapper .nav-link-label {\n    display: none;\n  }\n}\n\n/* mobile */\n@media (max-width:600px){\n    .logo{\n        width: 160px;\n        height: 46.97px;\n    }\n    #nav{\n        gap: 120px;\n        margin-left: 20px;\n        margin-top: 9.57px;\n    }\n}\n\n/* ------------------- */\n/*       hero          */\n/* ------------------- */\n#hero{\n    min-height: 50vh;\n}\n/* hero top */\n.hero-top-container{\ndisplay: flex;\njustify-content: space-between;\nalign-items: center;\nmargin-top: 70px;\nmargin-left: 240px;\nmargin-right: 85px;\nmargin-bottom: 69px;\n}\n/* scroll to contact btn */\n.scroll-btn{\n    position: relative;\n    width: 122.02px;\n    aspect-ratio: 1;\n    display: grid;\n    place-items: center;\n}\n.scroll-btn-arrow{\n    width: 37px;\n    height: 37px;\n    z-index: 2;\n}\n\n.rotate-text{\n    position: absolute;\n    inset: 0;\n    animation-name: rotate-circle;\n    animation-duration: 10s;\n    animation-timing-function: linear;\n    animation-iteration-count: infinite;\n}\n\n@keyframes rotate-circle {\n    to {\n      transform: rotate(1turn);\n    }\n  }\n\n  /* hero top image styles */\n  .hero-top-img{\n    width: 30.208vw;\n    height: 71px;\n    position: relative;\n  }\n  .hero-top-img::after{\n    content: \"The future is full of likes.\";\n    text-align: left;\n    letter-spacing: 2.95px;\n    color: #F0F5F5;\n    opacity: 1;\n    font-size: 73.79px; \n    font-size: clamp(1.563rem, 5.124vw, 4.612rem);\n    width: max-content;\n    height: 90px;\n    z-index: -1;\n    position: absolute;\n    top: 26px;\n  }\n  /* mobile */\n  @media (max-width:950px){\n    .hero-top-img{\n        width: 207px;\n        height: 33.84px;\n        \n      }\n      .hero-top-img::after{\n        font-size: 35.17px;\n        height: 43px;\n        letter-spacing: 1.41px;\n      }\n      .hero-top-container{\n        margin-top: 0px;\n        margin-left: 19.97px;\n        margin-right: 18.39px;\n        margin-bottom: 20px;\n        }\n        .scroll-btn{\n            width: 73.21px;\n        }\n        .scroll-btn-arrow{\n            width: 22px;\n            height: 22.35px;\n        }\n  }\n  @media (max-width:600px){\n    .hero-top-img::after{\n        font-size: 25px;\n        height: 43px;\n      }\n    .scroll-btn{\n        width: 60px;\n    }\n    .scroll-btn-arrow{\n        width: 16px;\n        height: 17px;\n    }\n  }\n\n\n/* hero Key visual */\n.carousel-container{\n  overflow: hidden;\n  height: 180px;\n}\n.kv {\n    width: 320px;\n    height: 180px;\n}\n.slides{\n   width: 100%;\n   display: flex;\n   gap: 5px;\n}\n.slide{\n    flex-grow: 1;\n   flex-shrink: 0;\n   transform: translateX(10vw);\n}\n\n@media (min-width: 720px) and (max-width: 1200px) {\n    .carousel-container {\n        height: 339px; \n    }\n    .kv {\n        width: 600px; \n        height:339px; \n    }\n    .slides {\n        gap: 5px; \n    }\n    .slide{\n        flex-grow: 1;\n       flex-shrink: 0;\n       transform: translateX(13vw);\n       \n    \n    }\n}\n\n@media (min-width:1200px){\n    .carousel-container {\n        height:568px; \n    }\n    .kv {\n        width: 1010px; \n        height:568px;\n    }\n    .slides {\n        gap: 5px; \n    }\n    .slide{\n        flex-grow: 1;\n       flex-shrink: 0;\n       transform: translateX(400px);\n    }\n}\n\n    \n\n/* company name */\n.company-name{\n    font-size: 2.4125rem; /* 38.6 px */\n    letter-spacing: -0.77px;\n}\n\n.company-name h3{\n    grid-column: 2/3;\n    justify-self: end;\n    font-family: var(--ff-trade-gothic);\n    z-index: 3;\n}\n\n@media (max-width:600px){\n    .company-name{\n        font-size: 1.5rem; /* 24 px */\n        letter-spacing: -0.77px;\n    }\n}\n\n/* ------------------- */\n/*       about         */\n/* ------------------- */\n\n#about{\n    height: 100%;\n    color: black;\n}\n.about-container{\n    background-color: var(--section-bg);\n    height: 100%;\n    overflow-y: hidden;\n    /* border-radius: 50% 50% 50% 50%/50% 50% 50% 50%; */\n}\n\n\n/* about top styles */\n.about-top{\n    margin-top: 3rem;\n    height: 347px;\n    grid-column: 2/3;\n    display: flex;\n}\n@media (max-width:600px){\n    .about-top{\n        flex-direction: column;\n    } \n}\n\n/* top right */\n.about-top_left{\n    display: grid;\n    place-items: center;\n    letter-spacing: 0px;\n}\n.about-top-title_eng{\n    color: #FFFFFF;\n    font-size: 130px;\n    white-space: nowrap; \n    z-index: 2;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n}\n\n.about-top-title_jp{\n    z-index: 3;\n    position: absolute;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    letter-spacing: 0px;\n    font-size: 30px;\n}\n.about-top_right p{\n    font-size: 22px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    z-index: 3;\n}\n.about-top_right {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    width: 370px;\n}\n\n@media (max-width:600px){\n    /* .about-container{\n    \n        border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;\n    } */\n    .about-top-title_eng{\n        color: #FFFFFF;\n        font-size: 80px; \n    }\n    \n    .about-top-title_jp{\n        font-size: 22px;\n    }\n    .about-top_right p{\n        font-size: 16px; \n    }\n    .about-top_right {\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between;\n        width: 270px;\n        text-align: center;\n        gap: 50px;\n    }\n}\n\n/* about center */\n.about-center{\n    grid-column: 2/3;\n    margin-top: 155px;\n    display: grid;\n    place-items: center;\n}\n\n\n.about-us-list{\n    width: 660px;\n    aspect-ratio: 1;\n    border-radius: 50%;\n    position: relative;\n}\n\n.about-us-list-item{\n    width: 200px;\n    aspect-ratio: 1;\n    border-radius: 50%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    position: absolute;\n    left: 50%;\n    top:50%;\n    margin: -100px;\n    z-index: 3;\n\n}\n\n.item-1{\n    transform: rotate(22.5deg) translate(330px) rotate(-22.5deg);\n}\n.item-2 {\n    transform: rotate( 67.5deg) translateX(330px) rotate(-67.5deg);\n}\n\n.item-3 {\n    transform: rotate(112.5deg) translateX(330px) rotate(-112.5deg);\n}\n\n.item-4 {\n    transform: rotate(157.5deg) translateX(330px) rotate(-157.5deg);\n}\n\n.item-5 {\n    transform: rotate(202.5deg) translateX(330px) rotate(-202.5deg);\n}\n\n.item-6 {\n    transform: rotate(247.5deg) translateX(330px) rotate(-247.5deg);\n}\n\n.item-7 {\n    transform: rotate(292.5deg) translateX(330px) rotate(-292.5deg);\n}\n\n.item-8 {\n    transform: rotate(337.5deg) translateX(330px) rotate(-337.5deg);\n}\n.center{\n    border: none;\n    font-size: 46px;\n    width: 660px;\n    aspect-ratio: 1;\n    margin: -330px;\n    letter-spacing: 0px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    background-color: #FFFFFF;\n }\n .center p{\n    width: 368px;\n    height: 277px;\n }\n\n .sub-item{\n    font-size: 24px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    background-image: url(./assets/images/transparentBkg/transparentBkg2x.png);\n    background-size: cover;\n }\n\n @media (max-width:600px){\n    .about-us-list{\n        width: 272.5px;\n    }\n    .about-us-list-item{\n        width: 92px;\n        \n        margin: -46px;\n        z-index: 3;\n    \n    }\n    .sub-item{\n        font-size: 14px;\n        width: 92px;\n    \n     }\n     .center{\n        border: none;\n        font-size: 46px;\n        width: 272.5px;\n        margin: -136.255px;\n        \n     }\n     .center p{\n        width: 152px;\n        height: 114px;\n        font-size: 19px;\n     }\n     .item-1{\n        transform: rotate(22.5deg) translate(136.255px) rotate(-22.5deg);\n    }\n    .item-2 {\n        transform: rotate( 67.5deg) translate(136.255px) rotate(-67.5deg);\n    }\n    \n    .item-3 {\n        transform: rotate(112.5deg) translate(136.255px) rotate(-112.5deg);\n    }\n    \n    .item-4 {\n        transform: rotate(157.5deg) translate(136.255px) rotate(-157.5deg);\n    }\n    \n    .item-5 {\n        transform: rotate(202.5deg) translate(136.255px) rotate(-202.5deg);\n    }\n    \n    .item-6 {\n        transform: rotate(247.5deg) translate(136.255px)rotate(-247.5deg);\n    }\n    \n    .item-7 {\n        transform: rotate(292.5deg) translate(136.255px) rotate(-292.5deg);\n    }\n    \n    .item-8 {\n        transform: rotate(337.5deg) translate(136.255px) rotate(-337.5deg);\n    }\n    \n}\n /* about bottom */\n .about-bottom{\n    grid-column: 2/3;\n    margin-top: 169px;\n }\n.contact-btn{\n    border: none;\n    background-color: transparent;\n }\n.contact-btn:hover{\n    cursor: pointer;\n }\n\n @media (max-width:600px){\n    .about-bottom{\n        margin-top: 75px;\n     }\n     .contact-btn-wrapper{\n        width: 158.11px;\n        height: 64.69px;\n     }\n }\n\n/* ------------------- */\n/*       service        */\n/* ------------------- */\n\n /* mobile first */\n\n.service-container{\n    margin-top: 40px;\n    background-color: var( --section-bg);\n    overflow: hidden;\n    display: grid;\n    grid-template-columns: 1fr 90% 1fr;\n    /* border-radius: 50% 50% 50% 50%/50% 50% 50% 50%; */\n    min-height: 100vh;\n}\n.service-top{\n    grid-column: 2;\n    justify-self: center;\n    width: 100%;\n}\n.servive-carousel-container{\n    grid-column: 2;\n}\n.service-contact-btn{\n    grid-column: 2;\n}\n\n/* mobile service grid */\n\n.title-wrapper{\n    position: relative;\n}\n.title_eng{\n    font-size: 5rem; /*80px*/\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    color: #FFFFFF;\n    white-space: nowrap; \n    z-index: 2;\n}\n.title_jp{\n    z-index: 3;\n    position: absolute;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n    letter-spacing: 0px;\n    font-size: 22px;\n}\n.title-wrapper{\n    display: grid;\n    place-items: center;\n    letter-spacing: 0px;\n    width: fit-content;\n}\n.service-top{\n    margin-bottom:38.57px ;\n}\n/* service carosel  */\n\n\n.carousel{\n    grid-column: 2;\n    height: 500px;\n    position: relative;\n    /* border: 1px solid black; */\n}\n.carousel .carousel-item{\n    width: 308px;\n    height: 408px;\n    background-color: rgba(255, 255, 255, 1);\n}\n.carousel-item{\n    z-index: 1;\n}\n.service-card_title{\n    font-size: 1.688rem;\n    text-align: center;\n    letter-spacing: 1.08px;\n    color: #000000;\n    margin-top: 23.51px;\n    margin-bottom: 9.34px;\n    font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n    font-weight: 300;\n    font-style: normal;\n}\n\n.service_card_description{\n    text-align: center;\n    width: 260px;\n    height: 70px;\n    padding-bottom: 47.57px;\n    font-family: 'Noto Sans JP', sans-serif;\n    font-size: 0.875rem; /* 24px */\n}\n\n.service_card{\n    width: 308px;\n    height: 408px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    border-radius: 40px;\n    background-color: rgba(255, 255, 255, 0.6);\n}\n\n\n#image{\n    width: 218px;\n    height: 169px;\n    border-radius: 50%;\n    margin-bottom: 30.34px;\n}\n\n.service-carosel-btn_img{\n    width: 100%;\n    height: 100%;\n}\n\n.carosel-btn{\n    width: 80px;\n    aspect-ratio: 1;\n    border: none;\n    background-color: transparent;\n}\n\n/*service carosel marker*/\n\n.carousel .indicators .indicator-item {\n    height: 10px !important;\n    width: 10px !important;\n\n}\n\n.carousel .indicators .indicator-item:hover {\n    border: 1px solid #000000 !important;\n\n}\n\n\n.carousel .indicators .indicator-item.active {\n\n    height: 10px !important;\n    width: 10px !important;\n    background-color: #000000 !important;\n    \n\n}\n\n.prev{\n    position: absolute;\n    /* top: 40%;\n    left: 30vw; */\n    left: 0;\n}\n.next{\n    position: absolute;\n    /* top: 40%;\n    right: 30vw; */\n    right: 0;\n}\n\n.prev,\n.next{\n    opacity: 0.6;\n    z-index: 2;\n}\n\n.prev:hover,\n.next:hover{\n    opacity: 1;\n    cursor: pointer;\n}\n\n/* service contact button */\n\n.service-contact-btn{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin-top: 33.5px;\n    width: 100%;\n}\n\n/* desktop version  */\n\n@media (min-width:1200px){\n    .servive-carousel-container{\n        width: 100%;\n    }\n    .service_slides{\n       justify-content: space-around;\n       align-items: center;\n       position: relative;\n    }\n    .service-card_title{\n        font-size: 1.69rem;\n        margin-top: 23.51px;\n        margin-bottom: 9.34px;\n        font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;\n        font-weight: 300;\n        font-style: normal;\n    }\n\n    /* current card */\n\n    \n    .service-container{\n        position: static;\n    }\n    .title_eng{\n        font-size: 8.125rem; /*130px */\n    }\n    .title_jp{\n        font-size: 1.875rem;/*30px */\n    }\n    .service-contact-btn{\n        margin-top: 53.7px;\n    }\n    .service-carousel-marker{\n        display: block;\n    }\n}\n/* ------------------- */\n/*       topics         */\n/* ------------------- */\n\n#topics{\n    height: 1000px;\n    margin-top: 80px;\n    background-color: var(--section-bg);\n}\n/* ------------------- */\n/*       company       */\n/* ------------------- */\n\n /* mobile first */\n .company-container{\n    background-color: var(--section-bg);\n    margin-top: 80px;\n    padding-bottom: 81px;\n    padding-top: 100px;\n    min-height: 100vh;\n }\n.company-title{\n    width: 100%;\n   \n}\n.company-info{\n    display: grid;\n    place-content: center;\n}\n.info-list{\n    padding: 0;\n    width: 100%;\n    margin: 0 auto;\n}\n.info-list-item{\n    display: grid;\n    grid-template-columns: 50px  201px 1fr;\n    gap:50px;\n    width: 350px;\n    height: 90px; \n}\n\n.info-title{\n    font-size: 1rem;\n    text-align: left;\n    font-family: 'Noto Sans JP', sans-serif;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    width: 49px;\n    \n    \n}\n.info-description{\n    font-size: 1rem;\n    text-align: left;\n    font-family: 'Noto Sans JP', sans-serif;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    flex: 1;\n}\n.company_tel p{\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    justify-content: center;\n}\n.fax{\n    padding-left: 10px;\n   \n}\n\n/* styles for the lines */\n\n.info-list-item{\n    position: relative;\n}\n.info-title::before{\n    content: \"\";\n    width: 55px;\n    height: 3px;\n    background-color: #FFFFFF;\n    position: absolute;\n    top: 0;\n    left: 0;\n    z-index: 3;\n\n}\n.info-title::after{\n    content: \"\";\n    width: 100%;\n    height: 1px;\n    background-color:  rgb(230, 235, 345); ;\n    position: absolute;\n    top: 1px;\n    left: 0;\n}\n\n\n@media (min-width:1200px){\n    .info-list-item{\n        display: flex;\n        gap:50px;\n        width: 609px;\n        height: 90px;\n    }\n    .info-title{\n        width: 55px;\n    }\n    .info-description{\n       flex: 1;\n    }\n}\n\n/* ------------------- */\n/*       contact       */\n/* ------------------- */\n#contact{\n    height: 1000px;\n    margin-top: 80px;\n    background-color: var(--section-bg);  \n}\n/* ------------------- */\n/*       footer        */\n/* ------------------- */\n\n#footer{\n    width: 100%;\n    height: 100px;\n    background-color: #000000;\n    display: grid;\n    place-items: center;\n}\n\n.copyright{\n    color: #FFFFFF;\n    font-family: 'Noto Sans JP', sans-serif;\n    font-size: 12px;\n    letter-spacing: 0.48px;\n    text-align: center;\n}\n\n@media (min-width:769px){\n    .copyright{\n        font-size: 18px;\n        letter-spacing: 0.72px;\n    }  \n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1857,13 +1841,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 
 
-
 // new
 
-const container = document.querySelector('.carousel-container');
-const slide = document.querySelector('.slides');
+const container = document.querySelector(".carousel-container");
+const slide = document.querySelector(".slides");
 
-let slides = document.querySelectorAll('.slide');
+let slides = document.querySelectorAll(".slide");
 let index = 1;
 const interval = 3000;
 let slideInterval; // Variable to hold the interval ID
@@ -1873,8 +1856,8 @@ const lastClone = slides[slides.length - 1].cloneNode(true);
 
 const secondClone = slides[1].cloneNode(true);
 
-firstClone.id = 'first-clone';
-lastClone.id = 'last-clone';
+firstClone.id = "first-clone";
+lastClone.id = "last-clone";
 
 slide.append(firstClone);
 slide.prepend(lastClone);
@@ -1885,142 +1868,142 @@ const slidesWidth = slides[index].clientWidth;
 slide.style.transform = `translateX(${-slidesWidth * index}px)`;
 
 const startSlide = () => {
-    slideInterval = setInterval(() => {
-        index++;
-        slide.style.transform = `translateX(${-slidesWidth * index}px)`;
-        slide.style.transition = '0.7s';
-    }, interval);
-}
+  slideInterval = setInterval(() => {
+    index++;
+    slide.style.transform = `translateX(${-slidesWidth * index}px)`;
+    slide.style.transition = "0.7s";
+  }, interval);
+};
 
 const pauseSlide = () => {
-    clearInterval(slideInterval); // Clear the interval when not in focus
-}
+  clearInterval(slideInterval); // Clear the interval when not in focus
+};
 
 const resumeSlide = () => {
-    startSlide(); // Resume the slide when the page regains focus
-}
+  startSlide(); // Resume the slide when the page regains focus
+};
 
-document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'hidden') {
-        pauseSlide();
-    } else {
-        resumeSlide();
-    }
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "hidden") {
+    pauseSlide();
+  } else {
+    resumeSlide();
+  }
 });
 
-slide.addEventListener('transitionend', () => {
-    slides = document.querySelectorAll('.slide');
-    if (slides[index].id === firstClone.id) {
-        slide.style.transition = 'none';
-        index = 1;
-        slide.style.transform = `translateX(${-slidesWidth * index}px)`;
-    }
+slide.addEventListener("transitionend", () => {
+  slides = document.querySelectorAll(".slide");
+  if (slides[index].id === firstClone.id) {
+    slide.style.transition = "none";
+    index = 1;
+    slide.style.transform = `translateX(${-slidesWidth * index}px)`;
+  }
 });
 
 startSlide();
 
+//nav
 
-//nav 
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the checkbox input and navigation links
+  const checkbox = document.getElementById("hamburger-btn");
+  const navLinks = document.querySelectorAll(".nav-links");
 
-
-  document.addEventListener("DOMContentLoaded", function () {
-    // Get the checkbox input and navigation links
-    const checkbox = document.getElementById("hamburger-btn");
-    const navLinks = document.querySelectorAll(".nav-links");
-
-    // Add a click event listener to each navigation link
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        // Uncheck the checkbox to close the navigation menu
-        checkbox.checked = false;
-      });
+  // Add a click event listener to each navigation link
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      // Uncheck the checkbox to close the navigation menu
+      checkbox.checked = false;
     });
   });
+});
 
+//service carosel
 
-  //service carosel
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, {
-        indicators:true,
-        shift:100,
-        duration:250,});
-        
+document.addEventListener("DOMContentLoaded", function () {
+  var elems = document.querySelectorAll(".carousel");
+  var instances = M.Carousel.init(elems, {
+    indicators: true,
+    shift: 100,
+    duration: 250,
   });
+});
 
+//smooth scroll
 
+const lenis = new Lenis();
 
-//smooth scroll 
-
-const lenis = new Lenis()
-
-lenis.on('scroll', (e) => {
-  console.log(e)
-})
+lenis.on("scroll", (e) => {
+  console.log(e);
+});
 
 function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
+  lenis.raf(time);
+  requestAnimationFrame(raf);
 }
 
 requestAnimationFrame(raf);
 
-  //animations
+//animations
 
-  gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-  gsap.to('.about-container',{
-    borderRadius:0,
-    duration:3,
-    scrollTrigger:{
-        toggleActions:"play none reverse restart",
-        trigger:'.about-top',
-        start:'top 80%',
-        end:'bottom center',
-        scrub:15,
-        markers:true
-    }
-  })
-
- 
-
-//   gsap.from('.animate',{
-//     y:100,
-//     duration:2,
-//     scrollTrigger:{
-//         trigger:'.about-center',
-//         start:'top center'
-//     }
-//   })
-
-//   gsap.from('.animate',{
-//     opacity:0,
-//     duration:2,
-//     scrollTrigger:{
-//         trigger:'.about-center',
-//         start:'top center'
-//     }
-//   })
-
-
-const tl = gsap.timeline({
-    scrollTrigger:".about-center",
-    start:"bottom 40%",
-    
-
+gsap.from(".about-container", {
+  borderRadius: "50%",
+  duration: 3,
+  scrollTrigger: {
+    toggleActions: "play reverse reverse reset",
+    trigger: ".about-container",
+    start: "top center",
+    end: "bottom center",
+    markers: true,
+  },
+});
+gsap.from(".service-container", {
+  borderRadius: "50%",
+  duration: 3,
+  scrollTrigger: {
+    toggleActions: "play reverse reverse reset",
+    trigger: ".service-container",
+    start: "top center",
+    end: "bottom center",
+    markers: true,
+  },
+});
+gsap.from(".company-container", {
+  borderRadius: "30%",
+  duration: 5,
+  scrollTrigger: {
+    toggleActions: "play reverse reverse reset",
+    trigger: ".company-container",
+    start: "top center",
+    end: "bottom center",
+    markers: true,
+  },
 });
 
-tl.from(".animate-1",{y:100,opacity:0,duration:0.7})
-  .from(".animate-2",{y:100,opacity:0,duration:0.7})
-  .from(".animate-3",{y:100,opacity:0,duration:0.7})
-  .from(".animate-4",{y:100,opacity:0,duration:0.7})
-  .from(".animate-5",{y:100,opacity:0,duration:0.7})
-  .from(".animate-6",{y:100,opacity:0,duration:0.7})
-  .from(".animate-7",{y:100,opacity:0,duration:0.7})
-  .from(".animate-8",{y:100,opacity:0,duration:0.7})
+const tl = gsap.timeline({
+  scrollTrigger: ".about-top",
+  start: "top 80%",
+  end: "bottom center",
+});
+
+const tl2 = gsap.timeline({
+  scrollTrigger: ".about-center",
+  start: "bottom 40%",
+});
+
+tl2
+  .from(".animate-1", { y: 100, opacity: 0, duration: 0.7 })
+  .from(".animate-2", { y: 100, opacity: 0, duration: 0.7 })
+  .from(".animate-3", { y: 100, opacity: 0, duration: 0.7 })
+  .from(".animate-4", { y: 100, opacity: 0, duration: 0.7 })
+  .from(".animate-5", { y: 100, opacity: 0, duration: 0.7 })
+  .from(".animate-6", { y: 100, opacity: 0, duration: 0.7 })
+  .from(".animate-7", { y: 100, opacity: 0, duration: 0.7 })
+  .from(".animate-8", { y: 100, opacity: 0, duration: 0.7 });
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main9b4ae89385b8e81682d6.js.map
+//# sourceMappingURL=main718f5269be6c322d483e.js.map

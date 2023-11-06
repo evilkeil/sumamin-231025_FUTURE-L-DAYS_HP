@@ -63,9 +63,7 @@ body {
     position: relative;
     color: var(--main-color);
     margin: 0;
-    padding: 0;
-
-   
+    padding: 0; 
 }
 
 /* make images easier to work with */
@@ -127,10 +125,8 @@ ol[role='list'] {
 #about{
     position: relative;
     overflow-x: hidden;
-
 }
 .loop-one_wrapper{
-  
     position: absolute;
     inset: 0;
     left: 600px;
@@ -158,7 +154,6 @@ body{
     max-width: 100vw;
 }
 #nav{
-   
     display: flex;
     background-color: white !important;
     justify-content: center;
@@ -173,8 +168,7 @@ body{
 }
 .primary-nav-svg{
     width: 8.8791px;
-    height: 9.0395px;
-    
+    height: 9.0395px; 
 }
 
 .logo{
@@ -213,8 +207,6 @@ body{
 .primary-nav-item:hover{
     cursor: pointer;
 }
-
-
 .hamburger-menu{
     display: none;
 }
@@ -281,7 +273,6 @@ body{
         border-radius: 9999px;
         transform-origin: left center;
         transition: opacity var(--animation-timing), width var(--animation-timing),translate var(--animation-timing),rotate var(--animation-timing);
-       
     }
     
     .hamburger-menu input{
@@ -412,7 +403,6 @@ margin-bottom: 69px;
     z-index: -1;
     position: absolute;
     top: 26px;
-   
   }
   /* mobile */
   @media (max-width:950px){
@@ -473,22 +463,18 @@ margin-bottom: 69px;
     flex-grow: 1;
    flex-shrink: 0;
    transform: translateX(10vw);
-   
-
 }
 
 @media (min-width: 720px) and (max-width: 1200px) {
     .carousel-container {
-        
-        height: 339px; /* 60% of the desktop height (568px) */
+        height: 339px; 
     }
     .kv {
-        width: 600px; /* Adjust this width as needed */
-        height:339px; /* 60% of the mobile height (180px) */
+        width: 600px; 
+        height:339px; 
     }
     .slides {
-        /* Adjust slide widths and gaps as needed */
-        gap: 5px; /* Adjust the gap between slides */
+        gap: 5px; 
     }
     .slide{
         flex-grow: 1;
@@ -508,16 +494,12 @@ margin-bottom: 69px;
         height:568px;
     }
     .slides {
-       
         gap: 5px; 
     }
     .slide{
         flex-grow: 1;
        flex-shrink: 0;
        transform: translateX(400px);
-       
-       
-    
     }
 }
 
@@ -565,14 +547,11 @@ margin-bottom: 69px;
     height: 347px;
     grid-column: 2/3;
     display: flex;
-    
 }
 @media (max-width:600px){
     .about-top{
         flex-direction: column;
-    }
-   
-    
+    } 
 }
 
 /* top right */
@@ -621,8 +600,7 @@ margin-bottom: 69px;
     } */
     .about-top-title_eng{
         color: #FFFFFF;
-        font-size: 80px;
-        
+        font-size: 80px; 
     }
     
     .about-top-title_jp{
@@ -676,8 +654,6 @@ margin-bottom: 69px;
 .item-1{
     transform: rotate(22.5deg) translate(330px) rotate(-22.5deg);
 }
-
-
 .item-2 {
     transform: rotate( 67.5deg) translateX(330px) rotate(-67.5deg);
 }
@@ -729,7 +705,6 @@ margin-bottom: 69px;
     font-style: normal;
     background-image: url(./assets/images/transparentBkg/transparentBkg2x.png);
     background-size: cover;
-
  }
 
  @media (max-width:600px){
@@ -1186,6 +1161,5 @@ margin-bottom: 69px;
     .copyright{
         font-size: 18px;
         letter-spacing: 0.72px;
-    }
-    
+    }  
 }
