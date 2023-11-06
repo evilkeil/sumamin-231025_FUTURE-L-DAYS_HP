@@ -1948,8 +1948,58 @@ startSlide();
 
 
 
+//smooth scroll 
+
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf);
+
+  //animations
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from('.about-container',{
+    borderRadius:'50%',
+    duration:3,
+    scrollTrigger:{
+        toggleActions:"restart reverse",
+        trigger:'.about-container',
+        start:'top 80%',
+        scrub:true,
+        markers:true
+    }
+  })
+
+  gsap.from('.animate',{
+    y:100,
+    duration:2,
+    scrollTrigger:{
+        trigger:'.about-center',
+        start:'top center'
+    }
+  })
+
+  gsap.from('.animate',{
+    opacity:0,
+    duration:2,
+    scrollTrigger:{
+        trigger:'.about-center',
+        start:'top center'
+    }
+  })
+
+
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main65f56ad1be769b85cba9.js.map
+//# sourceMappingURL=main6f8a7690b1d0507ed107.js.map
