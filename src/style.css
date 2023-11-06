@@ -956,13 +956,15 @@ margin-bottom: 69px;
 
 .prev{
     position: absolute;
-    top: 40%;
-    left: 30vw;
+    /* top: 40%;
+    left: 30vw; */
+    left: 0;
 }
 .next{
     position: absolute;
-    top: 40%;
-    right: 30vw;
+    /* top: 40%;
+    right: 30vw; */
+    right: 0;
 }
 
 .prev,
