@@ -118,28 +118,28 @@ gsap.registerPlugin(ScrollTrigger);
 //     markers: true,
 //   },
 // });
-gsap.from(".service-container", {
-  borderRadius: "50%",
-  duration: 3,
-  scrollTrigger: {
-    toggleActions: "play reverse reverse reset",
-    trigger: ".service-container",
-    start: "top center",
-    end: "bottom center",
-    markers: true,
-  },
-});
-gsap.from(".company-container", {
-  borderRadius: "30%",
-  duration: 5,
-  scrollTrigger: {
-    toggleActions: "play reverse reverse reset",
-    trigger: ".company-container",
-    start: "top center",
-    end: "bottom center",
-    markers: true,
-  },
-});
+// gsap.from(".service-container", {
+//   borderRadius: "50%",
+//   duration: 3,
+//   scrollTrigger: {
+//     toggleActions: "play reverse reverse reset",
+//     trigger: ".service-container",
+//     start: "top center",
+//     end: "bottom center",
+//     markers: true,
+//   },
+// });
+// gsap.from(".company-container", {
+//   borderRadius: "30%",
+//   duration: 5,
+//   scrollTrigger: {
+//     toggleActions: "play reverse reverse reset",
+//     trigger: ".company-container",
+//     start: "top center",
+//     end: "bottom center",
+//     markers: true,
+//   },
+// });
 
 const tl = gsap.timeline({
   scrollTrigger: ".about-top",
@@ -149,15 +149,16 @@ const tl = gsap.timeline({
 
 const tl2 = gsap.timeline({
   scrollTrigger: ".about-center",
-  start: "bottom 40%",
+  start: "top bottom",
+ 
 });
 
 tl2
-  .from(".animate-1", { y: 100, opacity: 0, duration: 0.7 })
-  .from(".animate-2", { y: 100, opacity: 0, duration: 0.7 })
-  .from(".animate-3", { y: 100, opacity: 0, duration: 0.7 })
-  .from(".animate-4", { y: 100, opacity: 0, duration: 0.7 })
-  .from(".animate-5", { y: 100, opacity: 0, duration: 0.7 })
-  .from(".animate-6", { y: 100, opacity: 0, duration: 0.7 })
-  .from(".animate-7", { y: 100, opacity: 0, duration: 0.7 })
-  .from(".animate-8", { y: 100, opacity: 0, duration: 0.7 });
+  .from(".animate-1", { y: 100, opacity: 0, duration: 0.4 ,delay:0.5,})
+  .from(".animate-2", { y: 100, opacity: 0, duration: 0.4 })
+  .from(".animate-3", { y: 100, opacity: 0, duration: 0.4 })
+  .from(".animate-4", { y: 100, opacity: 0, duration: 0.4 })
+  .from(".animate-5", { y: 100, opacity: 0, duration: 0.4 })
+  .from(".animate-6", { y: 100, opacity: 0, duration: 0.4 })
+  .from(".animate-7", { y: 100, opacity: 0, duration: 0.4 })
+  .from(".animate-8", { y: 100, opacity: 0, duration: 0.4 });
