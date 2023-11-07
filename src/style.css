@@ -946,19 +946,24 @@ margin-bottom: 69px;
 
 .prev{
     position: absolute;
-    /* top: 40%;
-    left: 30vw; */
-    left: 0;
+    top: 50%;
+    left:20px;
+    transform: translate(-50%,-50%);
 }
 .next{
     position: absolute;
     /* top: 40%;
     right: 30vw; */
-    right: 0;
+    top: 50%;
+    right:20px;
+    transform: translate(-50%,-50%);
+   
 }
 
 .prev,
 .next{
+    width: 50px;
+    aspect-ratio: 1;
     opacity: 0.6;
     z-index: 2;
 }
@@ -968,7 +973,28 @@ margin-bottom: 69px;
     opacity: 1;
     cursor: pointer;
 }
-
+@media (min-width:1200px){
+.prev,
+.next{
+    width: 80px;
+    aspect-ratio: 1;
+}
+.prev{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+}
+.next{
+    position: absolute;
+    /* top: 40%;
+    right: 30vw; */
+    top: 50%;
+    right: 35%;
+    transform: translate(-50%,-50%);
+   
+}
+}
 /* service contact button */
 
 .service-contact-btn{

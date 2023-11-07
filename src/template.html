@@ -120,6 +120,11 @@
             </div>
 
                 <div class="carousel">
+                    <div class="prev">
+                        <button class="carosel-prev-btn carosel-btn">
+                           <img src="./assets/images/btn/prev@2x-min.png" alt="" class="service-carosel-btn_img">
+                       </button>
+                   </div>
                     <div class="service_card carousel-item">
                         <h3 class="service-card_title">デザイン会社 <br>代行営業</h3>
                         <img src="./assets/images/carosel-img/design.jpg" alt="" class="service-card_img" id="image">
@@ -155,11 +160,6 @@
                         <img src="./assets/images/carosel-img/youtuber.jpg" alt="" class="service-card_img" id="image">
                         <p class="service_card_description">芸能特化型 ライバーエージェント業務 <br>TikTok / ライブ配信プラットフォームにおいてのプロモーション</p>
                     </div>
-                    <div class="prev">
-                        <button class="carosel-prev-btn carosel-btn">
-                           <img src="./assets/images/btn/prev@2x-min.png" alt="" class="service-carosel-btn_img">
-                       </button>
-                   </div>
                    <div class="next">
                        <button class="carosel-next-btn carosel-btn">
                            <img src="./assets/images/btn/next@2x-min.png" alt="" class="service-carosel-btn_img">
@@ -255,9 +255,7 @@
                 
             });
 
-            // $('.next').click(function(){
-            //     $('.carousel').carousel('next');
-            // })
+        
             $('.next').click(function(e){
                 e.preventDefault();
                 e.stopPropagation();
@@ -268,9 +266,7 @@
                 e.stopPropagation();
                 $('.carousel').carousel('prev');
             });
-            // $('.prev').click(function(){
-            //     $('.carousel').carousel('prev');
-            // })
+           
         });
        
     </script>
