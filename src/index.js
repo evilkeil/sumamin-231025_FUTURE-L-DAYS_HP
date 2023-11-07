@@ -109,83 +109,88 @@ requestAnimationFrame(raf);
 
   gsap.registerPlugin(ScrollTrigger);
 
-  if (window.innerWidth <= 1200) { // Change the screen width threshold as needed
-    gsap.to(".about-container", {
-      scrollTrigger: {
-        trigger: ".about-container",
-        start: "-100px 60%",
-        end: ".about-top-title_jp",
-        scrub: true,
-        markers: false,
-      },
-      "--clip": 'circle(62.1% at 50% 50%)',
-      duration: 15,
-    });
-
-    gsap.to(".service-container", {
-      scrollTrigger: {
-        trigger: ".service-container",
-        start: "-100px 60%",
-        end: ".carousel",
-        scrub: 2,
-        markers: false,
-      },
-      "--clip": 'circle(62.1% at 50% 50%)',
-      duration: 3,
-    });
-
-    gsap.to(".company-container", {
-      scrollTrigger: {
-        trigger: ".company-container",
-        start: "-100px 60%",
-        end: ".csompany-info",
-        scrub: true,
-        markers: false,
-      },
-      "--clip": 'circle(62.1% at 50% 50%)',
-      duration: 15,
-    });
-  }else {
-    gsap.to(".about-container", {
-        scrollTrigger: {
-          trigger: ".about-container",
-          start: "-100px 60%",
-          end: ".about-top-title_jp",
-          scrub: true,
-          markers: false,
-        },
-        borderRadius:"50%",
-        duration: 15,
-      });
-
-      gsap.to(".service-container", {
-        scrollTrigger: {
-          trigger: ".service-container",
-          start: "-100px 60%",
-          end: ".carousel",
-          scrub: 2,
-          markers: false,
-        },
-        borderRadius:"50%",
-        duration: 3,
-      });
-      gsap.to(".company-container", {
-        scrollTrigger: {
-          trigger: ".company-container",
-          start: "-100px 60%",
-          end: ".csompany-info",
-          scrub: true,
-          markers: false,
-        },
-        borderRadius:"50%",
-        duration: 15,
-      });
+  function activateAnimations(){
+    if (window.innerWidth <= 1200) { // Change the screen width threshold as needed
+        gsap.to(".about-container", {
+          scrollTrigger: {
+            trigger: ".about-container",
+            start: "-100px 60%",
+            end: ".about-top-title_jp",
+            scrub: true,
+            markers: false,
+          },
+          "--clip": 'circle(62.1% at 50% 50%)',
+          duration: 15,
+        });
+    
+        gsap.to(".service-container", {
+          scrollTrigger: {
+            trigger: ".service-container",
+            start: "-100px 60%",
+            end: ".carousel",
+            scrub: 2,
+            markers: false,
+          },
+          "--clip": 'circle(62.1% at 50% 50%)',
+          duration: 3,
+        });
+    
+        gsap.to(".company-container", {
+          scrollTrigger: {
+            trigger: ".company-container",
+            start: "-100px 60%",
+            end: ".csompany-info",
+            scrub: true,
+            markers: false,
+          },
+          "--clip": 'circle(62.1% at 50% 50%)',
+          duration: 15,
+        });
+      }else {
+        gsap.to(".about-container", {
+            scrollTrigger: {
+              trigger: ".about-container",
+              start: "-100px 60%",
+              end: ".about-top-title_jp",
+              scrub: true,
+              markers: false,
+            },
+            borderRadius:"50%",
+            duration: 15,
+          });
+    
+          gsap.to(".service-container", {
+            scrollTrigger: {
+              trigger: ".service-container",
+              start: "-100px 60%",
+              end: ".carousel",
+              scrub: 2,
+              markers: false,
+            },
+            borderRadius:"50%",
+            duration: 3,
+          });
+          gsap.to(".company-container", {
+            scrollTrigger: {
+              trigger: ".company-container",
+              start: "-100px 60%",
+              end: ".csompany-info",
+              scrub: true,
+              markers: false,
+            },
+            borderRadius:"50%",
+            duration: 15,
+          });
+      }
+    
   }
 
-
+  activateAnimations();
+  
+  
 
 const tl2 = gsap.timeline({
-  scrollTrigger: ".animate-5",
+  scrollTrigger: ".animate-4",
   start: "60% bottom",
   markers:true,
  
