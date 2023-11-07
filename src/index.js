@@ -79,14 +79,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //service carosel
 
-document.addEventListener("DOMContentLoaded", function () {
-  var elems = document.querySelectorAll(".carousel");
-  var instances = M.Carousel.init(elems, {
-    indicators: true,
-    shift: 100,
-    duration: 250,
-  });
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   var elems = document.querySelectorAll(".carousel");
+//   var instances = M.Carousel.init(elems, {
+//     indicators: true,
+//     shift: 100,
+//     duration: 250,
+//   });
+// });
 
 //smooth scroll
 
@@ -107,17 +107,17 @@ requestAnimationFrame(raf);
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from(".about-container", {
-  borderRadius: "50%",
-  duration: 3,
-  scrollTrigger: {
-    toggleActions: "play reverse reverse reset",
-    trigger: ".about-container",
-    start: "top center",
-    end: "bottom center",
-    markers: true,
-  },
-});
+// gsap.to(".about-container", {
+//   clipPath: "inset(0 0 0 0)",
+//   duration: 3,
+//   scrollTrigger: {
+//     toggleActions: "play reverse reverse reset",
+//     trigger: ".about-container",
+//     start: "top center",
+//     end: "bottom center",
+//     markers: true,
+//   },
+// });
 gsap.from(".service-container", {
   borderRadius: "50%",
   duration: 3,

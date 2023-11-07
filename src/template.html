@@ -155,7 +155,7 @@
                         <img src="./assets/images/carosel-img/youtuber.jpg" alt="" class="service-card_img" id="image">
                         <p class="service_card_description">芸能特化型 ライバーエージェント業務 <br>TikTok / ライブ配信プラットフォームにおいてのプロモーション</p>
                     </div>
-                    <!-- <div class="prev">
+                    <div class="prev">
                         <button class="carosel-prev-btn carosel-btn">
                            <img src="./assets/images/btn/prev@2x-min.png" alt="" class="service-carosel-btn_img">
                        </button>
@@ -164,7 +164,7 @@
                        <button class="carosel-next-btn carosel-btn">
                            <img src="./assets/images/btn/next@2x-min.png" alt="" class="service-carosel-btn_img">
                        </button>
-                   </div> -->
+                   </div>
                 </div>
                 <!-- <div class="prev">
                     <button class="carosel-prev-btn carosel-btn">
@@ -247,21 +247,31 @@
         
      
   
-        // $(document).ready(function(){
-        //     $('.carousel').carousel({
-        //         indicators:true,
-        //         shift:100,
-        //         duration:250,
+        $(document).ready(function(){
+            $('.carousel').carousel({
+                indicators:true,
+                shift:100,
+                duration:250,
                 
-        //     });
+            });
 
-        //     $('.next').click(function(){
-        //         $('.carousel').carousel('next');
-        //     })
-        //     $('.prev').click(function(){
-        //         $('.carousel').carousel('prev');
-        //     })
-        // });
+            // $('.next').click(function(){
+            //     $('.carousel').carousel('next');
+            // })
+            $('.next').click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                $('.carousel').carousel('next');
+            });
+            $('.prev').click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                $('.carousel').carousel('prev');
+            });
+            // $('.prev').click(function(){
+            //     $('.carousel').carousel('prev');
+            // })
+        });
        
     </script>
 </body>
