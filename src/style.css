@@ -571,10 +571,13 @@ margin-bottom: 40px;
     color: black;
 }
 .about-container{
+    --clip:circle(100%);
     background-color: var(--section-bg);
     height: 100%;
     overflow-y: hidden;
-    clip-path:circle(62.1% at 50% 50%);
+    /* clip-path:circle(62.1% at 50% 50%); */
+    clip-path: var(--clip);
+   
    padding-bottom: 50px;
    padding-top: 50px;
 }
@@ -587,7 +590,8 @@ margin-bottom: 40px;
 }
 @media (min-width:1200px){
     .about-container{
-        border-radius: 50%;
+        clip-path: inset(0 0 0 0);
+        
     }
 }
 
@@ -853,9 +857,11 @@ margin-bottom: 40px;
     min-height: 100vh;
 }
 .service-container{
-    clip-path:circle(62.1% at 50% 50%);
+    /* clip-path:circle(62.1% at 50% 50%); */
    padding-bottom: 50px;
    padding-top: 50px;
+   --clip:circle(100%);
+   clip-path: var(--clip);
 }
 @media (max-width:650px){
     .service-container{
@@ -880,7 +886,8 @@ margin-bottom: 40px;
     .service-container{
         padding-bottom: 100px;
         padding-top: 100px;
-        border-radius: 50%;
+        /* border-radius: 50%; */
+        clip-path: inset(0 0 0 0);
     }
 }
 
@@ -1154,9 +1161,11 @@ margin-bottom: 40px;
     min-height: 100vh;
  }
  .company-container{
-    clip-path:circle(62.1% at 50% 50%);
+    /* clip-path:circle(62.1% at 50% 50%); */
    padding-bottom: 50px;
    padding-top: 50px;
+   --clip:circle(100%);
+   clip-path: var(--clip);
 }
 @media (max-width:650px){
     .company-container{
@@ -1181,7 +1190,7 @@ margin-bottom: 40px;
     .company-container{
         padding-bottom: 100px;
         padding-top: 100px;
-        border-radius: 50%;
+        clip-path: inset(0 0 0 0);
     }
 }
 .company-title{

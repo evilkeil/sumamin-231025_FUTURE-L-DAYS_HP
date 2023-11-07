@@ -105,56 +105,94 @@ requestAnimationFrame(raf);
 
 //animations
 
-gsap.registerPlugin(ScrollTrigger);
 
-// gsap.to(".about-container", {
-//   clipPath: "inset(0 0 0 0)",
-//   duration: 3,
-//   scrollTrigger: {
-//     toggleActions: "play reverse reverse reset",
-//     trigger: ".about-container",
-//     start: "top center",
-//     end: "bottom center",
-//     markers: true,
-//   },
-// });
-// gsap.from(".service-container", {
-//   borderRadius: "50%",
-//   duration: 3,
-//   scrollTrigger: {
-//     toggleActions: "play reverse reverse reset",
-//     trigger: ".service-container",
-//     start: "top center",
-//     end: "bottom center",
-//     markers: true,
-//   },
-// });
-// gsap.from(".company-container", {
-//   borderRadius: "30%",
-//   duration: 5,
-//   scrollTrigger: {
-//     toggleActions: "play reverse reverse reset",
-//     trigger: ".company-container",
-//     start: "top center",
-//     end: "bottom center",
-//     markers: true,
-//   },
-// });
 
-const tl = gsap.timeline({
-  scrollTrigger: ".about-top",
-  start: "top 80%",
-  end: "bottom center",
-});
+  gsap.registerPlugin(ScrollTrigger);
+
+  if (window.innerWidth <= 1200) { // Change the screen width threshold as needed
+    gsap.to(".about-container", {
+      scrollTrigger: {
+        trigger: ".about-container",
+        start: "-100px 60%",
+        end: ".about-top-title_jp",
+        scrub: true,
+        markers: false,
+      },
+      "--clip": 'circle(62.1% at 50% 50%)',
+      duration: 15,
+    });
+
+    gsap.to(".service-container", {
+      scrollTrigger: {
+        trigger: ".service-container",
+        start: "-100px 60%",
+        end: ".carousel",
+        scrub: 2,
+        markers: false,
+      },
+      "--clip": 'circle(62.1% at 50% 50%)',
+      duration: 3,
+    });
+
+    gsap.to(".company-container", {
+      scrollTrigger: {
+        trigger: ".company-container",
+        start: "-100px 60%",
+        end: ".csompany-info",
+        scrub: true,
+        markers: false,
+      },
+      "--clip": 'circle(62.1% at 50% 50%)',
+      duration: 15,
+    });
+  }else {
+    gsap.to(".about-container", {
+        scrollTrigger: {
+          trigger: ".about-container",
+          start: "-100px 60%",
+          end: ".about-top-title_jp",
+          scrub: true,
+          markers: false,
+        },
+        borderRadius:"50%",
+        duration: 15,
+      });
+
+      gsap.to(".service-container", {
+        scrollTrigger: {
+          trigger: ".service-container",
+          start: "-100px 60%",
+          end: ".carousel",
+          scrub: 2,
+          markers: false,
+        },
+        borderRadius:"50%",
+        duration: 3,
+      });
+      gsap.to(".company-container", {
+        scrollTrigger: {
+          trigger: ".company-container",
+          start: "-100px 60%",
+          end: ".csompany-info",
+          scrub: true,
+          markers: false,
+        },
+        borderRadius:"50%",
+        duration: 15,
+      });
+  }
+
+
 
 const tl2 = gsap.timeline({
-  scrollTrigger: ".about-center",
-  start: "top bottom",
+  scrollTrigger: ".animate-5",
+  start: "60% bottom",
+  markers:true,
  
 });
 
 tl2
-  .from(".animate-1", { y: 100, opacity: 0, duration: 0.4 ,delay:0.5,})
+  .from(".animate-1", { y: 100, opacity: 0, duration: 0.4 })
   .from(".animate-2", { y: 100, opacity: 0, duration: 0.4 })
   .from(".animate-3", { y: 100, opacity: 0, duration: 0.4 })
   .from(".animate-4", { y: 100, opacity: 0, duration: 0.4 })
