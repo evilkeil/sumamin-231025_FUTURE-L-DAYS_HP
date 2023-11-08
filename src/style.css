@@ -573,7 +573,7 @@ margin-bottom: 40px;
     position: absolute;
     object-fit: cover;
     /* clip-path:circle(62.1% at 50% 50%); */
-    clip-path: circle(56.1456% at 50% 50%);
+    /* clip-path: circle(56.1456% at 50% 50%); */
     /* transition:clip-path 200ms ease-in;  */
 }
 
@@ -840,7 +840,7 @@ margin-bottom: 40px;
     z-index: 2;
  }
 .contact-btn:hover{
-    cursor: pointer;
+    cursor: pointer !important;
  }
  .contact-btn-wrapper{
     z-index: 2;

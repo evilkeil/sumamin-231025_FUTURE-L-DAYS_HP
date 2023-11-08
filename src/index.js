@@ -109,8 +109,8 @@ requestAnimationFrame(raf);
 
   gsap.registerPlugin(ScrollTrigger);
 
-  function activateAnimations(){
-    if (window.innerWidth <= 1200) { // Change the screen width threshold as needed
+  // function activateAnimations(){
+  //   if (window.innerWidth <= 1200) { // Change the screen width threshold as needed
         // gsap.to(".bg-img", {
         //   ease: "none",
         //   scrollTrigger: {
@@ -136,18 +136,18 @@ requestAnimationFrame(raf);
         //   duration: 3,
         // });
     
-        gsap.to(".company-container", {
-          scrollTrigger: {
-            trigger: ".company-container",
-            start: "-100px 60%",
-            end: ".csompany-info",
-            scrub: true,
-            markers: false,
-          },
-          "--clip": 'circle(62.1% at 50% 50%)',
-          duration: 15,
-        });
-      }else {
+        // gsap.to(".company-container", {
+        //   scrollTrigger: {
+        //     trigger: ".company-container",
+        //     start: "-100px 60%",
+        //     end: ".csompany-info",
+        //     scrub: true,
+        //     markers: false,
+        //   },
+        //   "--clip": 'circle(62.1% at 50% 50%)',
+        //   duration: 15,
+        // });
+      // }else {
         // gsap.to(".about-container", {
         //     scrollTrigger: {
         //       trigger: ".about-container",
@@ -171,64 +171,64 @@ requestAnimationFrame(raf);
           //   borderRadius:"50%",
           //   duration: 3,
           // });
-          gsap.to(".company-container", {
-            scrollTrigger: {
-              trigger: ".company-container",
-              start: "-100px 60%",
-              end: ".csompany-info",
-              scrub: true,
-              markers: false,
-            },
-            borderRadius:"50%",
-            duration: 15,
-          });
-      }
+      //     gsap.to(".company-container", {
+      //       scrollTrigger: {
+      //         trigger: ".company-container",
+      //         start: "-100px 60%",
+      //         end: ".csompany-info",
+      //         scrub: true,
+      //         markers: false,
+      //       },
+      //       borderRadius:"50%",
+      //       duration: 15,
+      //     });
+      // }
     
-  }
+  // }
 
-  activateAnimations();
+  // activateAnimations();
   
 
   //animations for the about section
 
   const tl = gsap.timeline();
 
-  tl
-  .to(".bg-img", { clipPath: 'circle(63% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(65% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(66% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(67% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(68% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(69% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(70% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(71% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(72% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(73% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(74% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(75% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(76% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(77% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(78% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(79% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(80% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(81% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(82% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(83% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(84% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'circle(85% at 50% 50%)' })
-  .to(".bg-img", { clipPath: 'inset(0 0 0 0)' });
+//   tl
+//   .to(".bg-img", { clipPath: 'circle(63% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(65% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(66% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(67% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(68% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(69% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(70% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(71% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(72% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(73% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(74% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(75% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(76% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(77% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(78% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(79% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(80% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(81% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(82% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(83% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(84% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'circle(85% at 50% 50%)' })
+//   .to(".bg-img", { clipPath: 'inset(0 0 0 0)' });
 
 
 
 
-ScrollTrigger.create({
-  trigger: ".about-top-description_one ",
-  start: "top center",
-  end: ".about-top-description_three",
-  scrub: -1, // Enable scrubbing
-  animation: tl, // Specify the GSAP timeline to be scrubbed
-  markers: false
-});
+// ScrollTrigger.create({
+//   trigger: ".about-top-description_one ",
+//   start: "top center",
+//   end: ".about-top-description_three",
+//   scrub: -1, // Enable scrubbing
+//   animation: tl, // Specify the GSAP timeline to be scrubbed
+//   markers: false
+// });
 
 
  
@@ -286,7 +286,7 @@ tl2
     end: "bottom top",
     scrub: -1, // Enable scrubbing
     animation: tl3, // Use the correct timeline variable
-    markers: true
+    markers: false
   });
 
   
