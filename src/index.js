@@ -124,17 +124,17 @@ requestAnimationFrame(raf);
         //   clipPath:'inset(0 0 0 0)',
         // });
     
-        gsap.to(".service-container", {
-          scrollTrigger: {
-            trigger: ".service-container",
-            start: "-100px 60%",
-            end: ".carousel",
-            // scrub: 2,
-            markers: false,
-          },
-          "--clip": 'circle(62.1% at 50% 50%)',
-          duration: 3,
-        });
+        // gsap.to(".service-container", {
+        //   scrollTrigger: {
+        //     trigger: ".service-container",
+        //     start: "-100px 60%",
+        //     end: ".carousel",
+        //     // scrub: 2,
+        //     markers: false,
+        //   },
+        //   "--clip": 'circle(62.1% at 50% 50%)',
+        //   duration: 3,
+        // });
     
         gsap.to(".company-container", {
           scrollTrigger: {
@@ -160,17 +160,17 @@ requestAnimationFrame(raf);
         //     duration: 15,
         //   });
     
-          gsap.to(".service-container", {
-            scrollTrigger: {
-              trigger: ".service-container",
-              start: "-100px 60%",
-              end: ".carousel",
-              scrub: 2,
-              markers: false,
-            },
-            borderRadius:"50%",
-            duration: 3,
-          });
+          // gsap.to(".service-container", {
+          //   scrollTrigger: {
+          //     trigger: ".service-container",
+          //     start: "-100px 60%",
+          //     end: ".carousel",
+          //     scrub: 2,
+          //     markers: false,
+          //   },
+          //   borderRadius:"50%",
+          //   duration: 3,
+          // });
           gsap.to(".company-container", {
             scrollTrigger: {
               trigger: ".company-container",

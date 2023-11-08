@@ -231,7 +231,7 @@ body{
         width: 100%;
         transition: transform var(--animation-timing);
         transform: translateX(100%);
-        z-index: 4;
+        z-index: 9998;
     }
 
     .primary-nav{
@@ -264,7 +264,7 @@ body{
         flex-direction: column;
         gap: var(--bar-gap);
         width: max-content;
-        z-index: 5;
+        z-index: 9999;
         cursor: pointer;
     }
 
@@ -861,48 +861,73 @@ margin-bottom: 40px;
  /* mobile first */
 #service{
     z-index: 5;
+    position: relative;
+    overflow-y: visible;
+    /* height: 90vh; */
+    /* aspect-ratio: 1; */
+}
+
+
+.service-bg-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    /* object-position: bottom */
+    clip-path:circle(100%);
+    /* transition:clip-path 200ms ease-in;  */
+}
+
+
+@media (min-width:650px){
+    .service-bg-img{
+        object-fit: fill;
+    }
 }
 .service-container{
    
-    background-color: var( --section-bg);
+    /* background-color: var( --section-bg); */
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 90% 1fr;
     /* border-radius: 50% 50% 50% 50%/50% 50% 50% 50%; */
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 .service-container{
     /* clip-path:circle(62.1% at 50% 50%); */
-   padding-bottom: 50px;
+   /* padding-bottom: 50px;
+   padding-top: 50px; */
+   /* --clip:circle(100%);
+   clip-path: var(--clip); */
    padding-top: 50px;
-   --clip:circle(100%);
-   clip-path: var(--clip);
+   padding-bottom: 50px;
 }
+
 @media (max-width:650px){
     .service-container{
-        padding-bottom: 200px;
-        padding-top: 200px;
+        /* padding-bottom: 200px;
+        padding-top: 200px; */
     }
 }
 
 @media (min-width:650px){
     .service-container{
-        padding-bottom: 300px;
-        padding-top: 300px;
+        /* padding-bottom: 300px;
+        padding-top: 300px; */
     }
 }
 @media (min-width:900px){
     .service-container{
-        padding-bottom: 400px;
-        padding-top: 400px;
+        /* padding-bottom: 400px;
+        padding-top: 400px; */
     }
 }
 @media (min-width:1000px){
     .service-container{
-        padding-bottom: 100px;
-        padding-top: 100px;
+        /* padding-bottom: 100px;
+        padding-top: 100px; */
         /* border-radius: 50%; */
-        clip-path: inset(0 0 0 0);
+        /* clip-path: inset(0 0 0 0); */
     }
 }
 
