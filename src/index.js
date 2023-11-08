@@ -286,8 +286,47 @@ tl2
     end: "500px top",
     scrub: -1, // Enable scrubbing
     animation: tl3, // Use the correct timeline variable
-    markers: true
+    markers: false
   });
 
   
   
+   //animations for the company section
+
+
+   const tl4 = gsap.timeline();
+   
+   tl4
+   .to(".company-bg-img", { clipPath: 'circle(60% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(65% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(66% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(67% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(68% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(69% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(70% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(71% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(72% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(73% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(74% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(75% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(76% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(77% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(78% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(79% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(80% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(81% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(82% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(83% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(84% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'circle(85% at 50% 50%)' })
+  .to(".company-bg-img", { clipPath: 'inset(0 0 0 0)' });
+
+
+  ScrollTrigger.create({
+    trigger: "#company",
+    start: "-200px center",
+    end: "500px top",
+    scrub: -1, // Enable scrubbing
+    animation: tl4, // Use the correct timeline variable
+    markers: true
+  });
