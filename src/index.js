@@ -328,5 +328,5 @@ tl2
     end: "500px top",
     scrub: -1, // Enable scrubbing
     animation: tl4, // Use the correct timeline variable
-    markers: true
+    markers: false
   });

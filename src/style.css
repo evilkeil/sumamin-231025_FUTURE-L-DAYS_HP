@@ -682,7 +682,7 @@ margin-bottom: 40px;
 /* about center */
 .about-center{
     grid-column: 2/3;
-    margin-top: 155px;
+    margin-top: 83px;
     display: grid;
     place-items: center;
 }
