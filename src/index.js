@@ -111,24 +111,25 @@ requestAnimationFrame(raf);
 
   function activateAnimations(){
     if (window.innerWidth <= 1200) { // Change the screen width threshold as needed
-        gsap.to(".about-container", {
-          scrollTrigger: {
-            trigger: ".about-container",
-            start: "-100px 60%",
-            end: ".about-top-title_jp",
-            scrub: true,
-            markers: false,
-          },
-          "--clip": 'circle(62.1% at 50% 50%)',
-          duration: 15,
-        });
+        // gsap.to(".bg-img", {
+        //   ease: "none",
+        //   scrollTrigger: {
+        //     trigger: ".about-container",
+        //     start: "-200px 20%",
+        //     end: "200px 70%",
+        //     scrub: true,
+        //     markers: false,
+        //   },
+        //   // duration:2.5,
+        //   clipPath:'inset(0 0 0 0)',
+        // });
     
         gsap.to(".service-container", {
           scrollTrigger: {
             trigger: ".service-container",
             start: "-100px 60%",
             end: ".carousel",
-            scrub: 2,
+            // scrub: 2,
             markers: false,
           },
           "--clip": 'circle(62.1% at 50% 50%)',
@@ -147,17 +148,17 @@ requestAnimationFrame(raf);
           duration: 15,
         });
       }else {
-        gsap.to(".about-container", {
-            scrollTrigger: {
-              trigger: ".about-container",
-              start: "-100px 60%",
-              end: ".about-top-title_jp",
-              scrub: true,
-              markers: false,
-            },
-            borderRadius:"50%",
-            duration: 15,
-          });
+        // gsap.to(".about-container", {
+        //     scrollTrigger: {
+        //       trigger: ".about-container",
+        //       start: "-100px 60%",
+        //       end: ".about-top-title_jp",
+        //       scrub: true,
+        //       markers: false,
+        //     },
+        //     borderRadius:"50%",
+        //     duration: 15,
+        //   });
     
           gsap.to(".service-container", {
             scrollTrigger: {
@@ -187,6 +188,62 @@ requestAnimationFrame(raf);
 
   activateAnimations();
   
+
+
+  // const tl = gsap.timeline({
+  //   scrollTrigger: ".about-container",
+  //   start: "-200px 20%",
+  //   end: "200px 70%",
+  //   scrub: true,
+  //   markers: true,
+   
+  // });
+  
+  // tl.to(".bg-img", { clipPath: 'circle(55% at 50% 50%)' })
+  // .to(".bg-img", { clipPath: 'circle(60% at 50% 50%)' })
+  // .to(".bg-img", { clipPath: 'circle(65% at 50% 50%)' })
+  // .to(".bg-img", { clipPath: 'circle(70% at 50% 50%)' })
+  // .to(".bg-img", { clipPath: 'circle(75% at 50% 50%)' })
+  // .to(".bg-img", { clipPath: 'circle(80% at 50% 50%)' })
+  // .to(".bg-img", { clipPath: 'circle(85% at 50% 50%)' })
+  // .to(".bg-img", { clipPath: 'inset(0 0 0 0)' });
+
+  const tl = gsap.timeline();
+
+  tl
+  .to(".bg-img", { clipPath: 'circle(65% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(66% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(67% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(68% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(69% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(70% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(71% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(72% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(73% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(74% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(75% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(76% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(77% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(78% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(79% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(80% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(81% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(82% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(83% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(84% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(85% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'inset(0 0 0 0)' });
+
+
+
+ScrollTrigger.create({
+  trigger: ".bg-img",
+  start: "top center",
+  end: "bottom center",
+  scrub: true, // Enable scrubbing
+  animation: tl, // Specify the GSAP timeline to be scrubbed
+});
+
   
 
 const tl2 = gsap.timeline({
