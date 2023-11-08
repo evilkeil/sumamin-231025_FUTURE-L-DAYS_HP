@@ -2279,12 +2279,13 @@ ScrollTrigger.create({
   end: "bottom center",
   scrub: -1, // Enable scrubbing
   animation: tl, // Specify the GSAP timeline to be scrubbed
+  markers: true
 });
 
   
 
 const tl2 = gsap.timeline({
-  scrollTrigger: ".animate-4",
+  scrollTrigger: ".animate-2",
   start: "60% bottom",
  
 });
@@ -2335,11 +2336,11 @@ tl2
     end: "bottom center",
     scrub: -1, // Enable scrubbing
     animation: tl3, // Use the correct timeline variable
-    markers: true
+    markers: false
   });
   
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main1a781d5867c0e8f43e97.js.map
+//# sourceMappingURL=main09b27515c3c02d5a3a9a.js.map
