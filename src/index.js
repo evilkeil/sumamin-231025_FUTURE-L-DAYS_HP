@@ -220,14 +220,27 @@ requestAnimationFrame(raf);
 
 
 
+
 ScrollTrigger.create({
-  trigger: ".bg-img",
+  trigger: ".about-top-description_one ",
   start: "top center",
-  end: "bottom center",
+  end: ".about-top-description_three",
   scrub: -1, // Enable scrubbing
   animation: tl, // Specify the GSAP timeline to be scrubbed
   markers: true
 });
+
+
+  //working version
+
+// ScrollTrigger.create({
+//   trigger: ".bg-img",
+//   start: "top center",
+//   end: "bottom center",
+//   scrub: -1, // Enable scrubbing
+//   animation: tl, // Specify the GSAP timeline to be scrubbed
+//   markers: true
+// });
 
   
 
@@ -277,12 +290,24 @@ tl2
   .to(".service-bg-img", { clipPath: 'inset(0 0 0 0)' });
 
 
+
   ScrollTrigger.create({
-    trigger: ".service-bg-img",
+    trigger: ".carousel",
     start: "top center",
     end: "bottom center",
     scrub: -1, // Enable scrubbing
     animation: tl3, // Use the correct timeline variable
     markers: false
   });
+
+  //working version
+
+  // ScrollTrigger.create({
+  //   trigger: ".service-bg-img",
+  //   start: "top center",
+  //   end: "bottom center",
+  //   scrub: -1, // Enable scrubbing
+  //   animation: tl3, // Use the correct timeline variable
+  //   markers: false
+  // });
   
