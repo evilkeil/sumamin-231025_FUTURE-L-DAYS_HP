@@ -281,12 +281,12 @@ tl2
 
 
   ScrollTrigger.create({
-    trigger: ".carousel",
+    trigger: "#serviceTrigger",
     start: "top center",
-    end: "bottom top",
+    end: "500px top",
     scrub: -1, // Enable scrubbing
     animation: tl3, // Use the correct timeline variable
-    markers: false
+    markers: true
   });
 
   
