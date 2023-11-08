@@ -194,7 +194,7 @@ requestAnimationFrame(raf);
   const tl = gsap.timeline();
 
   tl
-  .to(".bg-img", { clipPath: 'circle(50% at 50% 50%)' })
+  .to(".bg-img", { clipPath: 'circle(63% at 50% 50%)' })
   .to(".bg-img", { clipPath: 'circle(65% at 50% 50%)' })
   .to(".bg-img", { clipPath: 'circle(66% at 50% 50%)' })
   .to(".bg-img", { clipPath: 'circle(67% at 50% 50%)' })
@@ -251,7 +251,7 @@ tl2
    const tl3 = gsap.timeline();
    
    tl3
-   .to(".service-bg-img", { clipPath: 'circle(50% at 50% 50%)' })
+   .to(".service-bg-img", { clipPath: 'circle(60% at 50% 50%)' })
   .to(".service-bg-img", { clipPath: 'circle(65% at 50% 50%)' })
   .to(".service-bg-img", { clipPath: 'circle(66% at 50% 50%)' })
   .to(".service-bg-img", { clipPath: 'circle(67% at 50% 50%)' })
