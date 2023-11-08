@@ -2280,7 +2280,7 @@ ScrollTrigger.create({
   end: ".about-top-description_three",
   scrub: -1, // Enable scrubbing
   animation: tl, // Specify the GSAP timeline to be scrubbed
-  markers: true
+  markers: false
 });
 
 
@@ -2345,12 +2345,12 @@ tl2
 
 
   ScrollTrigger.create({
-    trigger: ".carousel",
-    start: "top center",
-    end: "bottom center",
+    trigger: ".service-top",
+    start: "bottom center",
+    end: ".service-contact-btn",
     scrub: -1, // Enable scrubbing
     animation: tl3, // Use the correct timeline variable
-    markers: false
+    markers: true
   });
 
   //working version
@@ -2368,4 +2368,4 @@ tl2
 
 /******/ })()
 ;
-//# sourceMappingURL=main7ea9c406eeb05ad85de4.js.map
+//# sourceMappingURL=mainf76817e2bfd1d5140530.js.map
