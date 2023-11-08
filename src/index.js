@@ -194,6 +194,7 @@ requestAnimationFrame(raf);
   const tl = gsap.timeline();
 
   tl
+  .to(".bg-img", { clipPath: 'circle(50% at 50% 50%)' })
   .to(".bg-img", { clipPath: 'circle(65% at 50% 50%)' })
   .to(".bg-img", { clipPath: 'circle(66% at 50% 50%)' })
   .to(".bg-img", { clipPath: 'circle(67% at 50% 50%)' })
@@ -223,7 +224,7 @@ ScrollTrigger.create({
   trigger: ".bg-img",
   start: "top center",
   end: "bottom center",
-  scrub: true, // Enable scrubbing
+  scrub: -1, // Enable scrubbing
   animation: tl, // Specify the GSAP timeline to be scrubbed
 });
 
@@ -247,5 +248,40 @@ tl2
 
    //animations for the service section
 
-
+   const tl3 = gsap.timeline();
    
+   tl3
+   .to(".service-bg-img", { clipPath: 'circle(50% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(65% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(66% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(67% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(68% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(69% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(70% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(71% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(72% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(73% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(74% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(75% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(76% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(77% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(78% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(79% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(80% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(81% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(82% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(83% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(84% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'circle(85% at 50% 50%)' })
+  .to(".service-bg-img", { clipPath: 'inset(0 0 0 0)' });
+
+
+  ScrollTrigger.create({
+    trigger: ".service-bg-img",
+    start: "top center",
+    end: "bottom center",
+    scrub: -1, // Enable scrubbing
+    animation: tl3, // Use the correct timeline variable
+    markers: true
+  });
+  
