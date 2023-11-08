@@ -573,7 +573,7 @@ margin-bottom: 40px;
     position: absolute;
     object-fit: cover;
     clip-path:circle(62.1% at 50% 50%);
-    transition:clip-path 200ms ease-in; 
+    /* transition:clip-path 200ms ease-in;  */
 }
 
 .about-container{
@@ -584,7 +584,7 @@ margin-bottom: 40px;
     /* clip-path: var(--clip); */
    
    
-   padding-bottom: 10px;
+   padding-bottom: 50px;
    padding-top: 50px;
 }
 
@@ -836,11 +836,14 @@ margin-bottom: 40px;
 .contact-btn{
     border: none;
     background-color: transparent;
+    z-index: 2;
  }
 .contact-btn:hover{
     cursor: pointer;
  }
-
+ .contact-btn-wrapper{
+    z-index: 2;
+ }
  @media (max-width:600px){
     .about-bottom{
         margin-top: 75px;

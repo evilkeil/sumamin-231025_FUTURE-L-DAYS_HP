@@ -189,24 +189,7 @@ requestAnimationFrame(raf);
   activateAnimations();
   
 
-
-  // const tl = gsap.timeline({
-  //   scrollTrigger: ".about-container",
-  //   start: "-200px 20%",
-  //   end: "200px 70%",
-  //   scrub: true,
-  //   markers: true,
-   
-  // });
-  
-  // tl.to(".bg-img", { clipPath: 'circle(55% at 50% 50%)' })
-  // .to(".bg-img", { clipPath: 'circle(60% at 50% 50%)' })
-  // .to(".bg-img", { clipPath: 'circle(65% at 50% 50%)' })
-  // .to(".bg-img", { clipPath: 'circle(70% at 50% 50%)' })
-  // .to(".bg-img", { clipPath: 'circle(75% at 50% 50%)' })
-  // .to(".bg-img", { clipPath: 'circle(80% at 50% 50%)' })
-  // .to(".bg-img", { clipPath: 'circle(85% at 50% 50%)' })
-  // .to(".bg-img", { clipPath: 'inset(0 0 0 0)' });
+  //animations for the about section
 
   const tl = gsap.timeline();
 
@@ -249,7 +232,6 @@ ScrollTrigger.create({
 const tl2 = gsap.timeline({
   scrollTrigger: ".animate-4",
   start: "60% bottom",
-  markers:true,
  
 });
 
@@ -262,3 +244,8 @@ tl2
   .from(".animate-6", { y: 100, opacity: 0, duration: 0.4 })
   .from(".animate-7", { y: 100, opacity: 0, duration: 0.4 })
   .from(".animate-8", { y: 100, opacity: 0, duration: 0.4 });
+
+   //animations for the service section
+
+
+   
