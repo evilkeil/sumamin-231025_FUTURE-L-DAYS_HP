@@ -2284,18 +2284,7 @@ ScrollTrigger.create({
 });
 
 
-  //working version
-
-// ScrollTrigger.create({
-//   trigger: ".bg-img",
-//   start: "top center",
-//   end: "bottom center",
-//   scrub: -1, // Enable scrubbing
-//   animation: tl, // Specify the GSAP timeline to be scrubbed
-//   markers: true
-// });
-
-  
+ 
 
 const tl2 = gsap.timeline({
   scrollTrigger: ".animate-2",
@@ -2345,27 +2334,18 @@ tl2
 
 
   ScrollTrigger.create({
-    trigger: ".service-top",
-    start: "bottom center",
-    end: ".service-contact-btn",
+    trigger: ".carousel",
+    start: "top center",
+    end: "bottom top",
     scrub: -1, // Enable scrubbing
     animation: tl3, // Use the correct timeline variable
     markers: true
   });
 
-  //working version
-
-  // ScrollTrigger.create({
-  //   trigger: ".service-bg-img",
-  //   start: "top center",
-  //   end: "bottom center",
-  //   scrub: -1, // Enable scrubbing
-  //   animation: tl3, // Use the correct timeline variable
-  //   markers: false
-  // });
+  
   
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=mainf76817e2bfd1d5140530.js.map
+//# sourceMappingURL=main5b350f7735e70e33a562.js.map
