@@ -573,7 +573,7 @@ margin-bottom: 40px;
     position: absolute;
     object-fit: cover;
     /* clip-path:circle(62.1% at 50% 50%); */
-    clip-path: circle(54% at 50% 50%)
+    clip-path: circle(56.1456% at 50% 50%);
     /* transition:clip-path 200ms ease-in;  */
 }
 
@@ -876,7 +876,7 @@ margin-bottom: 40px;
     object-fit: cover;
     /* object-position: bottom */
     /* clip-path:circle(62.1% at 50% 50%); */
-    clip-path: circle(53.6882% at 50% 50%)
+    clip-path: circle(58.1693% at 50% 50%);;
     /* transition:clip-path 200ms ease-in;  */
 }
 
