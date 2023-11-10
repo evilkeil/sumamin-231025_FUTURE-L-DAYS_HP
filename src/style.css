@@ -395,6 +395,12 @@ align-items: center;
 margin-left: 240px;
 margin-right: 85px;
 margin-bottom: 40px;
+position: relative;
+
+}
+
+.hero-top-img{
+    text-wrap: nowrap;
 }
 /* scroll to contact btn */
 .scroll-btn{
@@ -403,6 +409,9 @@ margin-bottom: 40px;
     aspect-ratio: 1;
     display: grid;
     place-items: center;
+    position: absolute;
+    top:-30px;
+    right:0;
 }
 .scroll-btn-arrow{
     width: 37px;
@@ -426,37 +435,32 @@ margin-bottom: 40px;
   }
 
   /* hero top image styles */
-  .hero-top-img{
+  /* .hero-top-img{
     width: 30.208vw;
     height: 71px;
     position: relative;
-  }
-  .hero-top-img::after{
-    content: "The future is full of likes.";
-    text-align: left;
-    letter-spacing: 2.95px;
-    color: #F0F5F5;
-    opacity: 1;
-    font-size: 73.79px; 
-    font-size: clamp(1.563rem, 5.124vw, 4.612rem);
-    width: max-content;
-    height: 90px;
+  } */
+
+  .hero-title{
+    width: 267px;
+    height: 43px;
+    color: black;
+    font-size: 35.17px;
+    margin-right: 40px;
     z-index: -1;
-    position: absolute;
-    top: 26px;
+    font-family: var(--ff-trade-gothic);
+    letter-spacing: 1.41px;
+    
   }
+
   /* mobile */
   @media (max-width:950px){
-    .hero-top-img{
+    /* .hero-top-img{
         width: 207px;
         height: 33.84px;
         
-      }
-      .hero-top-img::after{
-        font-size: 35.17px;
-        height: 43px;
-        letter-spacing: 1.41px;
-      }
+      } */
+      
       .hero-top-container{
         margin-top: 0px;
         margin-left: 19.97px;
@@ -607,6 +611,9 @@ margin-bottom: 40px;
     height: 100%;
     color: black;
     /* border: 1px solid red; */
+    /* border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%; */
+   
 }
 
 .bg-img{
@@ -629,12 +636,7 @@ margin-bottom: 40px;
    padding-top: 50px;
 }
 
-@media (min-width:900px){
-    .about-container{
-        padding-bottom: 100px;
-        padding-top: 100px;
-    }
-}
+
 
 /* about top styles */
 .about-top{
@@ -914,6 +916,27 @@ margin-bottom: 40px;
      }
  }
 
+
+ .about-bottom-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    /* border: 1px solid black; */
+}
+
+.about-bottom-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 500px;
+}
+
+.about-bottom-divider .shape-fill {
+    fill: #FFFFFF;
+}
 /* ------------------- */
 /*       service        */
 /* ------------------- */

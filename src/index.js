@@ -143,7 +143,7 @@ requestAnimationFrame(raf);
   .from(".about-top_left", {opacity:0}, 1)
   .from(".about-top_right", {opacity:0}, 1.5)
     .set("#about", {backgroundColor:"#F0F5F5"});
- 
+   
 
 //about ul
 const tl2 = gsap.timeline({
