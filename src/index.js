@@ -94,17 +94,46 @@ requestAnimationFrame(raf);
 //animations
 
 
-
   gsap.registerPlugin(ScrollTrigger);
   
 
+
   //animations for the about section
 
-  // const tl = gsap.timeline();
+  //company name
+ 
+
+  const text = new SplitType('#company-name', { types: 'chars' });
+
+  text.chars.forEach((char, i) => {
+    gsap.to(char, {
+      opacity: 1,
+      duration: 0, // Instantly set initial opacity to 0.2
+      delay: i * 0.1 // Stagger the animation by 0.1 seconds
+    });
+  })
+ 
+//about  section animations 
+let tl1 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".about-container",
+    start: "top center",
+    end:"top top",
+    scrub: true,
+    pin: false,
+   markers: true
+  }
+});
+
+tl1.from(".about-dot", {scale:0})
+  .from(".about-top_left", {opacity:0}, 1)
+  .from(".about-top_right", {opacity:0}, 1.5);
+ 
 
 
  
 
+//about ul
 const tl2 = gsap.timeline({
   scrollTrigger: ".animate-2",
   start: "60% bottom",
@@ -112,7 +141,7 @@ const tl2 = gsap.timeline({
 });
 
 tl2
-  .from(".animate-1", { y: 100, opacity: 0, duration: 0.4 })
+  .from(".animate-1", { y: 100, opacity: 0, duration: 0.4 },0.6)
   .from(".animate-2", { y: 100, opacity: 0, duration: 0.4 })
   .from(".animate-3", { y: 100, opacity: 0, duration: 0.4 })
   .from(".animate-4", { y: 100, opacity: 0, duration: 0.4 })
@@ -121,97 +150,27 @@ tl2
   .from(".animate-7", { y: 100, opacity: 0, duration: 0.4 })
   .from(".animate-8", { y: 100, opacity: 0, duration: 0.4 });
 
+
    //animations for the service section
 
-   const tl3 = gsap.timeline();
-   
-   tl3
-   .to(".service-bg-img", { clipPath: 'circle(60% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(65% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(66% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(67% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(68% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(69% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(70% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(71% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(72% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(73% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(74% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(75% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(76% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(77% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(78% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(79% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(80% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(81% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(82% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(83% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(84% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'circle(85% at 50% 50%)' })
-  .to(".service-bg-img", { clipPath: 'inset(0 0 0 0)' });
-
-
-
-  ScrollTrigger.create({
-    trigger: "#serviceTrigger",
-    start: "top center",
-    end: "500px top",
-    scrub: -1, // Enable scrubbing
-    animation: tl3, // Use the correct timeline variable
-    markers: false
-  });
-
-
-
-  ///////////// 
-
- 
-// const tl6 = gsap.timeline();
-
-// tl6.to(".animate-svg", {
-//     attr: { d: "M600,112.77C268.63,112.77,0,65.52,0,100V120H1200V100C1200,65.52,931.37,112.77,600,112.77Z" },
-//     duration: 1, // Adjust the duration as needed
-//     ease: "none",
-// });
-
-// ScrollTrigger.create({
-//     trigger: "#serviceTrigger",
-//     start: "top center",
-//     end: "500px top",
-//     scrub: 1, // Enable scrubbing
-//     animation: tl6,
-//     markers: false
-// });
-
-const tl6 = gsap.timeline();
-
-tl6.to(".service-container", {
-    borderRadius:"0%",
-});
-
-ScrollTrigger.create({
-    trigger: "#serviceTrigger",
-    start: "top center",
-    end: "500px top",
-    scrub: 1, // Enable scrubbing
-    animation: tl6,
-    markers: false
-});
-  
-const circle = document.querySelector('.circle');
-
-gsap.to(circle, {
-    width: 200, // Adjust the expanded size as needed
-    height: 200, // Adjust the expanded size as needed
-    duration: 1, // Adjust the animation duration
+   let tl3 = gsap.timeline({
     scrollTrigger: {
-        trigger: '#service', // Specify the trigger element by ID
-        start: 'top center', // Start the animation when the top of the section reaches the center of the viewport
-        end: 'bottom center', // End the animation when the bottom of the section reaches the center of the viewport
-        scrub: 1, // Enable scrubbing for a smooth effect
-    },
-});
+      trigger: ".service-hero",
+      start: "top top",
+      scrub: true,
+      pin: true,
+    //  markers: true
+    }
+  });
+  
+  tl3.to(".service-dot", {scale:1})
+    .to(".service-title", {x:"-100vw", xPercent:-100}, 0)
+    .set(".service-main", {backgroundColor:"#F0F5F5"})
+
+
+    
    //animations for the company section
+
 
 
    let tl4 = gsap.timeline({
