@@ -252,7 +252,29 @@ html, body {
     position: relative;
 }
 
+/* loop in the company section */
+.company-main{
+   position: relative;
+}
+.loop-five {
+   
+    width: 321.2738px;
+    position: absolute;
+    bottom: -40%;
+   right: 50px;
 
+}
+
+@media (max-width:820px){
+    .loop-five {
+   
+        width: 321.2738px;
+        position: absolute;
+        bottom: -40%;
+       right: -100px;
+    
+    }
+}
 /* additional resets etc */
 
 body {
@@ -1443,6 +1465,7 @@ position: relative;
   .main-common {
     padding:5vw;
     color:black;
+    padding-bottom: 0;
   }
   
   .title-wrapper{
@@ -1477,7 +1500,7 @@ position: relative;
   .company-info{
       display: grid;
       place-content: center;
-      margin-bottom: 500px;
+      margin-bottom: 100px;
   }
   .info-list{
       padding: 0;
@@ -1512,7 +1535,7 @@ position: relative;
       align-items: center;
       flex: 1;
   }
-  @media (min-width:650px){
+  @media (min-width:750px){
       .info-title{
           font-size: 18px;
           
@@ -1592,7 +1615,7 @@ position: relative;
 #contact{
     height: 1000px;
     /* margin-top: 80px; */
-    background-color: var(--section-bg);  
+     
 }
 /* ------------------- */
 /*       footer        */
