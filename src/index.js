@@ -113,20 +113,6 @@ requestAnimationFrame(raf);
     });
   })
  
-//about  section animations 
-// let tl1 = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".about-hero",
-//     start: "top top",
-//     scrub: true,
-//     pin: false,
-//    markers: true
-//   }
-// });
-
-// tl1.to(".about-dot", {scale:1})
-//   .from(".about-top_left", {opacity:0}, 1)
-//   .from(".about-top_right", {opacity:0}, 1.5);
  
 
   let tl1 = gsap.timeline({
@@ -139,9 +125,10 @@ requestAnimationFrame(raf);
     }
   });
   
-  tl1.to(".about-dot", {scale:1})
-  .from(".about-top_left", {opacity:0}, 1)
-  .from(".about-top_right", {opacity:0}, 1.5)
+  tl1.to(".about-dot", {scale:0.5})
+  .from(".about-top_left", {opacity:0},)
+  .to(".about-dot", {scale:1})
+  .from(".about-top_right", {opacity:0}, 1)
     .set("#about", {backgroundColor:"#F0F5F5"});
    
 
