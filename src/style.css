@@ -245,16 +245,30 @@ html, body {
     /* border:1px solid red; */
 }
 
-.loop-three {
+.loop-three svg{
     position: absolute;
-    top: 50%;
+    bottom: -50%ß;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 1543.3858px;
-    min-height: 701.9944px;
+    width: 1000px;
+    height: 500px;
     z-index: -1;
     /* background: transparent; */
-    /* border: 1px solid red; */
+    
+ 
+}
+.loop-three{
+    border: 1px solid red;
+    transform: translateY(-50);
+}
+@media(max-width:425px){
+    .loop-three{
+        height: 291.3989px;
+        width: 651.3622px;
+        margin: 0;
+        padding: 0;
+        transform: scale(2);
+    }
 }
 .carousel{
     position: relative;
@@ -1460,14 +1474,23 @@ position: relative;
 /* styles realted to animations */
 .carousel,
 .loop-three{
-    margin-bottom:100px;
+    /* margin-bottom:100px; */
     /* border:1px solid red; */
     background: transparent;
+}
+
+@media(max-width:300px){
+    .carousel,
+.loop-three{
+        /* margin-bottom:100px; */
+        /* border:1px solid red; */
+        background: transparent;
+    }
 }
 @media(max-width:370px){
     .carousel,
 .loop-three{
-        margin-bottom:200px;
+        /* margin-bottom:120px; */
         /* border:1px solid red; */
         background: transparent;
     }
@@ -1475,44 +1498,48 @@ position: relative;
 @media(min-width:389px){
     .carousel,
 .loop-three{
-        margin-bottom:310px;
+        /* margin-bottom:310px; */
         /* border:1px solid red; */
         background: transparent;
+        margin-top: -250px;
     }
 }
 @media(min-width:400px){
     .carousel,
     .loop-three{
-        margin-bottom:350px;
+        /* margin-bottom:340px; */
         /* border:1px solid red; */
         background: transparent;
+        margin-top: -270px;
+    
     }
 }
 
 @media(min-width:419px){
     .carousel,
     .loop-three{
-        margin-bottom: 250px;
+        /* margin-bottom: 250px; */
         /* border:1px solid red; */
         background: transparent;
+        margin-top: -200px;
     }
 }
-@media(min-width:800px){
+@media(min-width:799px){
     .carousel,
     .loop-three{
-        margin-bottom: 550px;
+        margin-bottom: 100px;
         /* border:1px solid red; */
         background: transparent;
     }
 }
-@media(min-width:1000px){
+/* @media(min-width:1000px){
     .carousel,
 .loop-three{
         margin-bottom: 0px;
-        /* border:1px solid red; */
+        border:1px solid red;
         background: transparent;
     }
-}
+} */
 /* ------------------- */
 /*       topics         */
 /* ------------------- */
