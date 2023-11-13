@@ -689,6 +689,7 @@ position: relative;
     opacity: 0.2;
     /* font-size: 24px; */
     font-size: 38.6px;
+    margin-right: 0.48px;;
 }
 @media (max-width:600px){
     .company-name{
@@ -717,6 +718,7 @@ position: relative;
     #company-name{
         position: absolute;
         right: 0;
+        margin-right: 10%;
     }
 }
 
