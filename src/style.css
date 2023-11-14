@@ -884,7 +884,7 @@ position: relative;
 
 @media (min-width:394px)and (max-width:760px){
     .about-container {
-        margin-top: -25vh;
+        margin-top: -80px;
         /* transform: translateY(-130px); */
     }
 }
@@ -892,7 +892,7 @@ position: relative;
 @media (max-width:393px){
     .about-container {
         transform: translateY(-50px);
-        margin-top: 20px;
+        margin-top: -70px;
     }
 }
 
@@ -1749,7 +1749,7 @@ position: relative;
     aspect-ratio: 1;
     border-radius: 50%;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 8px;
     border: 2px solid var(--section-bg);
 }
 
