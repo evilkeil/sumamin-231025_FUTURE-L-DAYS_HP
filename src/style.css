@@ -1621,13 +1621,14 @@ position: relative;
       padding: 0;
       width: 100%;
       margin: 0 auto;
+      z-index: 10; 
   }
   .info-list-item{
       display: grid;
       grid-template-columns: 50px  201px 1fr;
       gap:50px;
       width: 350px;
-      height: 90px; 
+      height: 90px;
   }
   
   .info-title{
@@ -1749,18 +1750,18 @@ position: relative;
     border-radius: 50%;
     cursor: pointer;
     margin-right: 20px;
-    outline: 2px solid var(--section-bg);
+    border: 2px solid var(--section-bg);
 }
 
 .radio-label:hover .custom-radio,
 [type="radio"]:focus + label .custom-radio{
     transform:scale(1.1);
-    outline: 2px solid var(--section-bg);
+    border: 2px solid var(--section-bg);
 }
 
 [type="radio"]:checked + label .custom-radio{
     background-color: var(--section-bg);
-    outline: 2px solid black;
+    border: 2px solid black;
 }
 /* ------------------- */
 /*       footer        */
