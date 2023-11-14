@@ -1948,7 +1948,7 @@ background-color: var(--section-bg);
 }
 
 #TnC{
-background-color: var(--section-bg);
+background-color: var(--section-bg) !important;
 }
 .label-name_wrapper{
     display: flex;
@@ -1970,7 +1970,13 @@ background-color: var(--section-bg);
 .contact-wrapper{
     margin-bottom: 32.89px;
 }
+.contact-header_jp{
+margin-bottom: 4.6px;
+}
 
+.contact-header_title{
+    margin-bottom: 23.65px;
+}
 .name-wrapper{
     margin-bottom: 27.13px;
 }
