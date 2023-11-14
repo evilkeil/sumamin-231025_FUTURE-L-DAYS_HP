@@ -1922,8 +1922,8 @@ aspect-ratio: 1;
 background-color: var(--section-bg);
 }
 
-#TnC{
-
+input#TnC{
+background-color: var(--section-bg);
 }
 .terms{
     height: 290px;
