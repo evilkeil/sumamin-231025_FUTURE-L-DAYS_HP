@@ -285,11 +285,10 @@ checkbox.addEventListener('click', function() {
         // Checkbox is checked, display the checked SVG
         checkedSVG.style.display = 'block';
         uncheckedSVG.style.display = 'none';
-        console.log("checked")
+       
     } else {
         // Checkbox is unchecked, display the unchecked SVG
         checkedSVG.style.display = 'none';
         uncheckedSVG.style.display = 'block';
-        console.log("not")
     }
 });
