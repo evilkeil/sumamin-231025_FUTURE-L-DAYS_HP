@@ -266,7 +266,30 @@ function companyTop() {
   return tl;
 }
 
-const masterCompany = gsap.timeline()
-masterCompany.add(companyTop())
+const masterCompany = gsap.timeline();
+masterCompany.add(companyTop());
   
    
+
+// test to see whther the input is wroking
+
+const checkbox = document.getElementById('TnC');
+const checkedSVG = document.querySelector('.checked');
+const uncheckedSVG = document.querySelector('.unchecked');
+
+// Initially hide the unchecked SVG
+
+
+checkbox.addEventListener('click', function() {
+    if (this.checked) {
+        // Checkbox is checked, display the checked SVG
+        checkedSVG.style.display = 'block';
+        uncheckedSVG.style.display = 'none';
+        console.log("checked")
+    } else {
+        // Checkbox is unchecked, display the unchecked SVG
+        checkedSVG.style.display = 'none';
+        uncheckedSVG.style.display = 'block';
+        console.log("not")
+    }
+});
