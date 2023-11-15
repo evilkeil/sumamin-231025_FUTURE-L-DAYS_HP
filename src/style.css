@@ -1660,7 +1660,7 @@ position: relative;
     /* width: 100%; */
     width: var(--beforeAnimation);
     height: 3px;
-    background-color:  rgba(230, 235, 345,1); ;
+    background-color:  #E6EBF5;
     position: absolute;
     top: 0;
     left: 0;
@@ -1671,7 +1671,7 @@ position: relative;
     content: "";
     width: var(--beforeAnimation);
     height: 3px;
-    background-color:  rgba(230, 235, 345,1); ;
+    background-color: #E6EBF5;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1880,6 +1880,14 @@ position: relative;
 
 .company-hero{
     /* margin-top: 80px; */
+
+}
+
+.company-title {
+    z-index: -1;
+}
+.company-dot{
+    z-index: -2;
 }
   .company-main::after{
     content:"" ;
