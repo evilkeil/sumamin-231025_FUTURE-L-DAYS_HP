@@ -170,7 +170,8 @@ tl2
   tl3.to(".service-dot", {scale:0.5})
   .to(".service-title", {x:"-50vw", xPercent:-50}, 0)
   .to(".service-dot", {scale:1})
-  .to(".service-main", {y:"-40%"})
+  // .to(".service-main", {y:"-33%"})  //todo: adust the y in breakpoints
+  .to(".service-main", {y:"-110px"})
   .set(".service-main", {backgroundColor:"transparent"})
   .set("#service", {backgroundColor:"#F0F5F5"})
 
@@ -180,11 +181,11 @@ tl2
 
    let tl4 = gsap.timeline({
     scrollTrigger: {
-      trigger: ".company-hero",
+      trigger: ".company-hero", //edit
       start: "top top",
       scrub: true,
       pin: true,
-    //  markers: true
+     markers: true
     }
   });
   
@@ -192,4 +193,20 @@ tl2
     .to(".company-title", {x:"-100vw", xPercent:-100}, 0)
     .set(".company-main", {backgroundColor:"#F0F5F5"})
   
+
+//topics section animations
+
+// let tl5 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".topics-hero",
+//     start: "top top",
+//     scrub: true,
+//     pin: true,
+//   //  markers: true
+//   }
+// });
+
+// tl5.to(".topics-dot", {scale:1})
+//   .to(".topics-title", {x:"-100vw", xPercent:-100}, 0)
+//   .set(".topics-main", {backgroundColor:"#F0F5F5"})
 
