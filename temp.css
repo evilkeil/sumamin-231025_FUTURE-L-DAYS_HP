@@ -1636,8 +1636,7 @@ position: relative;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    transform: translateY(-150px);
-    padding-bottom: 50px;
+    transform: translateY(-250px);
   }
 
   .topic{
@@ -1690,7 +1689,7 @@ position: relative;
 }
 
 .topics-dot{
-    z-index: -2;
+    z-index: -1;
 }
 /* ------------------- */
 /*       company       */
@@ -1729,9 +1728,10 @@ position: relative;
     margin:0;
     white-space:nowrap;
     position:absolute;
-    left:100%;
+    right:100%;
     top:50%;
     transform:translateY(-50%);
+    /* transform: translateX(-100vh); */
   }
 
   h1, h2 {
@@ -1888,7 +1888,7 @@ position: relative;
   }
 #company{
     position: relative;
-    transform: translateY(-500px);
+    
 }
 
 .company-hero{
@@ -1937,7 +1937,7 @@ position: relative;
     color: black;
      z-index: 10;
      position: relative;
-     margin-top: -600px;
+     margin-top: -300px;
 }
 
 /* contact grid */
