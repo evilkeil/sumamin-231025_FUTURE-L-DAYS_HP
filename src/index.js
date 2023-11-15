@@ -183,7 +183,8 @@ tl2
     scrollTrigger: {
       trigger: ".company-hero", //edit
       start: "top top",
-      scrub: true,
+      end:"+=200",
+      scrub: 3,
       pin: true,
      markers: true
     }

@@ -266,6 +266,7 @@ html, body {
 /* loop in the company section */
 .company-main{
    position: relative;
+   /* background-color: var(--section-bg); */
 }
 .loop-five {
    
@@ -1576,7 +1577,7 @@ position: relative;
 /* ------------------- */
 
 #topics{
-    margin-top: 80px; 
+    margin-top: 150px; 
     background-color: var(--section-bg);
     color: black;
     display: flex;
@@ -1586,8 +1587,32 @@ position: relative;
     gap: 37.16px;
     padding-bottom: 80px;
     padding-top: 65px;
+
+    position: relative;
 }
 
+#topics::after{
+    content:"" ;
+    border-radius: 50%;
+    /* border: 1px solid red; */
+    width: 100%;
+    position: absolute;
+    bottom: -50px;
+    height: 100px;
+    background-color: var(--section-bg);
+    /* border: 1px solid red; */
+    }
+    #topics::before{
+        content:"" ;
+        border-radius: 50%;
+        /* border: 1px solid red; */
+        width: 100%;
+        position: absolute;
+        top: -50px;
+        height: 100px;
+        background-color: var(--section-bg);
+        /* border: 1px solid red; */
+        }
 .topics-title{
     /* font-size: 8vmin;
     font-weight: bold;
