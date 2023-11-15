@@ -194,7 +194,7 @@ let tl5 = gsap.timeline({
 });
 
 tl5
-.from(".topic", {y:-20,opacity:0},0.1)
+.from(".topic", {y:-20,opacity:0,duration:1.5},0.1)
   .to(".topic", {'--beforeAnimation': "100%",duration: 3}, )
   
 
