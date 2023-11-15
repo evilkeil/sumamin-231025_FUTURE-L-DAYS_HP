@@ -98,6 +98,7 @@ requestAnimationFrame(raf);
   gsap.registerPlugin(ScrollTrigger);
   
 
+ 
 
   //animations for the about section
 
