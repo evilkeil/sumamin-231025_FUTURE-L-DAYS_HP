@@ -247,12 +247,12 @@ tl5
 function topicTop() {
   let tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".topics-hero",
-      start: "top top",
+      trigger: "#topics",
+      start: "-=300px top",
       end:"+=200",
       scrub: true,
-      pin: true,
-    //  markers: true
+      // pin: true,
+     markers: true
     }
   });
 
@@ -263,26 +263,6 @@ function topicTop() {
 
   return tl;
 }
-
-
-// function topicBottom(){
-//   let tl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: ".blog_cover",
-//       start: "-200px top",
-//       end:"+=150px",
-//       // scrub: true,
-//       // pin: true,
-//      markers: true
-//     }
-//   });
-  
-//   tl
-//   .from(".topic", {y:-20,opacity:0}, 0.5)
-//     .to(".topic", {'--beforeAnimation': "100%",duration: 3}, );
-    
-//     return tl;
-// }
 
 const master = gsap.timeline()
 master.add(topicTop())
