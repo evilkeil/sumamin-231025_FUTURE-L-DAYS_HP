@@ -186,7 +186,7 @@ tl2
       end:"+=200",
       scrub: 3,
       pin: true,
-     markers: true
+     markers: false
     }
   });
   
@@ -203,17 +203,18 @@ tl2
 
 //topics section animations
 
-// let tl5 = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".topics-hero",
-//     start: "top top",
-//     scrub: true,
-//     pin: true,
-//   //  markers: true
-//   }
-// });
+let tl5 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#topics",
+    start: "-=100px",
+    scrub: false,
+    // pin: true,
+  //  markers: true
+  }
+});
 
-// tl5.to(".topics-dot", {scale:1})
-//   .to(".topics-title", {x:"-100vw", xPercent:-100}, 0)
-//   .set(".topics-main", {backgroundColor:"#F0F5F5"})
+tl5.from(".topics-title", {opacity:0})
+.from(".topic", {y:-20,opacity:0}, 0.5)
+  .to(".topic", {'--beforeAnimation': "100%",duration: 3}, )
+  
 
