@@ -1,0 +1,22 @@
+
+//things learned along the way 
+
+/*PHONE NUMBERS BEING BLUE IN IPHONES //
+
+iOS renders strings that it interprets as phone numbers as clickable links by default.
+
+Use the format-detection meta tag and you can disable this feature:
+
+<meta name="format-detection" content="telephone=no">
+
+(add this on the top of the head)
+
+
+/*PHONES IGNORING OVERFLOW-hidden */
+
+use 
+
+
+html, body {
+    overflow-x:hidden 
+  } 
