@@ -2110,6 +2110,7 @@ position: relative;
     font-size: 14px;
     background-color: var(--section-bg);
 }
+
 /* contact form other styles */
 #contact input{
     border: none;
@@ -2162,11 +2163,19 @@ background-color: var(--section-bg);
     align-self: flex-start;
   }
 .terms{
-    height: 290px;
     overflow: scroll;
-    padding: 20px;
+    padding: 0;
     width: 100%;
-    border-radius: 10px;
+    /* border: 1px solid red; */
+    height: 246px;
+   
+}
+.terms-padding{
+overflow: hidden;
+padding:20px;
+height: 290px;
+/* border: 1px solid black; */
+background-color: var(--section-bg);
 }
 /* contact spacing and margins */
 .contact-wrapper{
