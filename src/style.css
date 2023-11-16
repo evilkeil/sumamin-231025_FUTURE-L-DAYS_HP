@@ -247,7 +247,9 @@ html, body {
     z-index: 6; */
     bottom: -400px;
     right: 40%;
-    z-index: 3;
+    /* z-index: 3; */
+    z-index: 6;
+
 }
 
 
@@ -1198,10 +1200,30 @@ position: relative;
         .about-us-list-item {
             z-index: 4;
         }
+<<<<<<< HEAD
         .loop-two{
             z-index: 6;
         }
         
+=======
+        
+        .about-bottom::after{
+            content:"" ;
+            border-radius: 50%;
+            /* border: 1px solid red; */
+            width: 1920px;
+            height: 1920px;
+            position: absolute;
+            bottom: -50px;
+            background-color: var(--section-bg);
+            top: calc(100% - 430px);
+            height: 400px;
+            background-color: var(--section-bg);
+            transform: translatey(100px);
+            z-index: -1;
+            /* opacity: 0.9; */
+        } 
+>>>>>>> f64283e0a7dc03f75bf810a8dc6146aab5256208
     } 
     
 
@@ -1386,6 +1408,20 @@ position: relative;
     height: 408px;
     background-color: rgba(255, 255, 255, 1);
 }
+
+@media (min-width:750px){
+    .carousel{
+        grid-column: 2;
+        height: 700px;
+        position: relative;
+        /* border: 1px solid black; */
+    }
+    .carousel .carousel-item{
+        width: 410px;
+        height: 545px;
+       
+    }
+}
 .carousel-item{
     z-index: 1;
 }
@@ -1419,6 +1455,7 @@ position: relative;
     border-radius: 40px;
     background-color: rgba(255, 255, 255, 0.6);
 }
+
 
 
 #image{
@@ -1461,6 +1498,21 @@ position: relative;
     background-color: #000000 !important;
     
 
+}
+
+@media (min-width:750px) {
+    .carousel{
+        overflow: visible;
+        display: grid;
+    }
+    .carousel .indicators{
+        transform: translateY(50px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
 }
 .carosel-btn{
     display: flex;
@@ -1510,13 +1562,13 @@ position: relative;
 .prev{
     position: absolute;
     top: 50%;
-    left: 40%;
+    left: 36%;
     transform: translate(-50%,-50%);
 }
 .next{
     position: absolute;
     top: 50%;
-    right: 35%;
+    right: 31%;
     transform: translate(-50%,-50%);
    
 }
@@ -1549,49 +1601,50 @@ position: relative;
 /* desktop version  */
 
 @media (min-width:1200px){
-    .servive-carousel-container{
-        width: 100%;
-    }
     .service_slides{
        justify-content: space-around;
        align-items: center;
        position: relative;
     }
+    .service_card_description{
+        font-size: 14px;
+    }
+}
+@media (min-width:750px){
+    .servive-carousel-container{
+        width: 100%;
+    }
+    .service_card{
+        width: 410px;
+        height: 545px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 40px;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
     .service-card_title{
-        font-size: 1.69rem;
-        margin-top: 23.51px;
-        margin-bottom: 9.34px;
+        font-size: 36px;
+        margin-top: 32px;
+        margin-bottom: 11px;
         font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;
         font-weight: 300;
         font-style: normal;
     }
-
-    /* current card */
-
-    
-    .service-container{
-        position: static;
-    }
-    .title_eng{
-        font-size: 8.125rem; /*130px */
-    }
-    .title_jp{
-        font-size: 1.875rem;/*30px */
-    }
-    .service-contact-btn{
-        margin-top: 53.7px;
-    }
-    .service-carousel-marker{
-        display: block;
+    .service_card_description{
+        text-align: center;
+        width: 334px;
+        height: 93px;
+        padding-bottom: 63.46px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 18px; /* 24px */
     }
 }
-
 
 /* styles realted to animations */
 .carousel,
 .loop-three{
     /* margin-bottom:100px; */
-    /* border:1px solid red; */
     background: transparent;
 }
 
@@ -1604,11 +1657,11 @@ position: relative;
     }
 }
 @media(max-width:370px){
-    .carousel,
-.loop-three{
+    .carousel{
         /* margin-bottom:120px; */
         /* border:1px solid red; */
         background: transparent;
+        /* transform: translateY(-200px); */
     }
 }
 @media(min-width:389px){
@@ -1646,6 +1699,14 @@ position: relative;
         margin-bottom: 100px;
         /* border:1px solid red; */
         background: transparent;
+    }
+}
+
+/* adjusting the space between the service title and carosel */
+
+@media(min-width:750px){
+    .carousel{
+        transform: translateY(-200px);
     }
 }
 
