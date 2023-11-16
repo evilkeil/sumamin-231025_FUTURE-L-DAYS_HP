@@ -130,7 +130,7 @@ requestAnimationFrame(raf);
   tl1.to(".about-dot", {scale:1})
   .from(".about-top_left", {opacity:0},)
   .from(".about-top_right", {opacity:0}, 1)
-    .set("#about", {backgroundColor:"#F0F5F5"});
+    // .set("#about", {backgroundColor:"#F0F5F5"});
    
 
 //about ul
