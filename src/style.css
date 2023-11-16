@@ -1747,7 +1747,23 @@ position: relative;
     }
 }
 
-.topics-main::after{
+@media (max-width:750px){
+    .topics-main{
+        background-color: var(--section-bg);
+    }
+    .topics-main::after{
+        content:"" ;
+        border-radius: 50%;
+    
+        width: 100%;
+        position: absolute;
+        bottom: -50px;
+        height: 100px;
+        background-color: var(--section-bg);
+        z-index: -1;
+    }
+}
+/* .topics-main::after{
     content:"" ;
     border-radius: 50%;
 
@@ -1758,7 +1774,7 @@ position: relative;
     background-color: var(--section-bg);
     z-index: -1;
  
-    }
+    } */
     /* #topics::before{
         content:"" ;
         border-radius: 50%;
@@ -2076,10 +2092,16 @@ position: relative;
   }
 #company{
     position: relative;
-    transform: translateY(-350px);
+    transform: translateY(350px);
     margin-top: -100px;
 }
-
+@media (max-width:750px){
+    #company{
+        position: relative;
+        transform: translateY(-350px);
+        margin-top: -100px;
+    }
+}
 .company-hero{
     /* margin-top: 80px; */
 
@@ -2145,9 +2167,16 @@ position: relative;
     color: black;
      z-index: 10;
      position: relative;
-     margin-top: -450px;
+     margin-top: 1000px;
 }
-
+@media (max-width:750px){
+    #contact{
+        color: black;
+         z-index: 10;
+         position: relative;
+         margin-top: -450px;
+    }
+}
 
 /* contact grid */
 .contact-wrapper{

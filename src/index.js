@@ -214,7 +214,7 @@ function topicTop() {
   tl.to(".topics-dot", {scale:1})
   .to(".topics-title", {x:"-50vw", xPercent:-50}, 0)
   .from(".topics-title", {opacity:0})
-  .set(".topics-main", {backgroundColor:"#F0F5F5"},0);
+  // .set(".topics-main", {backgroundColor:"#F0F5F5"},0);
 
   return tl;
 }
