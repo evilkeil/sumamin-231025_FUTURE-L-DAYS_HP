@@ -1945,12 +1945,13 @@ position: relative;
   .company-info{
       display: grid;
       place-content: center;
+      /* border: 1px solid red; */
       /* margin-bottom: 100px; */
   }
   .info-list{
-      padding: 0;
       width: 100%;
-      margin: 0 auto;
+      /* margin: 0 auto; */
+      margin-left: 10px;
       z-index: 10; 
   }
   .info-list-item{
@@ -2123,15 +2124,25 @@ position: relative;
      margin-top: -450px;
 }
 
+
 /* contact grid */
 .contact-wrapper{
+    
+    padding:5vw;
     gap: 32.89px;
+    /* new */
+   display: grid;
+   place-content: center;
 }
 .contact-header{
-    grid-column: 2;
+    /* grid-column: 2; */
+    /* margin: 0 auto; */
+    /* border: 1px solid red; */
 }
 .contact-form{
-    grid-column: 2;
+    /* grid-column: 2; */
+    /* margin: 0 auto; */
+    /* border: 1px solid red; */
 }
 /* custom radio btn */
 .radio-label{
