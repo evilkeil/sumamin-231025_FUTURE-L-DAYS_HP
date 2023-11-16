@@ -203,11 +203,11 @@ function topicTop() {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#topics",
-      start: "-=300px top",
+      start: "-=400px top",
       end:"+=200",
       scrub: true,
       // pin: true,
-    //  markers: true
+     markers: true
     }
   });
 
