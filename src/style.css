@@ -1205,8 +1205,11 @@ position: relative;
             content:"" ;
             border-radius: 50%;
             /* border: 1px solid red; */
-            width: 100%;
+            width: 1920px;
+            height: 1920px;
             position: absolute;
+            bottom: -50px;
+            background-color: var(--section-bg);
             top: calc(100% - 430px);
             height: 400px;
             background-color: var(--section-bg);
