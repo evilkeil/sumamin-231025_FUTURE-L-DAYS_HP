@@ -1663,11 +1663,11 @@ position: relative;
     }
 }
 @media(max-width:370px){
-    .carousel,
-.loop-three{
+    .carousel{
         /* margin-bottom:120px; */
         /* border:1px solid red; */
         background: transparent;
+        /* transform: translateY(-200px); */
     }
 }
 @media(min-width:389px){
@@ -1705,6 +1705,14 @@ position: relative;
         margin-bottom: 100px;
         /* border:1px solid red; */
         background: transparent;
+    }
+}
+
+/* adjusting the space between the service title and carosel */
+
+@media(min-width:750px){
+    .carousel{
+        transform: translateY(-200px);
     }
 }
 
