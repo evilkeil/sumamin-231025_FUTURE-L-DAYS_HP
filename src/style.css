@@ -2581,10 +2581,10 @@ border-radius: 10px;
     justify-content: center;
     align-items: center;
     margin-bottom: 67px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     }
     .terms-wrapper{
-        border: 1px solid red;
+        /* border: 1px solid red; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -2648,10 +2648,89 @@ margin-bottom: 4.6px;
 .your_inquiry-wrapper{
     margin-bottom: 47.97px;
 }
+
+@media (min-width:750px){
+    .contact-wrapper{
+        margin-bottom: 0px;
+        
+    }
+    .contact-header_jp{
+    margin-bottom: 6.21px;
+    
+    }
+    
+    .contact-header_title{
+        margin-bottom: 50px;
+    }
+    .name-wrapper{
+        margin-bottom: 39px;
+    }
+    
+    .name_kana-wrapper{
+        margin-bottom: 39px;
+    }
+    .your_company-wrapper{
+        margin-bottom: 39px;
+    }
+    
+    .email-wrapper{
+        margin-bottom: 55px;
+        
+    }
+    .label-name{
+        margin-bottom: 0px;
+        display: grid;
+        place-content: center;
+    }
+    .inquiry-details{
+        margin-bottom: 37.73px;
+        flex-direction: row;
+
+    }
+    .star{
+        display: none;
+    }
+    .required_item{
+        position: relative;
+    }
+    .required_item::after{
+        content: "※";
+        position: absolute;
+        top:-10px;
+        right: -5px;
+        height: 15px;
+        width: 10px;
+        font-size: 10px;
+    }
+    .terms-and-conditions_agree-wrapper{
+        display: grid;
+       place-content: center;
+        gap: 8.84px;
+        margin-bottom:66px;
+    }
+    .terms-title{
+        margin-bottom: 11.8px;
+        text-align: center;
+        align-self: flex-start;
+    }
+    
+    .radio-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .your_inquiry-wrapper{
+        margin-bottom: 47.62px;
+
+    }
+     
+}
+
 /* submit btn */
 
 .submit-btn{
-    width: 205px;
+    width: 200px;
     height: 60px;
     background-color: transparent;
     border: none;
@@ -2681,6 +2760,8 @@ margin-bottom: 4.6px;
  #back-to-top-btn:hover{
     cursor: pointer;
  }
+
+ 
 /* ------------------- */
 /*       footer        */
 /* ------------------- */
