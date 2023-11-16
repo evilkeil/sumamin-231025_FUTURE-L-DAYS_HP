@@ -2190,7 +2190,7 @@ position: relative;
   }
 #company{
     position: relative;
-    transform: translateY(150px);
+    transform: translateY(100px);
     margin-top: -100px;
 }
 @media (max-width:750px){
