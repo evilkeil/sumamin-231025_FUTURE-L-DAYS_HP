@@ -1201,40 +1201,9 @@ position: relative;
         .loop-two{
             z-index: 6;
         }
-        .about-bottom::after{
-            content:"" ;
-            border-radius: 50%;
-            /* border: 1px solid red; */
-            width: 1920px;
-            height: 1920px;
-            position: absolute;
-<<<<<<< HEAD
-            bottom: -50px;
-            background-color: var(--section-bg);
-=======
-            top: calc(100% - 430px);
-            height: 400px;
-            background-color: var(--section-bg);
-            transform: translatey(100px);
-            z-index: -1;
-            /* opacity: 0.9; */
-        } 
+        
     } 
-    @media (max-width:750px){
-        .about-bottom::after{
-            content:"" ;
-            border-radius: 80%;
-            /* border: 1px solid red; */
-            width: 150%;
-            position: absolute;
-            top: calc(100% - 390px);
-            height: 400px;
-            background-color: var(--section-bg);
-            /* transform: translatey(-100px); */
-            z-index: -1;
->>>>>>> 6ef65db224c51b6bca76ebc706815f14f1bcdfce
-        } 
-    }
+    
 
     #about{
         /* border: 1px solid red; */
