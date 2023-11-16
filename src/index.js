@@ -254,7 +254,7 @@ function companyTop() {
       end:"+=200",
       scrub: true,
       // pin: true,
-     markers: true
+    //  markers: true
     }
   });
 
