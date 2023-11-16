@@ -1190,7 +1190,6 @@ position: relative;
             /* opacity: 0.95; */
             position: absolute;
             top: calc(100%);
-            border: 1px solid black;
             width: 100%;
             z-index: 3;
         }
