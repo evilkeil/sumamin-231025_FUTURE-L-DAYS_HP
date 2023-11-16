@@ -1000,7 +1000,6 @@ position: relative;
 }
 .center{
     border: none;
-    font-size: 46px;
     width: 660px;
     aspect-ratio: 1;
     margin: -330px;
@@ -1009,21 +1008,28 @@ position: relative;
     font-weight: 300;
     font-style: normal;
     background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
  }
+ 
  .center p{
+    font-size: 46px;
     width: 368px;
     height: 277px;
  }
 
  .sub-item{
+    background-image: url(transparentBkg2x.png);
+    background-size: cover;
+ }
+ .sub-item p{
     font-size: 24px;
     font-family: a-otf-ud-shin-go-con80-pr6n, sans-serif;
     font-weight: 300;
     font-style: normal;
-    background-image: url(transparentBkg2x.png);
-    background-size: cover;
  }
-
  @media (max-width:600px){
     .about-us-list{
         width: 272.5px;
@@ -1084,6 +1090,9 @@ position: relative;
     .item-8 {
         transform: rotate(337.5deg) translate(136.255px) rotate(-337.5deg);
     }
+    .sub-item p{
+        font-size: 14px;
+     }
     
 }
 /* .about-dot{
