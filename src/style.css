@@ -221,8 +221,12 @@ html, body {
     }
 }
 .about-bottom{
-    z-index: 2;
+    z-index: 8;
     overflow: visible;
+}
+
+#contact-btn{
+    /* position: absolute; */
 }
 .about-center{
     z-index: 7;
@@ -2021,6 +2025,7 @@ position: relative;
         display: grid;
         place-items: center;
         text-align: end;
+        justify-items: start;
       }
       .blog_date{
         color: #C8C8C8;
@@ -3036,6 +3041,8 @@ margin-bottom: 4.6px;
             z-index: -3;
             width:130vmax;
             height:85vmax;
+            border: 1px solid red;
+            /* clip-path: circle(54.7% at 54% 100%); */
         }
         .company-main{
             position: relative;

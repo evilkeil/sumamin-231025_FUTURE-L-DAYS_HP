@@ -289,3 +289,11 @@ checkbox.addEventListener('click', function() {
     }
 });
 
+//test 
+
+const doc = document.querySelector('.about-bottom');
+
+doc.addEventListener('click',(e)=>{
+  console.log('clicked');
+});
+
