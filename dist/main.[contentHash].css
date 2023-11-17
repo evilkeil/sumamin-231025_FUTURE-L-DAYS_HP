@@ -1770,13 +1770,14 @@ position: relative;
         margin-top: -450px;
     }
 }
-@media(min-width:374px){
+
+@media(min-width:390px){
     .carousel,
 .loop-three{
         /* margin-bottom:310px; */
         /* border:1px solid red; */
         background: transparent;
-        margin-top: -450px;
+        margin-top: -250px;
     }
 }
 @media(min-width:400px){
@@ -1789,7 +1790,15 @@ position: relative;
     
     }
 }
-
+@media(min-width:410px){
+    .carousel,
+    .loop-three{
+        /* margin-bottom: 250px; */
+        /* border:1px solid red; */
+        background: transparent;
+        margin-top: -350px;
+    }
+}
 @media(min-width:419px){
     .carousel,
     .loop-three{
@@ -1797,6 +1806,15 @@ position: relative;
         /* border:1px solid red; */
         background: transparent;
         margin-top: -450px;
+    }
+}
+@media(min-width:425px){
+    .carousel,
+    .loop-three{
+        /* margin-bottom: 250px; */
+        /* border:1px solid red; */
+        background: transparent;
+        margin-top: -350px;
     }
 }
 
