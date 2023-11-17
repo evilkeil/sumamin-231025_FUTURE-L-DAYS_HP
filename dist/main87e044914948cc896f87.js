@@ -226,11 +226,6 @@ tl2
     //  markers: true
     }
   });
-  
-  // tl3.to(".service-dot", {scale:1})
-  //   .to(".service-title", {x:"-100vw", xPercent:-100}, 0)
-  //   .set(".service-main", {backgroundColor:"#F0F5F5"})
-
     
   tl3.to(".service-dot", {scale:0.5})
   .to(".service-title", {x:"-50vw", xPercent:-50}, 0)
@@ -362,4 +357,4 @@ checkbox.addEventListener('click', function() {
 
 /******/ })()
 ;
-//# sourceMappingURL=main1a28564cfcd09deda486.js.map
+//# sourceMappingURL=main87e044914948cc896f87.js.map

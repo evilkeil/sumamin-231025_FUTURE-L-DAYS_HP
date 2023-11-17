@@ -1761,15 +1761,16 @@ position: relative;
         /* border:1px solid red; */
         background: transparent;
         /* transform: translateY(-200px); */
+        margin-top: -450px;
     }
 }
-@media(min-width:389px){
+@media(min-width:374px){
     .carousel,
 .loop-three{
         /* margin-bottom:310px; */
         /* border:1px solid red; */
         background: transparent;
-        margin-top: -250px;
+        margin-top: -450px;
     }
 }
 @media(min-width:400px){
@@ -1778,7 +1779,7 @@ position: relative;
         /* margin-bottom:340px; */
         /* border:1px solid red; */
         background: transparent;
-        margin-top: -270px;
+        margin-top: -300px;
     
     }
 }
@@ -1789,7 +1790,17 @@ position: relative;
         /* margin-bottom: 250px; */
         /* border:1px solid red; */
         background: transparent;
-        margin-top: -200px;
+        margin-top: -450px;
+    }
+}
+
+@media(min-width:750px){
+    .carousel,
+    .loop-three{
+        /* margin-bottom: 250px; */
+        /* border:1px solid red; */
+        background: transparent;
+        margin-top: -300px;
     }
 }
 @media(min-width:799px){
@@ -1801,6 +1812,15 @@ position: relative;
     }
 }
 
+@media(min-width:1000px){
+    .carousel,
+    .loop-three{
+        /* margin-bottom: 250px; */
+        /* border:1px solid red; */
+        background: transparent;
+        margin-top: -220px;
+    }
+}
 /* adjusting the space between the service title and carosel */
 
 @media(min-width:750px){
