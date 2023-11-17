@@ -1522,7 +1522,13 @@ position: relative;
 
 
 
-#image{
+#image,
+#image2,
+#image3,
+#image4,
+#image5,
+#image6,
+#image7{
     width: 218px;
     height: 169px;
     border-radius: 50%;
@@ -1575,7 +1581,20 @@ position: relative;
         justify-content: center;
         align-items: center;
     }
-    
+
+    #image,
+    #image2,
+    #image3,
+    #image4,
+    #image5,
+    #image6,
+    #image7{
+        width: 290.8px;
+        height: 225.66px;
+        border-radius: 50%;
+        margin-bottom: 40.78px;
+    }
+   
     
 }
 .carosel-btn{
@@ -1718,7 +1737,7 @@ position: relative;
         height: 93px;
         padding-bottom: 63.46px;
         font-family: 'Noto Sans JP', sans-serif;
-        font-size: 18px; /* 24px */
+        font-size: 18px;
     }
 }
 
@@ -2965,5 +2984,69 @@ margin-bottom: 4.6px;
                     border-radius: 50%;
                     width: 140%;
                     left: -20%;
+                }
+            } */
+
+
+            @media (min-width:750px){
+                #test{
+                    display: grid;
+                    /* place-content: center; */
+                    grid-template-columns: 1fr 300px 1fr;
+                }
+                #image,
+                #image2,
+                #image3,
+                #image4,
+                #image5,
+                #image6,
+                #image7{
+                    /* border: 1px solid red; */
+                    grid-column: 2;
+                    margin-bottom: 0;
+                }
+    
+                .service-card_title{
+                    grid-column: 2;
+                    
+                }
+    
+                .service_card_description{
+                    grid-column: 2;
+                    margin-bottom: 60px;
+                    /* border: 1px solid red; */
+        
+                }
+
+               
+            }
+
+
+            /* @media (max-width:749px){
+                #test{
+                    display: grid;
+                   
+                    grid-template-columns: 1fr 250px 1fr;
+                }
+                #image,
+                #image2,
+                #image3,
+                #image4,
+                #image5,
+                #image6,
+                #image7{
+                    border: 1px solid red;
+                    grid-column: 2;
+                    
+                }
+    
+                .service-card_title{
+                    grid-column: 2;
+                }
+    
+                .service_card_description{
+                    grid-column: 2;
+                    margin-bottom: 30px;
+        
                 }
             } */
