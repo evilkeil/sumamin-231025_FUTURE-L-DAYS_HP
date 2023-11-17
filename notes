@@ -1,5 +1,5 @@
 
-//things learned along the way 
+things learned along the way 
 
 /*PHONE NUMBERS BEING BLUE IN IPHONES //
 
@@ -34,7 +34,7 @@ html, body {
   }
   
   .terms::-webkit-scrollbar:horizontal {
-      height: 11px;
+      height: 100px
   }
   
   .terms::-webkit-scrollbar-thumb {
