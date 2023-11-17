@@ -225,7 +225,7 @@ html, body {
     overflow: visible;
 }
 .about-center{
-    z-index: 3;
+    z-index: 7;
 }
 .about-container{
     z-index: 1;
