@@ -20,3 +20,25 @@ use
 html, body {
     overflow-x:hidden 
   } 
+
+
+  /* fix scrollbar not showing on desktop */
+
+  
+  .terms::-webkit-scrollbar {
+      -webkit-appearance: none;
+  }
+  
+  .terms::-webkit-scrollbar:vertical {
+      width: 11px;
+  }
+  
+  .terms::-webkit-scrollbar:horizontal {
+      height: 11px;
+  }
+  
+  .terms::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      border: 2px solid white; /* should match background, can't be transparent */
+      background-color: rgba(0, 0, 0, .5);
+  }
