@@ -2011,7 +2011,7 @@ position: relative;
     .topics-dot{
         z-index: -2;
         width:142vmax;
-        height:60vmax;
+        height:65vmax;
     }
 }
 
@@ -2266,7 +2266,7 @@ position: relative;
     #company{
         position: relative;
         transform: translateY(-350px);
-        margin-top: -100px;
+        margin-top: -200px;
     }
 }
 .company-hero{
@@ -2624,6 +2624,8 @@ border-radius: 10px;
         height: 246px;
        /* border: 1px solid red; */
     }
+
+    /* fix scrollbar not showing on desktop */
     .terms::-webkit-scrollbar {
         -webkit-appearance: none;
     }
