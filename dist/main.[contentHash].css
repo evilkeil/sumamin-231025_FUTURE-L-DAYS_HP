@@ -1928,7 +1928,6 @@ position: relative;
     --beforeAnimation: 0;
     width: 350px;
     height: 118.82px;
-    /* border: 1px solid red; */
     padding: 25px;
     position: relative;
   }
@@ -2619,12 +2618,31 @@ border-radius: 10px;
     }
 
     .terms{
-        overflow: scroll !important;
+        overflow-y: scroll !important;
         padding: 0;
         /* width: 600px; */
         height: 246px;
        /* border: 1px solid red; */
     }
+    .terms::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    
+    .terms::-webkit-scrollbar:vertical {
+        width: 11px;
+    }
+    
+    .terms::-webkit-scrollbar:horizontal {
+        height: 11px;
+    }
+    
+    .terms::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 2px solid white; /* should match background, can't be transparent */
+        background-color: rgba(0, 0, 0, .5);
+    }
+    
+
     .terms-padding{
     overflow: hidden;
     padding-left:30px;
@@ -2640,13 +2658,23 @@ border-radius: 10px;
     /* border: 1px solid red; */
     }
     .terms-wrapper{
-        /* border: 1px solid red; */
-        display: flex;
+        /* border: 1px solid black; */
+        /* display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: center; */
+        display: grid;
+        grid-template-columns: 1fr 660px 1fr;
     }
 
+    .terms-title{
+       grid-column: 2;
+       display: flex;
+    }
+    .terms-padding{
+        grid-column: 2;
+    }
+    
 }
 
 
@@ -2768,6 +2796,7 @@ margin-bottom: 4.6px;
         margin-bottom: 11.8px;
         text-align: center;
         align-self: flex-start;
+        /* border: 1px solid red; */
     }
     
     .radio-wrapper{
