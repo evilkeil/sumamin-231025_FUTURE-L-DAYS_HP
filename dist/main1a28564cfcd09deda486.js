@@ -200,6 +200,7 @@ requestAnimationFrame(raf);
 const tl2 = gsap.timeline({
   scrollTrigger: ".animate-2",
   start: "60% bottom",
+  markers:true
  
 });
 
@@ -361,4 +362,4 @@ checkbox.addEventListener('click', function() {
 
 /******/ })()
 ;
-//# sourceMappingURL=mainb0d0027a3f340bc84dd1.js.map
+//# sourceMappingURL=main1a28564cfcd09deda486.js.map

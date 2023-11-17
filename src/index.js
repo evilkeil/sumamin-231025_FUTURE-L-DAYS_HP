@@ -137,6 +137,7 @@ requestAnimationFrame(raf);
 const tl2 = gsap.timeline({
   scrollTrigger: ".animate-2",
   start: "60% bottom",
+  markers:true
  
 });
 
