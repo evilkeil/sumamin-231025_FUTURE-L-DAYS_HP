@@ -287,15 +287,11 @@ html, body {
 /* loop in the service section  */
 .service-main{
     position: relative;
-    /* border:1px solid red; */
 }
 
 
 .carousel{
     position: relative;
-    /* margin-bottom:100px; */
-    /* border:1px solid red; */
-    /* background: transparent; */
 }
 
 
@@ -804,9 +800,6 @@ position: relative;
 #about{
     height: 100%;
     color: black;
-    /* border: 1px solid red; */
-    /* border-bottom-right-radius: 50%;
-    border-bottom-left-radius: 50%; */
    
 }
 
@@ -819,11 +812,7 @@ position: relative;
 }
 
 .about-container{
-    /* --clip:circle(63.7332% at 47.8454% 47.8454%); */
-    /* background-color: var(--section-bg); */
     overflow-y: visible;
-    /* clip-path:circle(62.1% at 50% 50%); */
-    /* clip-path: var(--clip); */
    
    
    padding-bottom: 50px;
@@ -930,7 +919,6 @@ position: relative;
     /* border:1px solid black; */
 }
 .about-container{
-    /* border: 1px solid red; */
     transform: translateY(-110px); /*new */
     
 }
@@ -1099,16 +1087,6 @@ position: relative;
      }
     
 }
-/* .about-dot{
-        position: absolute;
-        width:142vmax;
-        height:142vmax;
-        left:50%;
-        top:50%;
-        transform:translate(-50%, -50%) scale(1.2);
-        border-radius: 50%;
-        background-color:#F0F5F5;
-} */
 
 .about-dot{
     z-index: -1;
@@ -1159,17 +1137,6 @@ position: relative;
     /* border: 1px solid black; */
 }
 
-/* #about::after{
-    content:"" ;
-    border-radius: 50%;
-    width: 100%;
-    position: absolute;
-    bottom: -50px;
-    height: 100px;
-    background-color: var(--section-bg);
-    z-index: -1;
-    }
-    */
     @media (min-width:750px){
         /* #about::after{
             content:"" ;
@@ -1185,7 +1152,6 @@ position: relative;
         .about-bottom{
             grid-column: 1/5;
             width: 100%;
-            /* border: 1px solid red; */
             transform: translateY(-50px);
             padding-bottom: 50px;
         }
@@ -1210,7 +1176,7 @@ position: relative;
         .about-bottom::after{
             content:"" ;
             border-radius: 50%;
-            border: 1px solid red;
+            /* border: 1px solid red; */
             width: 1920px;
             height: 1920px;
             position: absolute;
@@ -1221,20 +1187,18 @@ position: relative;
             background-color: var(--section-bg);
             transform: translatey(100px);
             z-index: -1;
-            /* opacity: 0.9; */
         } 
     } 
     
 
     #about{
-        /* border: 1px solid red; */
     }
     .about-center{
-        /* border: 1px solid red; */
+       
         width: 100%; 
     }
 
-.about-center::after{
+/* .about-center::after{
     border: none;
 }
 .about-bottom::after{
@@ -1249,6 +1213,7 @@ position: relative;
     top: -1100px;
     height: 1400px;
     z-index: -1;
+    border: 1px solid red;
 }
     @media (min-width: 1380px) and (max-width: 1700px) {
         .update-bg.about-bottom::after{
@@ -1308,7 +1273,7 @@ position: relative;
             left: -20%;
         }
     }
-    
+     */
 /* ------------------- */
 /*       service        */
 /* ------------------- */
@@ -2004,7 +1969,6 @@ position: relative;
         --beforeAnimation: 0;
         width: 900px;
         height: 94.86px;
-        /* border: 1px solid red; */
         padding-top: 20.52px;
         padding-top: 26.35px;
         padding-left: 20px;
@@ -2100,7 +2064,6 @@ position: relative;
       z-index: 10; 
   }
   .info-list-item{
-    /* border: 1px solid red; */
       display: grid;
       grid-template-columns: 50px  201px 1fr;
       gap:50px;
@@ -2301,7 +2264,6 @@ position: relative;
 
 /* contact grid */
 .contact-wrapper{
-    /* border: 1px solid red; */
     padding:5vw;
     gap: 32.89px;
     /* new */
@@ -2520,7 +2482,6 @@ background-color: var(--section-bg);
     overflow: scroll;
     padding: 0;
     width: 100%;
-    /* border: 1px solid red; */
     height: 246px;
    
 }
@@ -2545,19 +2506,17 @@ border-radius: 10px;
         letter-spacing: 0.72px;
     }
     .contact-item{
-        /* border: 1px solid red; */
         display: flex;
         justify-content: space-between;
     }
     .contact-form{
-        /* border: 1px solid red; */
+
         width: 856.65px;
     }
     
     .label-name_wrapper{
         display: flex;
         align-items: center;
-        /* border: 1px solid red; */
     }
 
     .terms{
@@ -2581,14 +2540,8 @@ border-radius: 10px;
     justify-content: center;
     align-items: center;
     margin-bottom: 67px;
-    /* border: 1px solid red; */
     }
     .terms-wrapper{
-        /* border: 1px solid black; */
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; */
         display: grid;
         grid-template-columns: 1fr 660px 1fr;
     }
@@ -2722,7 +2675,6 @@ margin-bottom: 4.6px;
         margin-bottom: 11.8px;
         text-align: center;
         align-self: flex-start;
-        /* border: 1px solid red; */
     }
     
     .radio-wrapper{
@@ -2772,9 +2724,7 @@ margin-bottom: 4.6px;
     cursor: pointer;
  }
 
- .terms{
-    /* border: 1px solid red; */
- }
+
 /* ------------------- */
 /*       footer        */
 /* ------------------- */
@@ -2830,7 +2780,7 @@ margin-bottom: 4.6px;
      /* unicorn */
     
 
-     .about-center::after{
+     /* .about-center::after{
         border: none;
     }
     .about-bottom::after{
@@ -2903,7 +2853,7 @@ margin-bottom: 4.6px;
                 width: 140%;
                 left: -20%;
             }
-        }
+        } */
 
    
 
@@ -2927,7 +2877,6 @@ margin-bottom: 4.6px;
                 #image5,
                 #image6,
                 #image7{
-                    /* border: 1px solid red; */
                     grid-column: 2;
                     margin-bottom: 0;
                 }
@@ -2940,7 +2889,6 @@ margin-bottom: 4.6px;
                 .service_card_description{
                     grid-column: 2;
                     margin-bottom: 60px;
-                    /* border: 1px solid red; */
         
                 }
 
@@ -3032,8 +2980,6 @@ margin-bottom: 4.6px;
             z-index: -3;
             width:130vmax;
             height:85vmax;
-            /* border: 1px solid red; */
-            /* clip-path: circle(54.7% at 54% 100%); */
         }
         .company-main{
             position: relative;
@@ -3063,7 +3009,6 @@ margin-bottom: 4.6px;
             width: 100%;
             overflow: hidden;
             line-height: 0;
-            /* border: 1px solid red; */
             z-index: -1;
         }
         
@@ -3092,7 +3037,6 @@ margin-bottom: 4.6px;
         width: 100%;
         overflow: hidden;
         line-height: 0;
-        /* border: 1px solid red; */
         z-index: -1;
         display: none;
     }
@@ -3120,7 +3064,6 @@ margin-bottom: 4.6px;
     #service::after{
         content:"" ;
         border-radius: 50%;
-     /* border: 1px solid red; */
         width: 200%;
         position: absolute;
         bottom: -200px;
@@ -3135,44 +3078,125 @@ margin-bottom: 4.6px;
 
  /* z index fixes */
 
- .about-container {  
-    /* 1 */
 
 
- }
 
- .loop-two{
-    /* 2 */
-    z-index: 11;
- }
+ #about::after{
+    content:"" ;
+    border-radius: 50%;
+    width: 200%;
+    position: absolute;
+    bottom: 0px;
+    left: -50%;
+    height: 500px;
+    background-color: var(--section-bg);
+    z-index: -5;
+    clip-path: circle(50% at 50% 94%);
+    /* border: 1px solid red; */
+    } 
 
- .about-center{
-    /* 2 */
-    z-index: 10;
-    /* background-color: red; */
- }
-.about-us-list{
-    z-index: 11;
+    @media (max-width:350px){
+        #about::after{
+            content:"" ;
+            border-radius: 50%;
+            width: 200%;
+            position: absolute;
+            bottom: 30px;
+            left: -50%;
+            height: 1000px;
+            background-color: var(--section-bg);
+            z-index: -5;
+            clip-path: circle(50% at 50% 94%);
+             /* border: 1px solid red; */
+            } 
+    }
+    @media (min-width: 400px) and (max-width: 500px){
+        #about::after{
+            content:"" ;
+            border-radius: 50%;
+            width: 200%;
+            position: absolute;
+            bottom: 70px;
+            left: -50%;
+            height: 1000px;
+            background-color: var(--section-bg);
+            z-index: -5;
+            clip-path: circle(50% at 50% 94%);
+             /* border: 1px solid red; */
+            } 
+    }
+
+
+    @media (min-width:800px){
+        #about::after{
+            content:"" ;
+            border-radius: 100%;
+            width: 200%;
+            position: absolute;
+            bottom: -100px;
+            left: -50%;
+            height: 3000px;
+            background-color: var(--section-bg);
+            z-index: -5;
+            clip-path: circle(50% at 50% 94%);
+             /* border: 1px solid red; */
+            } 
+    }
+
+/* 
+    .decor-wrap{
+        position: relative;
+    }
+    */
+   
+    .loop-two-desktop{
+        position: absolute;
+        bottom:-100px;
+        right: 80%;
+        transform: scale(2);
+    }
+
+    .loop-two-desktop{
+        display: none;
+    }
+
+    .loop-two{
+
+    }
+
+@media (min-width:700px){
+    .loop-two-desktop{
+        display: block;
+    }
+    .loop-two{
+        display: none;
+    }
+    .about-center{
+        /* 2 */
+        z-index: 10;
+        /* background-color: red; */
+     }
+    .about-us-list{
+        z-index: 11;
+    }
+     .about-bottom{
+        z-index: 11;
+    
+     }
+     .about-bottom::after{
+        background-color: transparent;
+      z-index: 11
+     }
+    
+     .contact-btn{
+        /* 3  inside abt-bottm*/
+        z-index: 12;
+     }
+    
+     #serviceTrigger{
+        z-index: 12;
+     }
+    
 }
- .about-bottom,
- .about-bottom::after,
- .about-bottom::before{
-    /* 2 */
-    /* z-index:5; */
-   /* background-color: green; */
- }
- .about-bottom::after{
-    /* background-color: red; */
-  /* z-index: 19; */
- }
-
- .contact-btn{
-    /* 3  inside abt-bottm*/
-    z-index: 12;
- }
-
- /* #serviceTrigger{
-    z-index: 20;
- } */
 
 /*# sourceMappingURL=main.[contentHash].css.map*/
