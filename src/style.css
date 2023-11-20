@@ -3,16 +3,11 @@
 /* ------------------- */
 :root{
     --main-color:#000000;
-
     /* fonts */
-
     --ff-trade-gothic:trade-gothic-next-compressed, sans-serif;
-    
     /* font weights */
     --fw-nav:400;
-
     /* hamburger menu vaiables */
-
     --bar-width:30px;
     --bar-height:1.17px;
     --bar-gap:11.24px;
@@ -20,28 +15,21 @@
     --background:#FFFFFF;
     --animation-timing:350ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3  + var(--bar-gap) * 2);
-
     /* section background color */
     --section-bg: #F0F5F5;
     --clip: circle(63.7332% at 47.8454% 47.8454%);
 }
-
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
-
-
 /* ------------------- */
 /* CSS - Reset               */
 /* ------------------- */
-
 /* Box sizing */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    
+    box-sizing: border-box; 
 }
-
 /* Reset margins */
 body,
 h1,
@@ -87,7 +75,6 @@ picture {
     max-width: 100%;
     display: block;
 }
-
 /* make form elements easier to work with */
 input,
 button,
@@ -95,12 +82,10 @@ textarea,
 select {
     font: inherit;
 }
-
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
 }
-
 /* remove animations for people who've turned them off */
 @media (prefers-reduced-motion: reduce) {  
   *,
@@ -127,9 +112,8 @@ ol[role='list'] {
         font-weight: inherit !important;
         line-height: inherit !important;
     }
-
 /* ------------------- */
-/*       UTILITY CLASSES          */
+/*   UTILITY CLASSES   */
 /* ------------------- */
 .main-grid{
     display: grid;
@@ -154,7 +138,6 @@ ol[role='list'] {
 .cursor-pointer:hover{
     cursor: pointer;
 }
-
 html, body {
     overflow-x:hidden 
   } 
@@ -167,7 +150,6 @@ html, body {
     height: 100vh;
     overflow:hidden;
   }
-  
   .dot {
     position: absolute;
     width:142vmax;
@@ -2496,4 +2478,3 @@ margin-bottom: 4.6px;
      #serviceTrigger{
         z-index: 12;
      }
-    
